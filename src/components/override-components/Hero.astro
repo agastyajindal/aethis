@@ -30,8 +30,8 @@ const is404 = Astro.locals.starlightRoute?.id === "404";
     <div class="hero-banner-overlay"></div>
     <div class="hero-banner-images">
       <Image src={noctisAmp} alt="Noctis Amplifier" class="hero-amp hero-amp-left" />
-      <Image src={rosariaAmp} alt="Rosaria Amplifier" class="hero-amp hero-amp-center" />
-      <Image src={luminaAmp} alt="Lumina Amplifier" class="hero-amp hero-amp-right" />
+      <Image src={luminaAmp} alt="Lumina Amplifier" class="hero-amp hero-amp-center" />
+      <Image src={rosariaAmp} alt="Rosaria Amplifier" class="hero-amp hero-amp-right" />
     </div>
   </div>
 )}
@@ -52,10 +52,10 @@ const is404 = Astro.locals.starlightRoute?.id === "404";
       top: 0;
       left: 0;
       width: 100%;
-      height: 100vh;
+      height: 60vh;
       z-index: -1;
       overflow: hidden;
-      transition: opacity 0.3s ease;
+      transition: opacity 0.15s ease;
     }
 
     .hero-banner-overlay {
@@ -63,9 +63,8 @@ const is404 = Astro.locals.starlightRoute?.id === "404";
       inset: 0;
       background: linear-gradient(
         to bottom,
-        rgba(0, 0, 0, 0.3) 0%,
-        rgba(0, 0, 0, 0.6) 50%,
-        rgba(0, 0, 0, 0.95) 85%,
+        rgba(0, 0, 0, 0.4) 0%,
+        rgba(0, 0, 0, 0.7) 60%,
         rgb(0, 0, 0) 100%
       );
       z-index: 1;
@@ -76,32 +75,32 @@ const is404 = Astro.locals.starlightRoute?.id === "404";
       inset: 0;
       display: flex;
       justify-content: center;
-      align-items: center;
-      gap: 2rem;
-      padding: 2rem;
+      align-items: flex-start;
+      gap: 1rem;
+      padding: 4rem 2rem 0;
     }
 
     .hero-amp {
       height: auto;
-      max-height: 70vh;
+      max-height: 45vh;
       width: auto;
       object-fit: contain;
-      opacity: 0.8;
-      filter: brightness(0.9);
+      opacity: 0.7;
+      filter: brightness(0.85);
     }
 
     .hero-amp-left {
-      transform: translateX(-10%) scale(0.9);
+      transform: translateX(-5%) scale(0.85);
     }
 
     .hero-amp-center {
-      transform: scale(1.05);
+      transform: scale(0.95);
       z-index: 2;
-      opacity: 0.9;
+      opacity: 0.85;
     }
 
     .hero-amp-right {
-      transform: translateX(10%) scale(0.9);
+      transform: translateX(5%) scale(0.85);
     }
 
     /* Hero text styles */
@@ -151,20 +150,24 @@ const is404 = Astro.locals.starlightRoute?.id === "404";
         width: 100%;
       }
 
+      .hero-banner {
+        height: 50vh;
+      }
+
       .hero-banner-images {
-        flex-direction: column;
-        gap: 0;
+        gap: 0.5rem;
+        padding: 3rem 1rem 0;
       }
 
       .hero-amp {
-        max-height: 35vh;
+        max-height: 30vh;
         opacity: 0.6;
       }
 
       .hero-amp-left,
       .hero-amp-center,
       .hero-amp-right {
-        transform: scale(0.8);
+        transform: scale(0.75);
       }
     }
 
@@ -175,7 +178,8 @@ const is404 = Astro.locals.starlightRoute?.id === "404";
       }
 
       .hero-amp-center {
-        max-height: 50vh;
+        max-height: 35vh;
+        transform: scale(0.9);
       }
     }
   }
@@ -199,8 +203,8 @@ const is404 = Astro.locals.starlightRoute?.id === "404";
   const heroBanner = document.getElementById("hero-banner");
 
   if (heroBanner) {
-    const fadeStart = 100;  // Start fading after 100px scroll
-    const fadeEnd = 500;    // Fully faded by 500px scroll
+    const fadeStart = 50;   // Start fading after 50px scroll
+    const fadeEnd = 250;    // Fully faded by 250px scroll
 
     function handleScroll() {
       const scrollY = window.scrollY;
