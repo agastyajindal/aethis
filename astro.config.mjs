@@ -28,6 +28,8 @@ const logoConfig = logo && logo_darkmode ? {
 
 // https://astro.build/config
 export default defineConfig({
+  site: "https://agastyajindal.github.io",
+  base: "/aethis",
   image: {
     service: { entrypoint: "astro/assets/services/noop" },
   },
