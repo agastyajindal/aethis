@@ -12,13 +12,17 @@
     "preview": "astro preview"
   },
   "dependencies": {
+    "@astrojs/react": "^4.4.2",
     "@astrojs/starlight": "^0.36.2",
     "@astrojs/starlight-tailwind": "^4.0.2",
     "@tailwindcss/vite": "^4.1.16",
     "astro": "^5.15.3",
     "astro-embed": "^0.9.1",
     "astro-font": "^1.1.0",
+    "framer-motion": "^12.23.25",
     "marked": "^16.4.1",
+    "react": "^19.2.1",
+    "react-dom": "^19.2.1",
     "sharp": "^0.34.4",
     "vite": "^7.1.12"
   },

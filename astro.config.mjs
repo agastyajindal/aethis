@@ -2,6 +2,7 @@
 import { defineConfig } from "astro/config";
 import starlight from "@astrojs/starlight";
 import { viewTransitions } from "astro-vtbot/starlight-view-transitions";
+import react from "@astrojs/react";
 
 import tailwindcss from "@tailwindcss/vite";
 import config from "./src/config/config.json" assert { type: "json" };
@@ -16,6 +17,14 @@ const { title, logo, logo_darkmode } = site;
 
 export const locales = locals
 
+// Only include logo config if paths are provided
+const logoConfig = logo && logo_darkmode ? {
+  logo: {
+    light: logo,
+    dark: logo_darkmode,
+    alt: "Harmonica",
+  },
+} : {};
 
 // https://astro.build/config
 export default defineConfig({
@@ -23,13 +32,10 @@ export default defineConfig({
     service: { entrypoint: "astro/assets/services/noop" },
   },
   integrations: [
+    react(),
     starlight({
       title,
-      logo: {
-        light: logo,
-        dark: logo_darkmode,
-        alt: "DocKit Logo",
-      },
+      ...logoConfig,
       // @ts-ignore
       social: social.main || [],
       locales,
