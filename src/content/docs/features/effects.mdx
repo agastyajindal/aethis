@@ -1,0 +1,264 @@
+---
+title: Effects & Pedals
+description: Drive pedal, stereo chorus, delay with ping-pong, and dual 9-band graphic EQ for complete tone shaping.
+---
+
+import { Image } from 'astro:assets';
+import SignalFlow from "~/components/user-components/SignalFlow.astro";
+import ControlCard from "~/components/user-components/ControlCard.astro";
+import BentoGrid from "~/components/user-components/BentoGrid.astro";
+import FeatureCard from "~/components/user-components/FeatureCard.astro";
+
+import eqImage from '~/assets/features/EQ-image.PNG';
+import postFx from '~/assets/features/post-fx.PNG';
+
+# Effects & Pedals
+
+Aethis includes a complete effects chain with everything you need to shape your sound. From subtle enhancement to extreme processing, these studio-quality effects give you full control over your tone.
+
+---
+
+## Signal Flow
+
+Your guitar signal flows through effects in this order:
+
+<SignalFlow steps={[
+  { label: "Guitar Input", description: "Your instrument signal" },
+  { label: "Global Input Gain", description: "-12 to +12 dB" },
+  { label: "Pre-Amp EQ", description: "9-band graphic EQ", color: "#EC4899" },
+  { label: "Drive Pedal", description: "Tube-style saturation", color: "#F59E0B" },
+  {
+    label: "Active Amp Channel",
+    isBox: true,
+    color: "#D76D77",
+    boxContent: ["Compressor", "Gate", "Tone Stack", "Amp", "Cabinet", "Presence", "Reverb"]
+  },
+  { label: "Post-Amp EQ", description: "9-band graphic EQ", color: "#94A3B8" },
+  { label: "Chorus", description: "Stereo modulation", color: "#EC4899" },
+  { label: "Delay", description: "Ping-pong mode", color: "#14B8A6" },
+  { label: "Multivoicer", description: "Harmonizer/Vocoder", color: "#979BFF" },
+  { label: "Global Output Gain", description: "-12 to +12 dB" },
+  { label: "Output", description: "To your DAW or speakers" }
+]} />
+
+Each effect can be enabled or bypassed independently.
+
+---
+
+## Dual 9-Band Graphic EQ
+
+<div class="fx-showcase">
+  <Image src={eqImage} alt="Pre-Amp and Post-Amp 9-Band Graphic EQ" class="fx-image" />
+</div>
+
+Shape your tone before and after the amp for complete tonal control. The Pre-Amp EQ (pink) conditions your signal before the amplifier, while the Post-Amp EQ (white) provides final polish.
+
+### Frequency Bands
+
+<BentoGrid variant="compact">
+  <FeatureCard title="100 Hz" color="#D76D77">
+    Sub-bass, rumble
+  </FeatureCard>
+  <FeatureCard title="200 Hz" color="#FF8585">
+    Bass, low thump
+  </FeatureCard>
+  <FeatureCard title="400 Hz" color="#FFD97B">
+    Low-mid warmth
+  </FeatureCard>
+  <FeatureCard title="800 Hz" color="#FFD97B">
+    Mid-range body
+  </FeatureCard>
+  <FeatureCard title="1.6 kHz" color="#7BE1A4">
+    Upper-mid presence
+  </FeatureCard>
+  <FeatureCard title="3.2 kHz" color="#7BE1A4">
+    High-mid bite
+  </FeatureCard>
+  <FeatureCard title="6.4 kHz" color="#5BC0EB">
+    Treble clarity
+  </FeatureCard>
+  <FeatureCard title="10 kHz" color="#5BC0EB">
+    High treble, air
+  </FeatureCard>
+  <FeatureCard title="16 kHz" color="#979BFF">
+    Extreme highs, sparkle
+  </FeatureCard>
+</BentoGrid>
+
+Each band: **-12 to +12 dB** adjustment
+
+<BentoGrid>
+  <FeatureCard title="Pre-Amp EQ" color="#EC4899">
+    Shapes signal going **INTO** the amp:
+    - Changes how the amp responds
+    - Affects distortion character
+    - Boosting mids = more mid-focused crunch
+  </FeatureCard>
+  <FeatureCard title="Post-Amp EQ" color="#94A3B8">
+    Shapes signal coming **OUT OF** the amp:
+    - Final polish and correction
+    - Doesn't change amp character
+    - Better for surgical adjustments
+  </FeatureCard>
+</BentoGrid>
+
+---
+
+## Post-Amp Effects
+
+<div class="fx-showcase">
+  <Image src={postFx} alt="Post-Amp Effects - Cabinet, Reverb, Chorus, Delay" class="fx-image" />
+</div>
+
+### Cabinet Simulation
+
+Authentic speaker cabinet emulation for realistic amp-in-the-room tone.
+
+<ControlCard
+  title="Cabinet"
+  color="#22C55E"
+  controls={[
+    { name: "Cabinet Enabled", range: "On/Off", description: "Toggle cabinet simulation" },
+    { name: "Mix", range: "0-100%", description: "Blend between direct amp sound and cabinet-processed signal" }
+  ]}
+  columns={1}
+/>
+
+### Reverb
+
+Lush spatial effects to add space and dimension to your tone.
+
+<ControlCard
+  title="Reverb"
+  color="#3B82F6"
+  controls={[
+    { name: "Size", range: "0-100%", description: "Room size from intimate booth to expansive cathedral" },
+    { name: "Damping", range: "0-100%", description: "High-frequency absorption for darker reverb tails" },
+    { name: "Width", range: "0-100%", description: "Stereo spread of the reverb" },
+    { name: "Mix", range: "0-100%", description: "Dry/wet blend of the reverb effect" }
+  ]}
+/>
+
+### Chorus
+
+Rich stereo modulation effect for lush, detuned sounds.
+
+<ControlCard
+  title="Chorus"
+  color="#EC4899"
+  controls={[
+    { name: "Rate", range: "0.1-10 Hz", description: "Speed of the modulation" },
+    { name: "Depth", range: "0-100%", description: "Intensity of the pitch modulation" },
+    { name: "Feedback", range: "0-95%", description: "Amount of signal fed back for more intense effect" },
+    { name: "Mix", range: "0-100%", description: "Dry/wet blend" }
+  ]}
+/>
+
+<BentoGrid variant="compact">
+  <FeatureCard title="Slow & Dreamy" color="#979BFF">
+    0.1-1 Hz rate for subtle movement
+  </FeatureCard>
+  <FeatureCard title="Classic Chorus" color="#EC4899">
+    1-3 Hz rate for standard modulation
+  </FeatureCard>
+  <FeatureCard title="Fast Vibrato" color="#FFD97B">
+    3-10 Hz rate for shimmer effect
+  </FeatureCard>
+</BentoGrid>
+
+### Delay
+
+Versatile delay with optional ping-pong stereo mode.
+
+<ControlCard
+  title="Delay"
+  color="#14B8A6"
+  controls={[
+    { name: "Time", range: "1-2000 ms", description: "Delay time between repeats" },
+    { name: "Feedback", range: "0-95%", description: "Number of repeats (higher = more echoes)" },
+    { name: "Damping", range: "0-100%", description: "High-frequency absorption on repeats" },
+    { name: "Ping-Pong", range: "On/Off", description: "Stereo bouncing effect" },
+    { name: "Mix", range: "0-100%", description: "Dry/wet blend" }
+  ]}
+/>
+
+<BentoGrid>
+  <FeatureCard title="Time Settings" color="#14B8A6">
+    - **1-50 ms**: Slapback, doubling
+    - **50-200 ms**: Rhythmic echoes
+    - **200-500 ms**: Standard delay
+    - **500-2000 ms**: Long, ambient
+  </FeatureCard>
+  <FeatureCard title="Feedback Settings" color="#979BFF">
+    - **0-20%**: Single echo or short trails
+    - **20-50%**: 4-5 audible echoes
+    - **50-80%**: Long, fading trails
+    - **80-95%**: Near self-oscillation
+  </FeatureCard>
+</BentoGrid>
+
+---
+
+## Global Controls
+
+<ControlCard
+  title="Master Section"
+  color="#D76D77"
+  controls={[
+    { name: "Global Input Gain", range: "-12 to +12 dB", description: "Master input level" },
+    { name: "Global Output Gain", range: "-12 to +12 dB", description: "Master output level" },
+    { name: "Global Bypass", range: "On/Off", description: "Bypass all processing" },
+    { name: "Input Enabled", range: "On/Off", description: "Master input mute" }
+  ]}
+/>
+
+<ControlCard
+  title="Audio Quality"
+  color="#979BFF"
+  controls={[
+    { name: "Oversampling", range: "Off, 2x, 4x, 8x", description: "Higher values = better quality, more CPU usage" },
+    { name: "CPU Saver Mode", range: "On/Off", description: "Reduce processing load for lower-powered systems" }
+  ]}
+  columns={1}
+/>
+
+---
+
+## Tips
+
+<BentoGrid variant="compact">
+  <FeatureCard title="Pre-EQ Shaping" color="#EC4899">
+    Shape your input before it hits the amp
+  </FeatureCard>
+  <FeatureCard title="Post-EQ Polish" color="#94A3B8">
+    Small adjustments go a long way
+  </FeatureCard>
+  <FeatureCard title="Chorus Width" color="#EC4899">
+    Adds dimension to clean tones
+  </FeatureCard>
+  <FeatureCard title="Delay Damping" color="#14B8A6">
+    Higher = warmer, vintage echoes
+  </FeatureCard>
+  <FeatureCard title="Ping-Pong" color="#14B8A6">
+    Great for leads and ambient textures
+  </FeatureCard>
+  <FeatureCard title="Oversampling" color="#979BFF">
+    4x or 8x improves quality
+  </FeatureCard>
+</BentoGrid>
+
+<style>{`
+  .fx-showcase {
+    margin: 1.5rem 0 2rem 0;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid var(--sl-color-gray-5);
+    background: var(--sl-color-gray-6);
+  }
+
+  .fx-image {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+`}</style>

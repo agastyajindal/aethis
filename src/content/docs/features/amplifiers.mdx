@@ -1,0 +1,176 @@
+---
+title: Three Amplifiers
+description: Three distinct amplifier channels with unique tonal characters, full tone controls, cabinet simulation, reverb, and dynamics processing.
+---
+
+import { Image } from 'astro:assets';
+import ControlCard from "~/components/user-components/ControlCard.astro";
+import BentoGrid from "~/components/user-components/BentoGrid.astro";
+import FeatureCard from "~/components/user-components/FeatureCard.astro";
+
+import noctisAmp from '~/assets/features/black-amp.PNG';
+import rosariaAmp from '~/assets/features/pink-amp.PNG';
+import luminaAmp from '~/assets/features/white-amp.PNG';
+import preFx from '~/assets/features/pre-fx.PNG';
+
+# Three Amplifiers
+
+Aethis includes **three distinct amplifier channels**, each with its own unique tonal character. Switch between amps instantly or dial in your perfect tone with the comprehensive controls available on each.
+
+---
+
+## Noctis — Modern High-Gain
+
+<div class="amp-showcase">
+  <Image src={noctisAmp} alt="Noctis - Modern High-Gain Amplifier" class="amp-image" />
+</div>
+
+A dark, powerful amplifier delivering a scooped, aggressive tone perfect for metal and modern rock. Noctis features boosted bass and treble with scooped mids for that thick, chunky attack that cuts through any mix.
+
+**Best for:** Metal, djent, modern rock, heavy rhythm
+
+---
+
+## Rosaria — Vintage Chime
+
+<div class="amp-showcase">
+  <Image src={rosariaAmp} alt="Rosaria - Vintage Chime Amplifier" class="amp-image" />
+</div>
+
+A bright, jangly character inspired by British class-A amplifiers. Rosaria excels at clean tones with sparkle and definition. The voicing emphasizes treble and upper mids for that classic chimey sound beloved by indie and alternative players.
+
+**Best for:** Clean tones, indie, alternative, jangle pop
+
+---
+
+## Lumina — Classic Rock
+
+<div class="amp-showcase">
+  <Image src={luminaAmp} alt="Lumina - Classic Rock Amplifier" class="amp-image" />
+</div>
+
+The quintessential rock amplifier tone with a pronounced mid-range punch. Lumina captures that classic British crunch sound—perfect for blues, classic rock, and everything in between.
+
+**Best for:** Blues, classic rock, crunch tones, versatile playing
+
+---
+
+## Amp Controls
+
+Every amp channel includes a full set of professional controls:
+
+<ControlCard
+  title="Input & Output"
+  color="#D76D77"
+  controls={[
+    { name: "Input Gain", range: "-12 to +12 dB", description: "Adjusts signal level going into the amp" },
+    { name: "Output Gain", range: "-12 to +12 dB", description: "Controls the final output level of the amp" }
+  ]}
+  columns={1}
+/>
+
+<ControlCard
+  title="Tone Stack (3-Band EQ)"
+  color="#FFD97B"
+  controls={[
+    { name: "Bass", range: "-12 to +12 dB", description: "Low frequency content" },
+    { name: "Mid", range: "-12 to +12 dB", description: "Mid-range frequencies — biggest impact on tone character" },
+    { name: "Treble", range: "-12 to +12 dB", description: "High frequency content" },
+    { name: "Presence", range: "-12 to +12 dB", description: "High-frequency \"air\" and sparkle above the treble control" }
+  ]}
+/>
+
+---
+
+## Pre-Amp Effects
+
+<div class="amp-showcase">
+  <Image src={preFx} alt="Pre-Amp Effects - Noise Gate, Compressor, Drive" class="amp-image" />
+</div>
+
+### Noise Gate
+
+Built-in precision gate to eliminate unwanted hum and buzz during silent passages.
+
+<ControlCard
+  title="Gate Controls"
+  color="#8B5CF6"
+  controls={[
+    { name: "Threshold", range: "-80 to 0 dB", description: "Signal level below which the gate closes" },
+    { name: "Attack", range: "0.1-100 ms", description: "How quickly the gate opens when signal is detected" },
+    { name: "Release", range: "10-1000 ms", description: "How slowly the gate closes after signal stops" },
+    { name: "Hold", range: "0-500 ms", description: "Minimum time gate stays open after triggering" }
+  ]}
+/>
+
+### Compressor
+
+Smooth dynamics control for consistent levels and sustain.
+
+<ControlCard
+  title="Compressor Controls"
+  color="#F97316"
+  controls={[
+    { name: "Threshold", range: "-60 to 0 dB", description: "Level above which compression begins" },
+    { name: "Ratio", range: "1:1 to 20:1", description: "Amount of gain reduction applied" },
+    { name: "Attack", range: "0.1-100 ms", description: "How quickly compression engages" },
+    { name: "Release", range: "10-1000 ms", description: "How slowly compression releases" },
+    { name: "Makeup Gain", range: "0-24 dB", description: "Compensate for volume lost during compression" },
+    { name: "Mix", range: "0-100%", description: "Parallel compression blend for punch with dynamics" }
+  ]}
+/>
+
+### Drive
+
+Warm, tube-style overdrive for everything from subtle grit to saturated crunch.
+
+<ControlCard
+  title="Drive Controls"
+  color="#F59E0B"
+  controls={[
+    { name: "Drive", range: "0-100%", description: "Intensity of the distortion" },
+    { name: "Tone", range: "0-100%", description: "Brightness of the overdrive (dark to bright)" },
+    { name: "Level", range: "-12 to +12 dB", description: "Output volume compensation" }
+  ]}
+/>
+
+---
+
+## Tips
+
+<BentoGrid variant="compact">
+  <FeatureCard title="Start with Mids" color="#FFD97B">
+    The Mid control has the biggest impact on your overall tone character
+  </FeatureCard>
+  <FeatureCard title="Use the Gate" color="#8B5CF6">
+    Essential for high-gain settings to keep things tight between notes
+  </FeatureCard>
+  <FeatureCard title="Compression First" color="#F97316">
+    Helps with consistent dynamics and sustain before the gate
+  </FeatureCard>
+  <FeatureCard title="Drive Stacking" color="#F59E0B">
+    Use drive with Noctis for extreme saturation
+  </FeatureCard>
+  <FeatureCard title="Clean Headroom" color="#EC4899">
+    Rosaria shines with low drive for sparkly cleans
+  </FeatureCard>
+  <FeatureCard title="Instant Switch" color="#D76D77">
+    Switch between all three amps with no loading or latency
+  </FeatureCard>
+</BentoGrid>
+
+<style>{`
+  .amp-showcase {
+    margin: 1.5rem 0 2rem 0;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid var(--sl-color-gray-5);
+    background: var(--sl-color-gray-6);
+  }
+
+  .amp-image {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+`}</style>

@@ -1,0 +1,426 @@
+---
+import config from "@/config/config.json";
+
+const { site } = config;
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Download Aethis - Free Guitar Amp Simulator</title>
+    <meta name="description" content="Download Aethis for macOS or Windows. Professional guitar processing with three amplifiers, four-voice Multivoicer, and complete effects chain. Free to use." />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <style>
+      :root {
+        --color-primary: #D76D77;
+        --color-body: #ffffff;
+        --color-text: #666666;
+        --color-heading: #1a1a1a;
+        --color-border: #e5e5e5;
+        --color-card-bg: #f8f8f8;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        background: var(--color-body);
+        color: var(--color-heading);
+        min-height: 100vh;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 24px;
+      }
+
+      /* Header */
+      header {
+        padding: 24px 0;
+        border-bottom: 1px solid var(--color-border);
+      }
+
+      header .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .logo {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: var(--color-heading);
+        text-decoration: none;
+      }
+
+      nav {
+        display: flex;
+        gap: 32px;
+        align-items: center;
+      }
+
+      nav a {
+        color: var(--color-text);
+        text-decoration: none;
+        font-size: 0.95rem;
+        transition: color 0.2s;
+      }
+
+      nav a:hover {
+        color: var(--color-heading);
+      }
+
+      /* Hero */
+      .hero {
+        padding: 100px 0 60px;
+        text-align: center;
+        background: linear-gradient(180deg, #fff 0%, #f8f8f8 100%);
+      }
+
+      .hero h1 {
+        font-size: clamp(2.5rem, 5vw, 4rem);
+        font-weight: 700;
+        line-height: 1.1;
+        margin-bottom: 20px;
+        letter-spacing: -0.02em;
+        color: var(--color-heading);
+      }
+
+      .hero h1 span {
+        background: linear-gradient(135deg, var(--color-primary) 0%, #ffca7b 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .hero p {
+        font-size: 1.15rem;
+        color: var(--color-text);
+        max-width: 550px;
+        margin: 0 auto 48px;
+        line-height: 1.6;
+      }
+
+      /* Download Cards */
+      .download-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 24px;
+        max-width: 700px;
+        margin: 0 auto;
+      }
+
+      .download-card {
+        background: #fff;
+        border: 1px solid var(--color-border);
+        border-radius: 16px;
+        padding: 36px 28px;
+        text-align: center;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+      }
+
+      .download-card:hover {
+        border-color: var(--color-primary);
+        transform: translateY(-4px);
+        box-shadow: 0 12px 24px rgba(215, 109, 119, 0.12);
+      }
+
+      .download-card .icon {
+        width: 56px;
+        height: 56px;
+        margin: 0 auto 20px;
+        color: var(--color-heading);
+      }
+
+      .download-card h3 {
+        font-size: 1.4rem;
+        font-weight: 600;
+        margin-bottom: 6px;
+        color: var(--color-heading);
+      }
+
+      .download-card .version {
+        color: var(--color-text);
+        font-size: 0.9rem;
+        margin-bottom: 6px;
+      }
+
+      .download-card .formats {
+        color: var(--color-text);
+        font-size: 0.85rem;
+        margin-bottom: 24px;
+      }
+
+      .download-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        background: var(--color-primary);
+        color: white;
+        padding: 14px 28px;
+        border-radius: 10px;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 0.95rem;
+        transition: all 0.2s;
+        width: 100%;
+      }
+
+      .download-btn:hover {
+        filter: brightness(1.08);
+        transform: scale(1.02);
+      }
+
+      .download-btn.disabled {
+        background: var(--color-card-bg);
+        color: var(--color-text);
+        cursor: not-allowed;
+        pointer-events: none;
+        border: 1px solid var(--color-border);
+      }
+
+      /* Formats */
+      .formats-section {
+        padding: 80px 0;
+        text-align: center;
+        background: #fff;
+      }
+
+      .formats-section h2 {
+        font-size: 1.8rem;
+        font-weight: 600;
+        margin-bottom: 12px;
+        color: var(--color-heading);
+      }
+
+      .formats-section h2 span {
+        color: var(--color-text);
+      }
+
+      .formats-section > p {
+        color: var(--color-text);
+        margin-bottom: 36px;
+      }
+
+      .format-badges {
+        display: flex;
+        justify-content: center;
+        gap: 12px;
+        flex-wrap: wrap;
+      }
+
+      .format-badge {
+        background: var(--color-card-bg);
+        border: 1px solid var(--color-border);
+        padding: 10px 20px;
+        border-radius: 8px;
+        font-weight: 500;
+        font-size: 0.9rem;
+        color: var(--color-heading);
+      }
+
+      /* Requirements */
+      .requirements {
+        padding: 80px 0;
+        background: var(--color-card-bg);
+      }
+
+      .requirements h2 {
+        font-size: 1.8rem;
+        font-weight: 600;
+        text-align: center;
+        margin-bottom: 48px;
+        color: var(--color-heading);
+      }
+
+      .requirements h2 span {
+        color: var(--color-text);
+      }
+
+      .req-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 24px;
+        max-width: 900px;
+        margin: 0 auto;
+      }
+
+      .req-card {
+        background: #fff;
+        border: 1px solid var(--color-border);
+        border-radius: 12px;
+        padding: 28px;
+      }
+
+      .req-card h3 {
+        font-size: 1rem;
+        font-weight: 600;
+        margin-bottom: 16px;
+        color: var(--color-primary);
+      }
+
+      .req-card ul {
+        list-style: none;
+        color: var(--color-text);
+        font-size: 0.9rem;
+        line-height: 1.9;
+      }
+
+      .req-card li::before {
+        content: "✓";
+        color: var(--color-primary);
+        margin-right: 10px;
+        font-weight: 600;
+      }
+
+      /* Footer */
+      footer {
+        padding: 32px 0;
+        border-top: 1px solid var(--color-border);
+        text-align: center;
+        color: var(--color-text);
+        font-size: 0.85rem;
+        background: #fff;
+      }
+
+      footer a {
+        color: var(--color-primary);
+        text-decoration: none;
+      }
+
+      footer a:hover {
+        text-decoration: underline;
+      }
+
+      @media (max-width: 640px) {
+        nav {
+          gap: 20px;
+        }
+
+        .hero {
+          padding: 60px 0 40px;
+        }
+
+        .download-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <a href="/" class="logo">Aethis</a>
+        <nav>
+          <a href="/">Home</a>
+          <a href="/features/amplifiers/">Features</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container">
+          <h1>Download <span>Aethis</span></h1>
+          <p>Professional guitar processing with three amplifiers, four-voice Multivoicer, and a complete effects chain. Free to download and use.</p>
+
+          <div class="download-grid">
+            <div class="download-card">
+              <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/>
+              </svg>
+              <h3>macOS</h3>
+              <p class="version">macOS 10.13 or later</p>
+              <p class="formats">Intel & Apple Silicon • VST3, AU, Standalone</p>
+              <a href="#" class="download-btn disabled">
+                Coming Soon
+              </a>
+            </div>
+
+            <div class="download-card">
+              <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M3 12V6.75l6-1.32v6.48L3 12zm17-9v8.75l-10 .15V5.21L20 3zM3 13l6 .09v6.81l-6-1.15V13zm17 .25V22l-10-1.91V13.1l10 .15z"/>
+              </svg>
+              <h3>Windows</h3>
+              <p class="version">Windows 10/11 (64-bit)</p>
+              <p class="formats">VST3 & Standalone</p>
+              <a href="#" class="download-btn disabled">
+                Coming Soon
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="formats-section">
+        <div class="container">
+          <h2>Available <span>Formats</span></h2>
+          <p>Install once, use everywhere.</p>
+
+          <div class="format-badges">
+            <div class="format-badge">VST3</div>
+            <div class="format-badge">AU (macOS)</div>
+            <div class="format-badge">Standalone</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="requirements">
+        <div class="container">
+          <h2>System <span>Requirements</span></h2>
+
+          <div class="req-grid">
+            <div class="req-card">
+              <h3>macOS</h3>
+              <ul>
+                <li>macOS 10.13 High Sierra or later</li>
+                <li>Intel or Apple Silicon processor</li>
+                <li>4 GB RAM minimum (8 GB recommended)</li>
+                <li>Audio interface with instrument input</li>
+              </ul>
+            </div>
+
+            <div class="req-card">
+              <h3>Windows</h3>
+              <ul>
+                <li>Windows 10 or Windows 11</li>
+                <li>64-bit processor</li>
+                <li>4 GB RAM minimum (8 GB recommended)</li>
+                <li>ASIO driver recommended for low latency</li>
+              </ul>
+            </div>
+
+            <div class="req-card">
+              <h3>Sample Rates</h3>
+              <ul>
+                <li>44.1 kHz / 48 kHz</li>
+                <li>88.2 kHz / 96 kHz</li>
+                <li>176.4 kHz / 192 kHz</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2025 Agastya Jindal / Aquevix. All rights reserved.</p>
+        <p style="margin-top: 8px;">
+          <a href="https://github.com/agastyajindal/Aethis/issues">Report an Issue</a>
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

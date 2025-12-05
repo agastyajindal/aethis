@@ -1,14 +1,14 @@
 ---
 title: |
-  Ready to explore <span class='light-text'>Dockit experience? </span>
-description: Discover tips, resources, and guidance to maximize experience with our documentation.
+  Ready to transform <span class='light-text'>your guitar tone?</span>
+description: Download Aethis for free. VST3, AU, and Standalone for macOS and Windows.
 enable: true
 fill_button:
   enable: true
-  label: Get Started
-  link: /getting-started/introduction/overview/
+  label: Download Free
+  link: /download
 outline_button:
   enable: true
-  label: View Docs
-  link: /getting-started/introduction/overview/
+  label: View Features
+  link: /features/amplifiers/
 ---

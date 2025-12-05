@@ -1,69 +1,48 @@
 {
   "main": [
     {
-      "label": "Getting Started",
+      "label": "Features",
       "translations": {
-        "fr": "Commencer"
+        "fr": "Fonctionnalités"
       },
       "items": [
         {
-          "label": "[seti:vite] Introduction",
+          "label": "[seti:audio] Amplifiers",
           "translations": {
-            "fr": "[seti:vite] Introduction"
+            "fr": "[seti:audio] Amplificateurs"
           },
-          "autogenerate": { "directory": "getting-started/introduction" }
+          "slug": "features/amplifiers"
         },
         {
-          "label": "[setting] Global Settings",
+          "label": "[seti:config] Effects & Pedals",
           "translations": {
-            "fr": "[setting] Paramètres globaux"
+            "fr": "[seti:config] Effets & Pédales"
           },
-          "autogenerate": { "directory": "getting-started/global-settings" }
+          "slug": "features/effects"
         },
         {
-          "label": "[seti:plan] Navigation",
+          "label": "[music] Multivoicer",
           "translations": {
-            "fr": "[seti:plan] Navigation"
+            "fr": "[music] Multivoicer"
           },
-          "slug": "getting-started/navigation"
+          "slug": "features/multivoicer"
         }
       ]
     },
     {
-      "label": "Content",
+      "label": "About",
       "translations": {
-        "fr": "Contenu"
+        "fr": "À propos"
       },
       "items": [
         {
-          "label": "[document] Components and Block",
+          "label": "[information] About Aethis",
           "translations": {
-            "fr": "[document] Composants et blocs"
+            "fr": "[information] À propos"
           },
-          "autogenerate": { "directory": "contents/components" }
-        },
-        {
-          "label": "[pencil] Editing Content",
-          "translations": {
-            "fr": "[pencil] Édition du contenu"
-          },
-          "autogenerate": { "directory": "contents/editing" }
+          "slug": "about"
         }
       ]
-    },
-    {
-      "label": "Reference",
-      "translations": {
-        "fr": "Référence"
-      },
-      "autogenerate": { "directory": "reference" }
-    },
-    {
-      "label": "Configurations",
-      "translations": {
-        "fr": "Configurations"
-      },
-      "autogenerate": { "directory": "configurations" }
     }
   ]
 }

@@ -24,38 +24,6 @@ const is404 = Astro.locals.starlightRoute?.id === "404";
   {title && <h1 set:html={title} class="mb-8 text-center rounded-2xl" />}
   {tagline && <p set:html={tagline} class="text-xl text-center" />}
 
-  {
-    !is404 && (
-      <div class="mt-12 max-w-4xl">
-        <div class="search-container rounded-2xl p-2 mb-6">
-          <div class="search-bar">
-            <Search />
-          </div>
-        </div>
-
-        <div class="flex justify-center items-center flex-wrap gap-4">
-          <p class="text-base font-normal">
-            {Astro.locals.t("hero.popular", "Popular")}:
-          </p>
-          <div class="flex gap-4 badges px-3 py-2.5 rounded-xl flex-wrap justify-center">
-            {sidebar.map((item: any) => {
-              const href = getFirstHref(item);
-              return (
-                <div class="badge rounded-lg px-2 py-1.5 group transition">
-                  <a
-                    class="cursor-pointer text-text no-underline group-hover:text-black dark:group-hover:text-white transition-colors"
-                    href={href}
-                  >
-                    {item.label}
-                  </a>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </div>
-    )
-  }
 </div>
 
 <style>

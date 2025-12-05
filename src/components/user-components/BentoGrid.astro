@@ -1,0 +1,64 @@
+---
+interface Props {
+  variant?: 'default' | 'compact';
+}
+
+const { variant = 'default' } = Astro.props;
+---
+
+<div class={`bento-grid ${variant}`}>
+  <slot />
+</div>
+
+<style>
+  .bento-grid {
+    display: grid;
+    gap: 1rem;
+    margin: 2rem 0 2.5rem 0;
+  }
+
+  .bento-grid:first-child {
+    margin-top: 0;
+  }
+
+  .bento-grid.default {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .bento-grid.compact {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media (max-width: 900px) {
+    .bento-grid.compact {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 640px) {
+    .bento-grid.default,
+    .bento-grid.compact {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .bento-grid > :global(*) {
+    margin: 0 !important;
+  }
+
+  .bento-grid > :global(.span-2) {
+    grid-column: span 2;
+  }
+
+  .bento-grid > :global(.span-row) {
+    grid-row: span 2;
+  }
+
+  @media (max-width: 640px) {
+    .bento-grid > :global(.span-2),
+    .bento-grid > :global(.span-row) {
+      grid-column: span 1;
+      grid-row: span 1;
+    }
+  }
+</style>

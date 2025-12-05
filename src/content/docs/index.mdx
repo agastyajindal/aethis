@@ -1,168 +1,185 @@
 ---
-title: Dockit Build Documentation with Modern UI
-description: Get started building your docs site with DocKit.
+title: Aethis - Professional Guitar Amp Simulator
+description: Three amplifiers, four-voice harmonization, and a complete effects chain in a single plugin.
 template: splash
 hero:
   title: |
-    Great <span data-icon-path='hero-icon.svg'></span> docs
-    <span class="light-text">developers love</span>
-  tagline: Discover tips, resources, and guidance to maximize experience with DocKit.
+    Your guitar. <span class="light-text">Reimagined.</span>
+  tagline: |
+    Three amplifiers. Four-voice Multivoicer. Complete effects chain.<br/>
+    Professional guitar processing in one plugin.<br/>
+    No compromise. No limitations.
 ---
 
+import { Image } from 'astro:assets';
 import Section from "~/components/Section.astro";
 import Card from "~/components/user-components/NewCard.astro";
 import Grid from "~/components/user-components/Grid.astro";
-
-<Section title="Powerful features
-<span class='light-text'>for documentations</span>" description="Explore the tools and design choices that make documentation efficient.">
-
-<Grid columns={4}>
-  <Card title="Well organized" icon="substack" iconColor="#FF8585">
-    The transparency of our data will help you make the informed decisions you need to.
-  </Card>
-  <Card title="Lightning fast" icon="seti:vite" iconColor="#7BE1A4">
-  Our performance optimization ensures quick load times and a smooth user experience.
-  </Card>
-
-<Card title="Powerful search" icon="seti:code-search" iconColor="#FFD97B">
-  Our search functionality helps users find information quickly and easily.
-</Card>
-<Card title="Very customized" icon="seti:config" iconColor="#979BFF">
-  Tailor the documentation to fit your brand and project needs with ease.
-</Card>
-
-</Grid>
-</Section>
-
-import HeroTabs from "~/components/HeroTabs.astro";
-import HeroTabsItem from "~/components/HeroTabsItem.astro";
-
-<Section
-  title="Get started quickly <span class='light-text'>in just 3 simple steps</span>"
-  description="A fast and frustration-free way to set up and start your documentation."
->
-  <HeroTabs>
-    <HeroTabsItem
-      title="Install our template"
-      subtitle="Set up in seconds with our template ."
-      number={1}
-      image="/src/assets/step-1.png"
-      imageAlt="Step 1 image"
-    />
-    <HeroTabsItem
-      title="Import what you need"
-      subtitle="Bring components or functions into projecs."
-      number={2}
-      image="/src/assets/step-2.png"
-      imageAlt="Step 2 image"
-    />
-    <HeroTabsItem
-      title="Start documentation"
-      subtitle="Start documenting your project immediately."
-      number={3}
-      image="/src/assets/step-3.png"
-      imageAlt="Step 3 image"
-    />
-  </HeroTabs>
-</Section>
-
-import ListCard from "~/components/user-components/ListCard.astro";
+import ImageMod from "~/components/ImageMod.astro";
 import LinkButton from "~/components/LinkButton.astro";
 
-<Section title="Feature topics for <span class='light-text'>our documentation</span>" description="Explore our featured topics and get an idea of our capabilities.">
+{/* Animation Components */}
+import FadeIn from "~/components/animations/FadeIn";
+import BlurText from "~/components/animations/BlurText";
+import GradientText from "~/components/animations/GradientText";
+import Aurora from "~/components/animations/Aurora";
+import FloatingParticles from "~/components/animations/FloatingParticles";
 
-<Grid columns={3}>
-<ListCard title="UI Components" imageIcon="/src/assets/element.svg" number="15">
-- [Buttons & Links](/contents/components/using-components/)
-- [Navigation Menus](/contents/components/using-components/)
-- [Cards & Panels](/contents/components/using-components/)
-- [Tabs & Accordions](/contents/components/using-components/)
-- [Forms & Inputs](/contents/components/using-components/)
-- [Tables & Lists](/contents/components/using-components/)
+{/* Images */}
+import noctisAmp from '~/assets/features/black-amp.PNG';
+import rosariaAmp from '~/assets/features/pink-amp.PNG';
+import luminaAmp from '~/assets/features/white-amp.PNG';
+import eqImage from '~/assets/features/EQ-image.PNG';
+import multivoicerImg from '~/assets/features/multivoicer.PNG';
+import postFx from '~/assets/features/post-fx.PNG';
 
-<LinkButton href="/contents/components/using-components/" variant="text" className="mt-6 mb-8 ml-4">View all components</LinkButton>
-</ListCard>
+{/* Background Effect */}
+<div class="fixed inset-0 pointer-events-none overflow-hidden" style="z-index: -1;">
+  <Aurora client:load opacity={0.15} speed={15} blur={120} />
+</div>
 
-<ListCard title="Content Writing" imageIcon="/src/assets/content.svg" number="18">
-- Markdown Basics
-- MDX Components
-- Code Examples
-- API Documentation
-- Tutorial Writing
-- Best Practices
+<Section title="Professional features
+<span class='light-text'>for serious guitarists</span>" description="Three amplifiers, intelligent harmonization, and a complete effects chain—all in one plugin.">
 
-<LinkButton href="/contents/editing/add-new-doc/" variant="text" className="mt-6 mb-8 ml-4">View writing guide</LinkButton>
-</ListCard>
-
-<ListCard title="Page Layouts" imageIcon="/src/assets/layouts.svg" number="8">
-- Homepage Templates
-- Documentation Pages
-- API Reference Layout
-- Tutorial Structure
-- Landing Pages
-- Error Pages
-
-<LinkButton href="/getting-started/introduction/overview/" variant="text" className="mt-6 mb-8 ml-4">View layouts</LinkButton>
-</ListCard>
+<div class="animate-stagger">
+<Grid columns={4}>
+  <FadeIn client:visible delay={0} direction="up">
+    <Card title="Three Amplifiers" icon="seti:audio" iconColor="#FF8585">
+      Noctis, Rosaria, and Lumina—three distinct amp channels with unique sonic character. Full tone controls and built-in effects.
+    </Card>
+  </FadeIn>
+  <FadeIn client:visible delay={0.1} direction="up">
+    <Card title="Effects Chain" icon="seti:config" iconColor="#FFD97B">
+      Drive pedal, stereo chorus, delay with ping-pong mode. Dual 9-band EQ for pre and post amp shaping.
+    </Card>
+  </FadeIn>
+  <FadeIn client:visible delay={0.2} direction="up">
+    <Card title="The Multivoicer" icon="seti:audio" iconColor="#7BE1A4">
+      Four pitch-shifted voices with ±12 semitone range. Harmonizer and Vocoder modes with MIDI control.
+    </Card>
+  </FadeIn>
+  <FadeIn client:visible delay={0.3} direction="up">
+    <Card title="Plugin & Standalone" icon="rocket" iconColor="#979BFF">
+      VST3, AU, and Standalone. macOS and Windows. 44.1 kHz to 192 kHz sample rates.
+    </Card>
+  </FadeIn>
 </Grid>
+</div>
 
-<Grid columns={3}>
-
-<ListCard title="Code Syntax" imageIcon="/src/assets/code-block.svg" number="10" image="/src/assets/code-image.png">
-
-- Syntax Highlighting
-- Line Numbers
-- Copy Button
-- Language Labels
-- Diff Highlighting
-- File Names
-
-<LinkButton
-  href="/getting-started/introduction/overview/"
-  variant="text"
-  className="mt-6 mb-8 ml-4"
->
-  View code guide
-</LinkButton>
-
-</ListCard>
-
-<ListCard title="Version History" imageIcon="/src/assets/changelogs.svg" number="25">
-
-- Release Notes
-- Feature Updates
-- Bug Fixes
-- Breaking Changes
-- Migration Guides
-- Deprecated Features
-
-<LinkButton
-  href="/getting-started/introduction/overview/"
-  variant="text"
-  className="mt-6 mb-8 ml-4"
->
-  View changelog
-</LinkButton>
-
-</ListCard>
-
-</Grid>
- 
 </Section>
 
+<Section title="Three amplifiers, <span class='light-text'>infinite tones</span>" description="Each amp has its own character. Switch instantly between all three.">
 
+<Grid columns={3}>
+<FadeIn client:visible delay={0} direction="up">
+  <div class="feature-showcase rounded-2xl overflow-hidden border border-white/10 bg-white/5 glow-card">
+    <div class="img-container">
+      <Image src={noctisAmp} alt="Noctis - Modern High-Gain Amplifier" class="feature-img" />
+    </div>
+    <div class="p-5">
+      <h3 class="text-lg font-semibold mb-2 text-white">Noctis</h3>
+      <p class="text-text text-sm mb-3">Modern high-gain for metal and rock. Scooped mids, aggressive attack.</p>
+      <LinkButton href="/features/amplifiers/" variant="text" size="sm">Learn More →</LinkButton>
+    </div>
+  </div>
+</FadeIn>
 
-import ThemeDemo from "~/components/ThemeDemo.astro";
+<FadeIn client:visible delay={0.1} direction="up">
+  <div class="feature-showcase rounded-2xl overflow-hidden border border-white/10 bg-white/5 glow-card">
+    <div class="img-container">
+      <Image src={rosariaAmp} alt="Rosaria - Vintage Chime Amplifier" class="feature-img" />
+    </div>
+    <div class="p-5">
+      <h3 class="text-lg font-semibold mb-2 text-white">Rosaria</h3>
+      <p class="text-text text-sm mb-3">Vintage chime for cleans and indie. Bright, jangly character.</p>
+      <LinkButton href="/features/amplifiers/" variant="text" size="sm">Learn More →</LinkButton>
+    </div>
+  </div>
+</FadeIn>
+
+<FadeIn client:visible delay={0.2} direction="up">
+  <div class="feature-showcase rounded-2xl overflow-hidden border border-white/10 bg-white/5 glow-card">
+    <div class="img-container">
+      <Image src={luminaAmp} alt="Lumina - Classic Rock Amplifier" class="feature-img" />
+    </div>
+    <div class="p-5">
+      <h3 class="text-lg font-semibold mb-2 text-white">Lumina</h3>
+      <p class="text-text text-sm mb-3">Classic rock crunch. Mid-range punch for blues and versatile playing.</p>
+      <LinkButton href="/features/amplifiers/" variant="text" size="sm">Learn More →</LinkButton>
+    </div>
+  </div>
+</FadeIn>
+</Grid>
+
+</Section>
+
+<Section title="Complete <span class='light-text'>effects chain</span>" description="Shape your tone before and after the amp with professional effects.">
+
+<Grid columns={2}>
+<FadeIn client:visible delay={0} direction="left">
+  <div class="feature-showcase rounded-2xl overflow-hidden border border-white/10 bg-white/5 p-6 glow-card">
+    <div class="img-container rounded-xl overflow-hidden mb-5">
+      <Image src={eqImage} alt="Dual 9-Band Graphic EQ" class="feature-img" />
+    </div>
+    <h3 class="text-xl font-semibold mb-3 text-white">Dual 9-Band EQ</h3>
+    <p class="text-text mb-4">Pre-amp EQ shapes your signal before the amp. Post-amp EQ provides final polish. Complete tonal control from 100 Hz to 16 kHz.</p>
+    <LinkButton href="/features/effects/" variant="text">View All Effects →</LinkButton>
+  </div>
+</FadeIn>
+
+<FadeIn client:visible delay={0.15} direction="right">
+  <div class="feature-showcase rounded-2xl overflow-hidden border border-white/10 bg-white/5 p-6 glow-card">
+    <div class="img-container rounded-xl overflow-hidden mb-5">
+      <Image src={postFx} alt="Post-Amp Effects - Cabinet, Reverb, Chorus, Delay" class="feature-img" />
+    </div>
+    <h3 class="text-xl font-semibold mb-3 text-white">Post-Amp Effects</h3>
+    <p class="text-text mb-4">Cabinet simulation, spatial reverb, stereo chorus, and ping-pong delay. Everything you need for polished, professional tones.</p>
+    <LinkButton href="/features/effects/" variant="text">Explore Effects →</LinkButton>
+  </div>
+</FadeIn>
+</Grid>
+
+</Section>
 
 <Section
-  title="Switch easily from <span class='light-text'>dark/light mode</span>"
-  description="Dedicated toggle button to switch between dark and light mode."
+  title="The Multivoicer <span class='light-text'>in action</span>"
+  description="Four-voice harmonization that sounds like a full band. Create rich, layered harmonies in real-time."
 >
 
-<ThemeDemo
-  darkImage="/src/assets/darkmode-demo.png"
-  lightImage="/src/assets/lightmode-demo.png"
-/>
+<FadeIn client:visible direction="up" delay={0.1}>
+  <div class="multivoicer-showcase rounded-2xl overflow-hidden border border-white/10 bg-white/5 p-8 relative">
+    <FloatingParticles client:load count={20} color="rgba(123, 225, 164, 0.4)" speed={25} />
+
+    <div class="img-container rounded-xl overflow-hidden mb-8 relative">
+      <Image src={multivoicerImg} alt="Multivoicer - 4-Voice Pitch Shifter and Harmonizer" class="feature-img" />
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-6 text-center relative z-10">
+      <FadeIn client:visible delay={0} direction="up">
+        <div class="p-4">
+          <h4 class="text-lg font-semibold text-white mb-2">Harmonizer Mode</h4>
+          <p class="text-text text-sm">Automatically generate perfect musical intervals. Choose your root note and scale—your guitar becomes a choir.</p>
+        </div>
+      </FadeIn>
+      <FadeIn client:visible delay={0.1} direction="up">
+        <div class="p-4">
+          <h4 class="text-lg font-semibold text-white mb-2">Vocoder Mode</h4>
+          <p class="text-text text-sm">Add synthetic, vocal-like texture with formant shifting. Push into experimental, otherworldly territory.</p>
+        </div>
+      </FadeIn>
+      <FadeIn client:visible delay={0.2} direction="up">
+        <div class="p-4">
+          <h4 class="text-lg font-semibold text-white mb-2">MIDI Control</h4>
+          <p class="text-text text-sm">Connect a MIDI controller for real-time chord-following harmonies. Your guitar provides the tone, MIDI controls the harmony.</p>
+        </div>
+      </FadeIn>
+    </div>
+
+    <div class="text-center mt-6">
+      <LinkButton href="/features/multivoicer/">Explore Multivoicer →</LinkButton>
+    </div>
+  </div>
+</FadeIn>
 
 </Section>
 
@@ -170,95 +187,125 @@ import AccordionContainer from "~/components/AccordionContainer.astro";
 import Accordion from "~/components/Accordion.astro";
 
 <Section
-  title="Have question? <span class='light-text'>We’re here to help</span>"
-  description="Get answers to the general questions people have asked."
+  title="Common questions <span class='light-text'>answered</span>"
+  description="Everything you need to know about Aethis."
 >
 
+<FadeIn client:visible direction="up" delay={0.1}>
 <AccordionContainer tabList={
   [
     {
       type: 'basic',
       title: 'Getting Started',
-      subtitle:'Some questions about how to start.',
+      subtitle:'Setup, installation, and first steps.',
       icon: "rocket"
-
     },
     {
       type: 'setting',
-      title: 'Settings & Configurations',
-      subtitle:'How to configure our documentation.',
+      title: 'Features & Usage',
+      subtitle:'Understanding Aethis\'s capabilities.',
       icon: "settings"
-
     },
     {
       type: 'help',
-      title: 'Help & Support',
-      subtitle:'What type of support we provide.',
+      title: 'Specifications',
+      subtitle:'Formats, platforms, and requirements.',
       icon: "support"
-
     }
-
-]
+  ]
 }>
 
 <Accordion
-  question="How do I get started with Dockit?"
-  answer="Simply install our template, import the components you need, and start documenting your project. The setup process takes just a few minutes."
+  question="What do I need to use Aethis?"
+  answer="You'll need: (1) A computer running Windows 10 or later, or macOS 10.13 or later, (2) An audio interface with an instrument/Hi-Z input for your guitar, (3) For plugin use: a DAW that supports VST3 (Windows/Mac) or AU (Mac only). Aethis also runs standalone without a DAW."
   type="basic"
+/>
+<Accordion
+  question="Is Aethis free to use?"
+  answer="Yes. Aethis is completely free to download and use for personal or commercial projects. It's proprietary software (closed source), but there are no fees, subscriptions, or hidden costs."
+  type="basic"
+/>
+<Accordion
+  question="How do I install Aethis?"
+  answer="Download the installer for your platform from the Download page. Run the installer and follow the prompts. The VST3 plugin installs to your system's standard plugin folder. On macOS, the AU is also installed. Launch your DAW and rescan plugins, or run Aethis Standalone directly."
+  type="basic"
+/>
+<Accordion
+  question="Can I use Aethis for live performance and recording?"
+  answer="Yes. Aethis works as a standard VST3/AU plugin in any compatible DAW. Insert it on a track, arm for recording, and play—your processed guitar signal records directly to that track. For live use, the standalone app provides direct monitoring with low latency. In a DAW, use direct monitoring through your interface or enable low-latency mode."
+  type="basic"
+/>
+
+<Accordion
+  question="How does the Multivoicer work?"
+  answer="The Multivoicer adds up to four pitch-shifted voices to your guitar signal. Each voice has independent control over: interval (±12 semitones), fine-tuning (cents), mix level, stereo pan, and delay. In Harmonizer mode, voices snap to a selected musical scale with 8 scale types. The 16-band Vocoder mode adds synthetic textures with formant shifting. MIDI mode allows real-time chord-following harmonies."
+  type="setting"
+/>
+<Accordion
+  question="What are the three amplifier channels?"
+  answer="Aethis includes three amp channels: (1) Noctis—modern high-gain with scooped mids for metal and rock. (2) Rosaria—vintage chime with bright, jangly character for cleans and indie. (3) Lumina—classic rock crunch with mid-range punch for blues and versatile playing. Each has full tone controls, noise gate, cabinet simulation, reverb, and compressor."
+  type="setting"
+/>
+<Accordion
+  question="What effects are included?"
+  answer="Pre-Amp Section: 9-band graphic EQ and drive pedal with tube-style saturation. Post-Amp Section: 9-band graphic EQ, cabinet simulation, reverb, stereo chorus, and delay with ping-pong mode. The dual EQ setup lets you shape tone before and after the amp independently."
+  type="setting"
+/>
+<Accordion
+  question="What audio quality options are available?"
+  answer="Aethis offers adjustable oversampling (Off, 2x, 4x, 8x) for pristine audio quality at the cost of CPU usage. CPU Saver mode reduces processing load for lower-powered systems. All effects and amp processing adapt automatically to your DAW's sample rate from 44.1 kHz to 192 kHz."
+  type="setting"
+/>
+
+<Accordion
+  question="What plugin formats are supported?"
+  answer="VST3 (Windows and macOS), AU/Audio Unit (macOS only), and Standalone application (no DAW required). Aethis is 64-bit only."
+  type="help"
 />
 <Accordion
   question="What are the system requirements?"
-  answer="Dockit requires Node.js 18+ and works with any modern web browser. It's built on Astro and supports all major operating systems."
-  type="basic"
-/>
-<Accordion
-  question="Is Dockit free to use?"
-  answer="Yes, Dockit is completely free and open source. You can use it for personal and commercial projects without any limitations."
-  type="basic"
-/>
-<Accordion
-  question="Can I customize the design?"
-  answer="Absolutely! Dockit is highly customizable with Tailwind CSS. You can modify colors, layouts, components, and add your own branding."
-  type="basic"
-/>
-
-<Accordion
-  question="How do I change the theme colors?"
-  answer="You can customize theme colors by modifying the CSS custom properties in your theme configuration file or through the Tailwind config."
-  type="setting"
-/>
-<Accordion
-  question="Can I add custom components?"
-  answer="Yes, you can create and add custom Astro components. Simply place them in the components folder and import them where needed."
-  type="setting"
-/>
-<Accordion
-  question="How do I configure navigation?"
-  answer="Navigation is configured through the menu.json file in your config folder. You can add, remove, or reorder menu items as needed."
-  type="setting"
-/>
-<Accordion
-  question="Can I use my own domain?"
-  answer="Yes, you can deploy Dockit to any hosting service and use your custom domain. We provide deployment guides for popular platforms."
-  type="setting"
-/>
-
-<Accordion
-  question="Where can I get help?"
-  answer="You can get help through our GitHub discussions, documentation, or community Discord server. We also provide email support for complex issues."
+  answer="macOS: 10.13 High Sierra or later, Intel or Apple Silicon. Windows: Windows 10 or later, 64-bit. Both: 4 GB RAM minimum (8 GB recommended), audio interface with instrument input. ASIO driver recommended on Windows for lowest latency."
   type="help"
 />
 <Accordion
-  question="How do I report bugs?"
-  answer="Please report bugs through our GitHub issues page with detailed information about the problem and steps to reproduce it."
+  question="What sample rates are supported?"
+  answer="Aethis supports: 44.1 kHz, 48 kHz, 88.2 kHz, 96 kHz, 176.4 kHz, and 192 kHz. The plugin adapts automatically to your DAW's project sample rate."
   type="help"
 />
 <Accordion
-  question="Do you offer premium support?"
-  answer="While Dockit is free, we offer premium consulting services for custom implementations and enterprise deployments."
+  question="Who is Aethis for?"
+  answer="Studio guitarists who want authentic amp tones with creative harmony layering. Producers building richly textured arrangements. Songwriters needing instant access to polished, layered sounds. Live performers requiring reliable, low-latency processing. Anyone who wants professional guitar tones without expensive hardware."
   type="help"
 />
 
 </AccordionContainer>
+</FadeIn>
 
 </Section>
+
+<style>{`
+  .img-container {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .feature-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+  }
+
+  .feature-showcase:hover .feature-img {
+    transform: scale(1.02);
+  }
+
+  .glow-card {
+    transition: all 0.3s ease;
+  }
+
+  .glow-card:hover {
+    border-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px -8px rgba(0, 0, 0, 0.3);
+  }
+`}</style>

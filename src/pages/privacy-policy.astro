@@ -1,0 +1,319 @@
+---
+import config from "@/config/config.json";
+
+const { site } = config;
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Privacy Policy - Aethis</title>
+    <meta name="description" content="Privacy Policy for Aethis guitar amp simulator software by Agastya Jindal / Aquevix." />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <style>
+      :root {
+        --color-primary: #D76D77;
+        --color-body: #ffffff;
+        --color-text: #666666;
+        --color-heading: #1a1a1a;
+        --color-border: #e5e5e5;
+        --color-card-bg: #f8f8f8;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        background: var(--color-body);
+        color: var(--color-text);
+        min-height: 100vh;
+        line-height: 1.7;
+      }
+
+      .container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 0 24px;
+      }
+
+      /* Header */
+      header {
+        padding: 24px 0;
+        border-bottom: 1px solid var(--color-border);
+      }
+
+      header .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1200px;
+      }
+
+      .logo {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: var(--color-heading);
+        text-decoration: none;
+      }
+
+      nav {
+        display: flex;
+        gap: 32px;
+        align-items: center;
+      }
+
+      nav a {
+        color: var(--color-text);
+        text-decoration: none;
+        font-size: 0.95rem;
+        transition: color 0.2s;
+      }
+
+      nav a:hover {
+        color: var(--color-heading);
+      }
+
+      /* Content */
+      .content {
+        padding: 80px 0;
+      }
+
+      h1 {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: var(--color-heading);
+        margin-bottom: 0.5rem;
+      }
+
+      .last-updated {
+        color: var(--color-text);
+        font-size: 0.9rem;
+        margin-bottom: 3rem;
+        padding-bottom: 2rem;
+        border-bottom: 1px solid var(--color-border);
+      }
+
+      h2 {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: var(--color-heading);
+        margin-top: 3rem;
+        margin-bottom: 1rem;
+      }
+
+      h3 {
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: var(--color-heading);
+        margin-top: 2rem;
+        margin-bottom: 0.75rem;
+      }
+
+      p {
+        margin-bottom: 1rem;
+      }
+
+      ul {
+        margin-bottom: 1rem;
+        padding-left: 1.5rem;
+      }
+
+      li {
+        margin-bottom: 0.5rem;
+      }
+
+      strong {
+        color: var(--color-heading);
+      }
+
+      a {
+        color: var(--color-primary);
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      .highlight-box {
+        background: var(--color-card-bg);
+        border: 1px solid var(--color-border);
+        border-radius: 12px;
+        padding: 1.5rem;
+        margin: 1.5rem 0;
+      }
+
+      .highlight-box h3 {
+        margin-top: 0;
+      }
+
+      /* Footer */
+      footer {
+        padding: 32px 0;
+        border-top: 1px solid var(--color-border);
+        text-align: center;
+        color: var(--color-text);
+        font-size: 0.85rem;
+        background: #fff;
+      }
+
+      footer .container {
+        max-width: 1200px;
+      }
+
+      footer a {
+        color: var(--color-primary);
+        text-decoration: none;
+      }
+
+      footer a:hover {
+        text-decoration: underline;
+      }
+
+      @media (max-width: 640px) {
+        nav {
+          gap: 20px;
+        }
+
+        h1 {
+          font-size: 2rem;
+        }
+
+        .content {
+          padding: 40px 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <a href="/" class="logo">Aethis</a>
+        <nav>
+          <a href="/">Home</a>
+          <a href="/features/amplifiers/">Features</a>
+          <a href="/download">Download</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="content">
+      <div class="container">
+        <h1>Privacy Policy</h1>
+        <p class="last-updated">Last updated: December 5, 2025</p>
+
+        <p>This Privacy Policy describes how Agastya Jindal ("we", "us", or "our"), operating under Aquevix, handles information in connection with the Aethis software application ("the Software").</p>
+
+        <h2>About Aethis</h2>
+        <p>Aethis is a <strong>closed-source, proprietary</strong> guitar amplifier simulator and effects processor software. The Software is provided free of charge for personal and commercial use.</p>
+
+        <div class="highlight-box">
+          <h3>Our Commitment to Privacy</h3>
+          <p>Aethis is designed with privacy in mind. The Software operates entirely offline and does not require an internet connection for its core functionality. We do not collect, transmit, or store any personal data through the Software.</p>
+        </div>
+
+        <h2>Information We Do Not Collect</h2>
+        <p>Aethis does <strong>not</strong> collect:</p>
+        <ul>
+          <li>Personal identification information (name, email, address)</li>
+          <li>Audio recordings or musical content you create</li>
+          <li>Usage statistics or telemetry data</li>
+          <li>System information or hardware identifiers</li>
+          <li>Location data</li>
+          <li>Any data transmitted over the internet</li>
+        </ul>
+
+        <h2>Local Data Storage</h2>
+        <p>Aethis stores certain data locally on your computer to provide its functionality:</p>
+
+        <h3>Preset Files</h3>
+        <p>When you save presets within Aethis, these are stored as local files on your computer. Preset files contain:</p>
+        <ul>
+          <li>Amplifier settings and configurations</li>
+          <li>Effects parameters (EQ, chorus, delay, etc.)</li>
+          <li>Multivoicer settings</li>
+          <li>User-defined preset names</li>
+        </ul>
+        <p>These files remain entirely on your device and are never transmitted to us or any third party.</p>
+
+        <h3>Import/Export Functionality</h3>
+        <p>Aethis allows you to import and export preset files. When you use these features:</p>
+        <ul>
+          <li><strong>Export:</strong> Preset data is saved to a location you choose on your computer</li>
+          <li><strong>Import:</strong> Preset files you select are read from your local storage</li>
+        </ul>
+        <p>No data is uploaded to external servers during import or export operations. All file operations occur locally on your device.</p>
+
+        <h3>Application Preferences</h3>
+        <p>The Software may store application preferences locally, such as:</p>
+        <ul>
+          <li>Window size and position</li>
+          <li>Last used audio settings</li>
+          <li>Recently opened presets</li>
+          <li>UI preferences</li>
+        </ul>
+
+        <h2>Third-Party Services</h2>
+        <p>Aethis does not integrate with any third-party analytics, advertising, or data collection services. The Software does not include:</p>
+        <ul>
+          <li>Analytics SDKs</li>
+          <li>Crash reporting services</li>
+          <li>Advertising networks</li>
+          <li>Social media integrations</li>
+          <li>Cloud synchronization services</li>
+        </ul>
+
+        <h2>Website and Downloads</h2>
+        <p>When you visit our website or download Aethis:</p>
+        <ul>
+          <li>Our website may use standard web server logs that record IP addresses, browser type, and pages visited</li>
+          <li>Download links may be hosted on third-party services (such as GitHub) which have their own privacy policies</li>
+        </ul>
+        <p>We recommend reviewing the privacy policies of any third-party services you interact with.</p>
+
+        <h2>Children's Privacy</h2>
+        <p>Aethis is not directed at children under the age of 13. We do not knowingly collect any information from children.</p>
+
+        <h2>Data Security</h2>
+        <p>Since Aethis does not collect or transmit personal data, there is no risk of your personal information being compromised through our Software. All data remains on your local device under your control.</p>
+
+        <h2>Open Source Components</h2>
+        <p>While Aethis itself is closed-source proprietary software, it may include open-source libraries and components. The use of these components does not affect this privacy policy, as they operate locally within the Software.</p>
+
+        <h2>Changes to This Policy</h2>
+        <p>We may update this Privacy Policy from time to time. Any changes will be posted on this page with an updated "Last updated" date. We encourage you to review this Privacy Policy periodically.</p>
+
+        <h2>Contact Information</h2>
+        <p>If you have any questions about this Privacy Policy or Aethis, you can reach us through:</p>
+        <ul>
+          <li>GitHub Issues: <a href="https://github.com/agastyajindal/Aethis/issues">github.com/agastyajindal/Aethis/issues</a></li>
+        </ul>
+
+        <div class="highlight-box">
+          <h3>Summary</h3>
+          <p><strong>Aethis respects your privacy.</strong> The Software operates offline, stores data only on your local device, does not collect personal information, and does not transmit any data to external servers. Your music and settings stay on your computer, under your control.</p>
+        </div>
+
+      </div>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2025 Agastya Jindal / Aquevix. All rights reserved.</p>
+        <p style="margin-top: 8px;">
+          <a href="/">Home</a> ·
+          <a href="/download">Download</a> ·
+          <a href="https://github.com/agastyajindal/Aethis/issues">Report an Issue</a>
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

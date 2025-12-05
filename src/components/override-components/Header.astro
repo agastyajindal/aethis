@@ -5,7 +5,6 @@ import { getTranslations } from "@/lib/utils/languagePerser";
 import config from "@/config/config.json" assert { type: "json" };
 import ThemeSwitch from "./ThemeSwitch.astro";
 import Search from "./Search.astro";
-import LanguageSelect from "@astrojs/starlight/components/LanguageSelect.astro";
 
 // get current locale from URL
 const locale = Astro.currentLocale || "en";
@@ -127,7 +126,6 @@ const hasSidebar = Astro.locals.starlightRoute.hasSidebar;
       )
     }
 
-    {!hasSidebar && <div class="mr-4"><LanguageSelect /></div> }
     {settings.theme_switcher && <ThemeSwitch className="lg:mx-6 mr-10" />}
 
     {

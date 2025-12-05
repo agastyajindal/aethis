@@ -71,7 +71,7 @@ const { hasSidebar } = Astro.locals.starlightRoute;
     </div>
   </div>
   {!hasSidebar && <CTA />}
-  {!hasSidebar && <Footer />}
+  <Footer />
 </div>
 
 <style>
@@ -99,9 +99,6 @@ const { hasSidebar } = Astro.locals.starlightRoute;
     }
     .sidebar button:where(.astro-jif73yzw) {
       top: 14px !important;
-    }
-    footer {
-      display: none;
     }
     @media (max-width: 800px) {
       .header {

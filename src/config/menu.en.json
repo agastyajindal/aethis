@@ -5,94 +5,77 @@
       "url": "/"
     },
     {
-      "name": "Documentation",
-      "url": "/getting-started/introduction/overview/"
-    },
-    {
-      "name": "Reference",
+      "name": "Features",
       "url": "",
       "hasChildren": true,
       "children": [
         {
-          "name": "Configuration",
-          "url": "/reference/configuration/"
+          "name": "Amplifiers",
+          "url": "/features/amplifiers/",
+          "icon": "audio"
         },
         {
-          "name": "Plugins Reference",
-          "url": "/reference/plugin/"
+          "name": "Effects & Pedals",
+          "url": "/features/effects/",
+          "icon": "config"
+        },
+        {
+          "name": "Multivoicer",
+          "url": "/features/multivoicer/",
+          "icon": "music"
         }
       ]
     }
   ],
   "footer": {
     "community": {
-      "title": "Join Our Community",
+      "title": "Community",
       "links": [
         {
-          "name": "GitHub Discussions",
-          "url": "https://github.com/themefisher/dockit/discussions"
+          "name": "GitHub",
+          "url": "https://github.com/agastyajindal/Aethis"
         },
         {
-          "name": "Discord Community",
-          "url": "/"
-        },
-        {
-          "name": "Twitter Updates",
-          "url": "/"
-        },
-        {
-          "name": "Contributing Guide",
-          "url": "/"
+          "name": "YouTube",
+          "url": "#"
         }
       ]
     },
     "help_links": {
-      "title": "Helpful Links",
+      "title": "Support",
       "links": [
         {
-          "name": "Getting Started",
-          "url": "/"
+          "name": "Download",
+          "url": "/download"
+        },
+        {
+          "name": "System Requirements",
+          "url": "/download#requirements"
+        },
+        {
+          "name": "Report an Issue",
+          "url": "https://github.com/agastyajindal/Aethis/issues"
         },
         {
           "name": "Privacy Policy",
-          "url": "/privacy-policy"
-        },
-        {
-          "name": "Terms and Conditions",
-          "url": "/terms-conditions"
-        },
-        {
-          "name": "About Us",
-          "url": "/about"
-        },
-        {
-          "name": "Troubleshooting",
-          "url": "/"
+          "url": "/privacy-policy/"
         }
       ]
     },
     "company": {
-      "title": "Resources",
+      "title": "Features",
       "links": [
         {
-          "name": "Documentation Hub",
-          "url": "/docs/"
+          "name": "Amplifiers",
+          "url": "/features/amplifiers/"
         },
         {
-          "name": "Theme Gallery",
-          "url": "/"
+          "name": "Multivoicer",
+          "url": "/features/multivoicer/"
         },
         {
-          "name": "Best Practices",
-          "url": "/"
-        },
-        {
-          "name": "Performance Tips",
-          "url": "/"
-        },
-        {
-          "name": "Migration Guide",
-          "url": "/"
+          "name": "Effects",
+          "url": "/features/effects/"
         }
       ]
     }

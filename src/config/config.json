@@ -1,15 +1,15 @@
 {
   "site": {
-    "title": "DocKit",
-    "logo": "/src/assets/logo-light.svg",
-    "logo_darkmode": "/src/assets/logo-dark.svg",
+    "title": "Aethis",
+    "logo": "",
+    "logo_darkmode": "",
     "logo_width": "127",
     "logo_height": "32",
-    "logo_text": "DocKit"
+    "logo_text": "Aethis"
   },
 
   "settings": {
-    "search": true,
+    "search": false,
     "theme_switcher": true
   },
 
@@ -18,15 +18,15 @@
       "enable": true,
       "action": "#"
     },
-    "copyright": "Designed and Developed by <a class=\"text-primary hover:underline no-underline\" href=\"https://themefisher.com\" target=\"_blank\" rel=\"noopener\" aria-label=\"Themefisher\">Themefisher</a> Copyright &copy; 2025."
+    "copyright": "&copy; 2025 Agastya Jindal / Aquevix. All rights reserved."
   },
 
   "navigation_button": {
     "enable": true,
-    "label": "Get Started",
+    "label": "Download",
     "translations": {
-      "fr": "Erste Schritte"
+      "fr": "Télécharger"
     },
-    "link": "/getting-started/introduction/overview/"
+    "link": "/download"
   }
 }

@@ -1,0 +1,275 @@
+---
+title: Multivoicer
+description: A 4-voice pitch shifter and harmonizer with scale quantization, vocoder mode, and MIDI control.
+---
+
+import { Image } from 'astro:assets';
+import ControlCard from "~/components/user-components/ControlCard.astro";
+import BentoGrid from "~/components/user-components/BentoGrid.astro";
+import FeatureCard from "~/components/user-components/FeatureCard.astro";
+
+import multivoicerImg from '~/assets/features/multivoicer.PNG';
+
+# Multivoicer
+
+The heart of Aethis—a sophisticated **4-voice pitch shifter and harmonizer** that can create anything from subtle doubling effects to full vocal-style harmonies and otherworldly synth textures.
+
+<div class="mv-showcase">
+  <Image src={multivoicerImg} alt="Multivoicer - 4-Voice Pitch Shifter and Harmonizer" class="mv-image" />
+</div>
+
+---
+
+## Operating Modes
+
+<BentoGrid>
+  <FeatureCard title="Harmonizer Mode" color="#7BE1A4">
+    Traditional pitch-shifting with up to 4 independent voices. Create harmonies, octaves, detune effects, and more. Each voice can be tuned independently with cent-level precision.
+  </FeatureCard>
+  <FeatureCard title="Vocoder Mode" color="#979BFF">
+    A 16-band vocoder for synth-like, robotic, and alien voice effects. Transform your guitar into a talking synthesizer with formant-shifting capabilities.
+  </FeatureCard>
+</BentoGrid>
+
+---
+
+## Master Controls
+
+<ControlCard
+  title="Multivoicer Master"
+  color="#D76D77"
+  controls={[
+    { name: "Multivoicer Enabled", range: "On/Off", description: "Toggle the entire multivoicer section" },
+    { name: "Mode", range: "Harmonizer / Vocoder", description: "Switch between operating modes" },
+    { name: "Dry/Wet Mix", range: "0-100%", description: "Balance between original signal and harmonized voices" }
+  ]}
+/>
+
+---
+
+## Voicing Presets
+
+Quick-access presets for common harmony arrangements:
+
+<BentoGrid>
+  <FeatureCard title="Closed Voicing" color="#FFD97B">
+    Voices arranged close together for tight harmonies
+  </FeatureCard>
+  <FeatureCard title="Open Voicing" color="#7BE1A4">
+    Voices spread apart for bigger, more open sound
+  </FeatureCard>
+  <FeatureCard title="Stacked Octaves" color="#5BC0EB">
+    Layered octave harmonies for massive sound
+  </FeatureCard>
+  <FeatureCard title="Custom" color="#979BFF">
+    Manual control of all voice parameters
+  </FeatureCard>
+</BentoGrid>
+
+---
+
+## Global Voice Effects
+
+<ControlCard
+  title="Global Effects"
+  color="#7BE1A4"
+  controls={[
+    { name: "Glissando", range: "0-1000 ms", description: "Smooth pitch glide time when changing intervals" },
+    { name: "Unison", range: "0-100%", description: "Subtle detuning spread for chorus-like thickness" },
+    { name: "Width", range: "0-200%", description: "Stereo field expansion (100% = normal)" },
+    { name: "Tone", range: "0-100%", description: "Overall brightness of the harmonized voices" }
+  ]}
+/>
+
+---
+
+## Scale Quantization
+
+Lock your harmonies to musical scales for always-in-key results.
+
+<ControlCard
+  title="Scale Settings"
+  color="#FFD97B"
+  controls={[
+    { name: "Quantize Enabled", range: "On/Off", description: "Enable scale-aware harmonization" },
+    { name: "Scale Type", range: "8 scales", description: "Chromatic, Major, Minor, Harmonic Minor, Pentatonic Major/Minor, Dorian, Mixolydian" },
+    { name: "Root Key", range: "C to B", description: "Select the root note of your scale" }
+  ]}
+/>
+
+When enabled, the harmonizer adjusts voice intervals to stay within the selected scale. This prevents "wrong" notes in your harmonies—your guitar turns into a choir of perfectly harmonized voices.
+
+---
+
+## Voice Controls
+
+Each of the 4 voices can be individually configured:
+
+<ControlCard
+  title="Per-Voice Controls"
+  color="#5BC0EB"
+  controls={[
+    { name: "Voice Enabled", range: "On/Off", description: "Toggle individual voice" },
+    { name: "Interval", range: "-12 to +12", description: "Pitch shift in semitones (0 = unison, 12 = octave)" },
+    { name: "Mix", range: "0-100%", description: "Individual voice volume" },
+    { name: "Pan", range: "L to R", description: "Stereo position of the voice" },
+    { name: "Detune", range: "±100 cents", description: "Fine-tuning for thickness or correction" },
+    { name: "Delay", range: "0-500 ms", description: "Per-voice delay for slapback and doubling effects" }
+  ]}
+/>
+
+### Default Configuration
+
+<BentoGrid>
+  <FeatureCard title="Voice 1" color="#D76D77">
+    +5 semitones (perfect fourth up)
+  </FeatureCard>
+  <FeatureCard title="Voice 2" color="#FFD97B">
+    -5 semitones (perfect fourth down)
+  </FeatureCard>
+  <FeatureCard title="Voice 3" color="#7BE1A4">
+    +12 semitones (octave up)
+  </FeatureCard>
+  <FeatureCard title="Voice 4" color="#979BFF">
+    Disabled (available for custom)
+  </FeatureCard>
+</BentoGrid>
+
+### Common Intervals
+
+<BentoGrid variant="compact">
+  <FeatureCard title="Unison (0)" color="#D76D77">
+    Thickening with detune
+  </FeatureCard>
+  <FeatureCard title="Minor 3rd (±3)" color="#FF8585">
+    Dark, moody harmony
+  </FeatureCard>
+  <FeatureCard title="Major 3rd (±4)" color="#FFD97B">
+    Bright, happy harmony
+  </FeatureCard>
+  <FeatureCard title="Perfect 4th (±5)" color="#7BE1A4">
+    Open, suspended sound
+  </FeatureCard>
+  <FeatureCard title="Perfect 5th (±7)" color="#5BC0EB">
+    Power chord interval
+  </FeatureCard>
+  <FeatureCard title="Octave (±12)" color="#979BFF">
+    Massive, full sound
+  </FeatureCard>
+</BentoGrid>
+
+---
+
+## Vocoder Controls
+
+When in Vocoder Mode, additional controls become available:
+
+<ControlCard
+  title="Vocoder"
+  color="#979BFF"
+  controls={[
+    { name: "Vocoder Mix", range: "0-100%", description: "Blend of vocoded signal" },
+    { name: "Formant Shift", range: "-12 to +12", description: "Shift vocal formants for gender-bending effects" },
+    { name: "Synth Mix", range: "0-100%", description: "Internal synthesizer carrier blend" }
+  ]}
+/>
+
+<BentoGrid variant="compact">
+  <FeatureCard title="Shift Down" color="#D76D77">
+    Deep, monster-like textures
+  </FeatureCard>
+  <FeatureCard title="Neutral (0)" color="#7BE1A4">
+    Natural character
+  </FeatureCard>
+  <FeatureCard title="Shift Up" color="#5BC0EB">
+    Higher, synthetic textures
+  </FeatureCard>
+</BentoGrid>
+
+Vocoder mode creates tones impossible with traditional harmonizers—perfect for experimental music, ambient textures, and unique lead sounds.
+
+---
+
+## MIDI Harmonizer Mode
+
+<ControlCard
+  title="MIDI Control"
+  color="#FF8585"
+  controls={[
+    { name: "MIDI Mode", range: "On/Off", description: "Voice intervals follow incoming MIDI notes for real-time chord-following harmonies" }
+  ]}
+  columns={1}
+/>
+
+Connect a MIDI controller or DAW track, play chords via MIDI, and the Multivoicer will set voice intervals to match those notes in real-time. Your guitar provides the tone while MIDI controls the harmony.
+
+---
+
+## Use Cases
+
+<BentoGrid>
+  <FeatureCard title="Harmony Leads" color="#7BE1A4">
+    - Enable Harmonizer mode
+    - Set Voice 1 to +4 (major third)
+    - Set Voice 2 to +7 (perfect fifth)
+    - Enable Scale Quantization
+  </FeatureCard>
+  <FeatureCard title="Octave Effects" color="#5BC0EB">
+    - Select Stacked Octaves preset
+    - Adjust Dry/Wet to taste
+    - Add Delay for epic soundscapes
+  </FeatureCard>
+  <FeatureCard title="Synth/Experimental" color="#979BFF">
+    - Enable Vocoder Mode
+    - Adjust Formant Shift
+    - Increase Synth Mix
+    - Add Chorus and Delay
+  </FeatureCard>
+  <FeatureCard title="MIDI Harmonies" color="#FF8585">
+    - Enable MIDI Mode
+    - Connect MIDI controller
+    - Play chords via MIDI
+    - Guitar provides tone
+  </FeatureCard>
+</BentoGrid>
+
+---
+
+## Tips
+
+<BentoGrid variant="compact">
+  <FeatureCard title="Start with Presets" color="#FFD97B">
+    Use voicing presets as starting points, then customize
+  </FeatureCard>
+  <FeatureCard title="Scale Quantization" color="#7BE1A4">
+    Essential for melodies to keep harmonies musical
+  </FeatureCard>
+  <FeatureCard title="Stereo Width" color="#5BC0EB">
+    Spread voices for immersive sound
+  </FeatureCard>
+  <FeatureCard title="Subtle Detune" color="#D76D77">
+    10-30 cents creates natural thickening
+  </FeatureCard>
+  <FeatureCard title="Glissando" color="#FF8585">
+    Adds expression when changing intervals
+  </FeatureCard>
+  <FeatureCard title="Vocoder Mode" color="#979BFF">
+    For sounds you can't get anywhere else
+  </FeatureCard>
+</BentoGrid>
+
+<style>{`
+  .mv-showcase {
+    margin: 1.5rem 0 2rem 0;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid var(--sl-color-gray-5);
+    background: var(--sl-color-gray-6);
+  }
+
+  .mv-image {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+`}</style>

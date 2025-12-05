@@ -1,0 +1,165 @@
+---
+import { Icon } from "@astrojs/starlight/components";
+
+interface Props {
+  title: string;
+  icon?: string;
+  color?: string;
+  span?: '1' | '2' | 'row';
+  variant?: 'default' | 'highlight' | 'subtle';
+}
+
+const { title, icon, color = '#D76D77', span, variant = 'default' } = Astro.props;
+
+const spanClass = span === '2' ? 'span-2' : span === 'row' ? 'span-row' : '';
+---
+
+<div class={`bento-item feature-card ${spanClass} ${variant}`} style={`--accent-color: ${color}`}>
+  <div class="card-accent"></div>
+  <div class="card-inner">
+    <div class="feature-header">
+      {icon && (
+        <div class="feature-icon">
+          <Icon name={icon} size="1.125rem" />
+        </div>
+      )}
+      <h4 class="feature-title">{title}</h4>
+    </div>
+    <div class="feature-content">
+      <slot />
+    </div>
+  </div>
+</div>
+
+<style>
+  .feature-card {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background: var(--sl-color-gray-6);
+    border: 1px solid var(--sl-color-gray-5);
+    border-radius: 16px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+  }
+
+  .feature-card:hover {
+    border-color: color-mix(in srgb, var(--accent-color) 50%, var(--sl-color-gray-5));
+    transform: translateY(-3px);
+    box-shadow:
+      0 12px 32px -12px rgba(0, 0, 0, 0.25),
+      0 0 0 1px color-mix(in srgb, var(--accent-color) 20%, transparent);
+  }
+
+  .card-accent {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--accent-color) 0%, color-mix(in srgb, var(--accent-color) 50%, transparent) 100%);
+  }
+
+  .card-inner {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.875rem;
+    height: 100%;
+  }
+
+  .feature-card.highlight {
+    background: linear-gradient(160deg,
+      color-mix(in srgb, var(--accent-color) 12%, var(--sl-color-gray-6)) 0%,
+      var(--sl-color-gray-6) 100%
+    );
+  }
+
+  .feature-card.highlight .card-accent {
+    height: 100%;
+    width: 4px;
+    background: linear-gradient(180deg, var(--accent-color) 0%, transparent 100%);
+  }
+
+  .feature-card.subtle {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+  }
+
+  .feature-card.subtle:hover {
+    transform: none;
+    box-shadow: none;
+  }
+
+  .feature-card.subtle .card-accent {
+    display: none;
+  }
+
+  .feature-header {
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
+  }
+
+  .feature-icon {
+    width: 28px;
+    height: 28px;
+    border-radius: 8px;
+    background: color-mix(in srgb, var(--accent-color) 15%, transparent);
+    color: var(--accent-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .feature-title {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--sl-color-text-accent);
+    margin: 0;
+    line-height: 1.3;
+  }
+
+  .feature-content {
+    font-size: 0.875rem;
+    color: var(--sl-color-text);
+    line-height: 1.65;
+    flex: 1;
+    opacity: 0.85;
+  }
+
+  .feature-content :global(p) {
+    margin: 0;
+  }
+
+  .feature-content :global(strong) {
+    color: var(--sl-color-text-accent);
+    font-weight: 600;
+  }
+
+  .feature-content :global(ul) {
+    margin: 0.5rem 0 0 0;
+    padding-left: 1.125rem;
+    list-style: none;
+  }
+
+  .feature-content :global(li) {
+    margin: 0.375rem 0;
+    position: relative;
+    padding-left: 0.25rem;
+  }
+
+  .feature-content :global(li)::before {
+    content: '';
+    position: absolute;
+    left: -1rem;
+    top: 0.55em;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--accent-color);
+  }
+
+</style>
