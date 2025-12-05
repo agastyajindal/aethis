@@ -1,0 +1,17 @@
+{
+  "media": {
+    "root": "src/assets",
+    "public": "src"
+  },
+  "content": {
+    "root": "src/content"
+  },
+  "code": {
+    "root": "src/components"
+  },
+  "themeConfig": [
+    "src/config"
+  ],
+  "arrangement": [],
+  "showCommitModal": false
+}
