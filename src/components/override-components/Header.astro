@@ -18,7 +18,7 @@ const pathname = Astro.request.url;
 const hasSidebar = Astro.locals.starlightRoute.hasSidebar;
 
 // Base URL for links
-const base = import.meta.env.BASE_URL || "";
+const base = (import.meta.env.BASE_URL || "").replace(/\/$/, "") + "/";
 const withBase = (url: string) => url.startsWith("http") ? url : `${base}${url.startsWith("/") ? url.slice(1) : url}`;
 ---
 
