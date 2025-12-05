@@ -1,6 +1,9 @@
 ---
 const { href, variant = "primary", className } = Astro.props;
 
+const base = import.meta.env.BASE_URL || "";
+const withBase = (url: string) => url.startsWith("http") || url === "#" ? url : `${base}${url.startsWith("/") ? url.slice(1) : url}`;
+
 let classes = ''
 
 if (variant === "primary") {
@@ -13,7 +16,7 @@ if (variant === "primary") {
 
 ---
 
-<a href={href} class={` ${classes} ${className}`}>
+<a href={withBase(href)} class={` ${classes} ${className}`}>
   <slot />
   <svg
   class="mt-0!"

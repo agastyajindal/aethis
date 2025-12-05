@@ -11,6 +11,10 @@ const menu = await getTranslations(locale || "en");
 
 const footer = menu.footer;
 const currentLocal = Astro.currentLocale || "en";
+
+// Base URL for links
+const base = import.meta.env.BASE_URL || "";
+const withBase = (url: string) => url.startsWith("http") || url === "#" ? url : `${base}${url.startsWith("/") ? url.slice(1) : url}`;
 ---
 
 <footer>
@@ -23,7 +27,7 @@ const currentLocal = Astro.currentLocale || "en";
             <ul>
               {footer.community?.links.map((link: any) => (
                 <li>
-                  <a href={link.url}>{link.name}</a>
+                  <a href={withBase(link.url)}>{link.name}</a>
                 </li>
               ))}
             </ul>
@@ -37,7 +41,7 @@ const currentLocal = Astro.currentLocale || "en";
             <ul>
               {footer.help_links?.links.map((link: any) => (
                 <li>
-                  <a href={link.url}>{link.name}</a>
+                  <a href={withBase(link.url)}>{link.name}</a>
                 </li>
               ))}
             </ul>
@@ -51,7 +55,7 @@ const currentLocal = Astro.currentLocale || "en";
             <ul>
               {footer.company?.links.map((link: any) => (
                 <li>
-                  <a href={link.url}>{link.name}</a>
+                  <a href={withBase(link.url)}>{link.name}</a>
                 </li>
               ))}
             </ul>
@@ -111,7 +115,7 @@ const currentLocal = Astro.currentLocale || "en";
     </div>
     <div class="bottom-footer">
       <p set:html={markdownify(config?.params?.copyright)} />
-      <a href="/privacy-policy/">Privacy Policy</a>
+      <a href={withBase("/privacy-policy/")}>Privacy Policy</a>
     </div>
   </div>
 </footer>

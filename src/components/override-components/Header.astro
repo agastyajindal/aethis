@@ -16,6 +16,10 @@ const { main }: { main: any[] } = menu;
 const pathname = Astro.request.url;
 
 const hasSidebar = Astro.locals.starlightRoute.hasSidebar;
+
+// Base URL for links
+const base = import.meta.env.BASE_URL || "";
+const withBase = (url: string) => url.startsWith("http") ? url : `${base}${url.startsWith("/") ? url.slice(1) : url}`;
 ---
 
 <nav class="navbar container">
@@ -71,7 +75,7 @@ const hasSidebar = Astro.locals.starlightRoute.hasSidebar;
                 {menu.children?.map((child: { url: string; name: string }) => (
                   <li class="nav-dropdown-item">
                     <a
-                      href={child.url}
+                      href={withBase(child.url)}
                       aria-label={child.name}
                       class={`nav-dropdown-link block ${
                         (pathname === `${child.url}/` ||
@@ -88,7 +92,7 @@ const hasSidebar = Astro.locals.starlightRoute.hasSidebar;
           ) : (
             <li class="nav-item">
               <a
-                href={menu.url}
+                href={withBase(menu.url)}
                 class={`nav-link block ${
                   (pathname === `${menu.url}/` || pathname === menu.url) &&
                   "active"
@@ -106,7 +110,7 @@ const hasSidebar = Astro.locals.starlightRoute.hasSidebar;
         <li class="mt-4 inline-block lg:hidden">
           <a
             class="btn btn-outline-primary btn-sm"
-            href={navigation_button.link}
+            href={withBase(navigation_button.link)}
           >
             {navigation_button.label}
           </a>
@@ -132,7 +136,7 @@ const hasSidebar = Astro.locals.starlightRoute.hasSidebar;
       navigation_button.enable && (
         <a
           class="btn btn-outline-primary hidden! lg:inline-block!"
-          href={navigation_button.link}
+          href={withBase(navigation_button.link)}
         >
           {navigation_button.translations
             ? // @ts-ignore
