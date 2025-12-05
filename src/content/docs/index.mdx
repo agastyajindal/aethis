@@ -22,7 +22,6 @@ import LinkButton from "~/components/LinkButton.astro";
 import FadeIn from "~/components/animations/FadeIn";
 import BlurText from "~/components/animations/BlurText";
 import GradientText from "~/components/animations/GradientText";
-import Aurora from "~/components/animations/Aurora";
 import FloatingParticles from "~/components/animations/FloatingParticles";
 
 {/* Images */}
@@ -32,11 +31,6 @@ import luminaAmp from '~/assets/features/white-amp.PNG';
 import eqImage from '~/assets/features/EQ-image.PNG';
 import multivoicerImg from '~/assets/features/multivoicer.PNG';
 import postFx from '~/assets/features/post-fx.PNG';
-
-{/* Background Effect */}
-<div class="fixed inset-0 pointer-events-none overflow-hidden" style="z-index: -1;">
-  <Aurora client:load opacity={0.15} speed={15} blur={120} />
-</div>
 
 <Section title="Professional features
 <span class='light-text'>for serious guitarists</span>" description="Three amplifiers, intelligent harmonization, and a complete effects chain—all in one plugin.">
