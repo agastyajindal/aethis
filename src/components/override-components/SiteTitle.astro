@@ -56,10 +56,37 @@ const {
           />
         )}
       </>
-    ) : logo_text ? (
-      logo_text
     ) : (
-      siteTitle || title
+      <span class="logo-text">{logo_text || siteTitle || title}</span>
     )
-  }</a
->
+  }
+</a>
+
+<style>
+  .navbar-brand {
+    text-decoration: none;
+  }
+
+  .logo-text {
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    background: linear-gradient(135deg, #ffffff 0%, #D76D77 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.3s ease;
+  }
+
+  .navbar-brand:hover .logo-text {
+    background: linear-gradient(135deg, #D76D77 0%, #ffca7b 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+
+  :global([data-theme="light"]) .logo-text {
+    background: linear-gradient(135deg, #1a1a1a 0%, #D76D77 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+</style>

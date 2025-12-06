@@ -39,21 +39,11 @@ const { title, description, enable, fill_button, outline_button } =
 }
 
 <style>
-  /* Ensure background image is visible in light mode */
-  :global([data-theme="light"]) .cta-container {
-    background-blend-mode: multiply;
-    background-color: #f9fafb; /* Light background color */
-  }
-
-  /* Dark mode styling */
-  :global([data-theme="dark"]) .cta-container {
-    background: url("/src/assets/cta-bg.png") no-repeat center;
-    background-size: cover;
+  .cta-container {
+    background: linear-gradient(180deg, transparent 0%, rgba(215, 109, 119, 0.08) 50%, transparent 100%);
     padding: 1rem;
     position: relative;
   }
-
-
 </style>
 
 <script>
