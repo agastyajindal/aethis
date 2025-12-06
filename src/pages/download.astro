@@ -268,7 +268,18 @@ const { site } = config;
       .download-card .formats {
         color: var(--color-text);
         font-size: 0.85rem;
-        margin-bottom: 24px;
+        margin-bottom: 8px;
+      }
+
+      .download-count {
+        color: var(--color-text);
+        font-size: 0.85rem;
+        margin-bottom: 20px;
+        min-height: 1.2em;
+      }
+
+      .download-count:empty {
+        display: none;
       }
 
       .download-btn {
@@ -455,6 +466,7 @@ const { site } = config;
               <h3>macOS</h3>
               <p class="version">macOS 10.13 or later</p>
               <p class="formats">Intel & Apple Silicon • VST3, AU, Standalone</p>
+              <p class="download-count" id="macos-downloads"></p>
               <a href="https://github.com/agastyajindal/aethis/releases/download/v0.8.0-beta/Aethis-0.8.0.dmg" class="download-btn">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>
@@ -470,7 +482,8 @@ const { site } = config;
               <h3>Windows</h3>
               <p class="version">Windows 10/11 (64-bit)</p>
               <p class="formats">VST3 & Standalone</p>
-              <a href="https://github.com/agastyajindal/aethis/releases/download/v0.8.0-beta/Aethis-0.8.0-Setup.exe" class="download-btn">
+              <p class="download-count" id="windows-downloads"></p>
+              <a href="https://github.com/agastyajindal/aethis/releases/download/v0.8.0-beta/Aethis-0.8.1-Setup.exe" class="download-btn">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>
                 </svg>
@@ -571,5 +584,41 @@ const { site } = config;
         </p>
       </div>
     </footer>
+
+    <script>
+      async function fetchDownloadCounts() {
+        try {
+          const response = await fetch('https://api.github.com/repos/agastyajindal/aethis/releases');
+          const releases = await response.json();
+
+          let macosCount = 0;
+          let windowsCount = 0;
+
+          for (const release of releases) {
+            for (const asset of release.assets) {
+              if (asset.name.endsWith('.dmg')) {
+                macosCount += asset.download_count;
+              } else if (asset.name.endsWith('.exe')) {
+                windowsCount += asset.download_count;
+              }
+            }
+          }
+
+          const macosEl = document.getElementById('macos-downloads');
+          const windowsEl = document.getElementById('windows-downloads');
+
+          if (macosEl && macosCount > 0) {
+            macosEl.textContent = `${macosCount.toLocaleString()} downloads`;
+          }
+          if (windowsEl && windowsCount > 0) {
+            windowsEl.textContent = `${windowsCount.toLocaleString()} downloads`;
+          }
+        } catch (error) {
+          console.error('Failed to fetch download counts:', error);
+        }
+      }
+
+      fetchDownloadCounts();
+    </script>
   </body>
 </html>
