@@ -74,9 +74,28 @@ Built-in live tuner for quick reference. Run Aethis standalone without a DAW. Pl
 
 ---
 
+## Pricing
+
+| | |
+|---|---|
+| **Beta (Current)** | **Free** — Full access to all features |
+| **v1.0 Release** | Paid (pricing TBA) |
+
+> **Note:** All beta versions are completely free. When v1.0 releases, it will be a paid product. Enjoy the beta while it lasts!
+
+---
+
+## Support Development
+
+Love Aethis? Donations will be available soon to support continued development.
+
+---
+
 ## License
 
 Proprietary software. All rights reserved.
+
+© 2025 Agastya Jindal / Aquevix
 
 ---
 
