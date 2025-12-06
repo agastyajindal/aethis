@@ -62,6 +62,20 @@ const withBase = (url: string) => url.startsWith("http") || url === "#" ? url : 
           </div>
         )
       }
+      {
+        footer.legal && (
+          <div>
+            <h4>{footer.legal.title}</h4>
+            <ul>
+              {footer.legal?.links.map((link: any) => (
+                <li>
+                  <a href={withBase(link.url)}>{link.name}</a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )
+      }
 
       {
         config?.params?.footer_contact?.enable && (
@@ -115,7 +129,11 @@ const withBase = (url: string) => url.startsWith("http") || url === "#" ? url : 
     </div>
     <div class="bottom-footer">
       <p set:html={markdownify(config?.params?.copyright)} />
-      <a href={withBase("/privacy-policy/")}>Privacy Policy</a>
+      <div class="bottom-links">
+        <a href={withBase("/license/")}>License</a>
+        <span class="divider">|</span>
+        <a href={withBase("/privacy-policy/")}>Privacy Policy</a>
+      </div>
     </div>
   </div>
 </footer>
@@ -202,6 +220,17 @@ const withBase = (url: string) => url.startsWith("http") || url === "#" ? url : 
       flex-wrap: wrap;
       gap: 1rem;
     }
+
+    .bottom-links {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .bottom-links .divider {
+      color: var(--sl-color-gray-4);
+    }
+
     .bottom-footer a {
       color: var(--sl-color-text);
       text-decoration: none;

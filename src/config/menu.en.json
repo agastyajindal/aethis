@@ -55,6 +55,15 @@
         {
           "name": "Report an Issue",
           "url": "https://github.com/agastyajindal/Aethis/issues"
+        }
+      ]
+    },
+    "legal": {
+      "title": "Legal",
+      "links": [
+        {
+          "name": "License",
+          "url": "/license/"
         },
         {
           "name": "Privacy Policy",

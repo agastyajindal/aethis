@@ -1,0 +1,125 @@
+---
+import StarlightPage from "@astrojs/starlight/components/StarlightPage.astro";
+---
+
+<StarlightPage
+  frontmatter={{
+    title: "License & Legal",
+    description: "Aethis software license, terms of use, and legal information.",
+    template: "splash",
+  }}
+>
+  <div class="legal-container">
+    <h1>License & Legal</h1>
+
+    <section class="legal-section">
+      <h2>Software License</h2>
+      <p>Aethis is <strong>proprietary, closed-source software</strong>. All rights reserved.</p>
+      <p><strong>Copyright &copy; 2025 Agastya Jindal / Aquevix</strong></p>
+    </section>
+
+    <section class="legal-section">
+      <h2>Terms of Use</h2>
+      <ul>
+        <li>Aethis is provided free of charge for personal and commercial music production use.</li>
+        <li>You may install and use Aethis on your own computers.</li>
+        <li>You may use Aethis in commercial music productions and recordings.</li>
+      </ul>
+    </section>
+
+    <section class="legal-section">
+      <h2>Restrictions</h2>
+      <ul>
+        <li><strong>No Redistribution:</strong> You may not redistribute, share, upload, or otherwise distribute the Aethis software, installer, or any of its components.</li>
+        <li><strong>No Modification:</strong> You may not modify, reverse engineer, decompile, or disassemble the software.</li>
+        <li><strong>No Resale:</strong> You may not sell, rent, lease, or sublicense the software.</li>
+        <li><strong>No Derivative Works:</strong> You may not create derivative works based on the software.</li>
+      </ul>
+      <p class="warning"><strong>Unauthorized distribution of Aethis is illegal and subject to legal action.</strong></p>
+    </section>
+
+    <section class="legal-section">
+      <h2>Disclaimer of Warranties</h2>
+      <p>AETHIS IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NONINFRINGEMENT.</p>
+    </section>
+
+    <section class="legal-section">
+      <h2>Limitation of Liability</h2>
+      <p>IN NO EVENT SHALL AGASTYA JINDAL, AQUEVIX, OR ANY CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.</p>
+    </section>
+
+    <section class="legal-section">
+      <h2>Intellectual Property</h2>
+      <p>Aethis, the Aethis logo, and all associated trademarks, trade names, and brand elements are the exclusive property of Agastya Jindal / Aquevix. All rights reserved.</p>
+    </section>
+
+    <section class="legal-section">
+      <h2>Contact</h2>
+      <p>For licensing inquiries or to report unauthorized distribution, please contact us through our <a href="https://github.com/agastyajindal/aethis/issues">GitHub Issues</a> page.</p>
+    </section>
+
+    <p class="last-updated">Last updated: December 2025</p>
+  </div>
+</StarlightPage>
+
+<style>
+  .legal-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: var(--sl-color-white);
+  }
+
+  .legal-section {
+    margin-bottom: 2.5rem;
+    padding: 1.5rem;
+    background: var(--sl-color-gray-6);
+    border-radius: 12px;
+    border: 1px solid var(--sl-color-gray-5);
+  }
+
+  .legal-section h2 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    color: var(--sl-color-white);
+  }
+
+  .legal-section p {
+    color: var(--sl-color-text);
+    line-height: 1.7;
+    margin-bottom: 0.75rem;
+  }
+
+  .legal-section ul {
+    color: var(--sl-color-text);
+    line-height: 1.7;
+    padding-left: 1.5rem;
+    margin: 0.75rem 0;
+  }
+
+  .legal-section li {
+    margin-bottom: 0.5rem;
+  }
+
+  .legal-section a {
+    color: var(--sl-color-accent);
+  }
+
+  .warning {
+    color: #f87171 !important;
+    font-weight: 500;
+    margin-top: 1rem;
+  }
+
+  .last-updated {
+    text-align: center;
+    color: var(--sl-color-gray-3);
+    font-size: 0.875rem;
+    margin-top: 2rem;
+  }
+</style>
