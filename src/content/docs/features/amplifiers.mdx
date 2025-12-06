@@ -12,6 +12,7 @@ import noctisAmp from '~/assets/features/black-amp.PNG';
 import rosariaAmp from '~/assets/features/pink-amp.PNG';
 import luminaAmp from '~/assets/features/white-amp.PNG';
 import preFx from '~/assets/features/pre-fx.PNG';
+import postFx from '~/assets/features/post-fx.PNG';
 
 # Three Amplifiers
 
@@ -131,6 +132,74 @@ Warm, tube-style overdrive for everything from subtle grit to saturated crunch.
     { name: "Drive", range: "0-100%", description: "Intensity of the distortion" },
     { name: "Tone", range: "0-100%", description: "Brightness of the overdrive (dark to bright)" },
     { name: "Level", range: "-12 to +12 dB", description: "Output volume compensation" }
+  ]}
+/>
+
+---
+
+## Post-Amp Effects
+
+<div class="amp-showcase">
+  <Image src={postFx} alt="Post-Amp Effects - Cabinet, Reverb, Chorus, Delay" class="amp-image" />
+</div>
+
+### Cabinet Simulation
+
+Authentic speaker cabinet emulation for realistic amp-in-the-room tone.
+
+<ControlCard
+  title="Cabinet"
+  color="#22C55E"
+  controls={[
+    { name: "Cabinet Enabled", range: "On/Off", description: "Toggle cabinet simulation" },
+    { name: "Mix", range: "0-100%", description: "Blend between direct amp sound and cabinet-processed signal" }
+  ]}
+  columns={1}
+/>
+
+### Reverb
+
+Lush spatial effects to add space and dimension to your tone.
+
+<ControlCard
+  title="Reverb"
+  color="#3B82F6"
+  controls={[
+    { name: "Size", range: "0-100%", description: "Room size from intimate booth to expansive cathedral" },
+    { name: "Damping", range: "0-100%", description: "High-frequency absorption for darker reverb tails" },
+    { name: "Width", range: "0-100%", description: "Stereo spread of the reverb" },
+    { name: "Mix", range: "0-100%", description: "Dry/wet blend of the reverb effect" }
+  ]}
+/>
+
+### Chorus
+
+Rich stereo modulation effect for lush, detuned sounds.
+
+<ControlCard
+  title="Chorus"
+  color="#EC4899"
+  controls={[
+    { name: "Rate", range: "0.1-10 Hz", description: "Speed of the modulation" },
+    { name: "Depth", range: "0-100%", description: "Intensity of the pitch modulation" },
+    { name: "Feedback", range: "0-95%", description: "Amount of signal fed back for more intense effect" },
+    { name: "Mix", range: "0-100%", description: "Dry/wet blend" }
+  ]}
+/>
+
+### Delay
+
+Versatile delay with optional ping-pong stereo mode.
+
+<ControlCard
+  title="Delay"
+  color="#14B8A6"
+  controls={[
+    { name: "Time", range: "1-2000 ms", description: "Delay time between repeats" },
+    { name: "Feedback", range: "0-95%", description: "Number of repeats (higher = more echoes)" },
+    { name: "Damping", range: "0-100%", description: "High-frequency absorption on repeats" },
+    { name: "Ping-Pong", range: "On/Off", description: "Stereo bouncing effect" },
+    { name: "Mix", range: "0-100%", description: "Dry/wet blend" }
   ]}
 />
 
