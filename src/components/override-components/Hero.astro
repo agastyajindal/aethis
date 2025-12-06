@@ -39,9 +39,10 @@ const is404 = Astro.locals.starlightRoute?.id === "404";
 <div
   class="hero flex flex-col items-center mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-35"
 >
-  {title && <h1 set:html={title} class="mb-8 text-center rounded-2xl" />}
-  {tagline && <p set:html={tagline} class="text-xl text-center" />}
-
+  <div class="hero-text-card">
+    {title && <h1 set:html={title} class="mb-8 text-center rounded-2xl" />}
+    {tagline && <p set:html={tagline} class="text-xl text-center" />}
+  </div>
 </div>
 
 <style>
@@ -103,14 +104,28 @@ const is404 = Astro.locals.starlightRoute?.id === "404";
       transform: translateX(5%) scale(0.85);
     }
 
+    /* Hero text card */
+    .hero-text-card {
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-radius: 24px;
+      padding: 2.5rem 3rem;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
     /* Hero text styles */
     h1 {
       font-size: 7rem !important;
       line-height: 6.5rem !important;
       letter-spacing: -4px;
-      color: #000000;
+      color: #ffffff;
       position: relative;
       z-index: 10;
+    }
+
+    .hero-text-card p {
+      color: rgba(255, 255, 255, 0.85);
     }
 
     .hero {
@@ -148,6 +163,11 @@ const is404 = Astro.locals.starlightRoute?.id === "404";
       }
       .search-container {
         width: 100%;
+      }
+
+      .hero-text-card {
+        padding: 1.5rem 2rem;
+        border-radius: 16px;
       }
 
       .hero-banner {
