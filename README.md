@@ -15,19 +15,6 @@ The official documentation and showcase website for Aethis - a complete guitar p
 
 Visit the live site: [agastyajindal.github.io/aethis](https://agastyajindal.github.io/aethis/)
 
-## Development
-
-```bash
-# Install dependencies
-npm install
-
-# Start development server
-npm run dev
-
-# Build for production
-npm run build
-```
-
 ## Tech Stack
 
 - [Astro](https://astro.build/) + [Starlight](https://starlight.astro.build/)
@@ -35,8 +22,6 @@ npm run build
 - GitHub Pages
 
 ## License
-
-Website: MIT
 Aethis Plugin: Proprietary - All rights reserved
 
 ---
