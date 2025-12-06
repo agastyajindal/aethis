@@ -196,11 +196,11 @@ const { site } = config;
   <body>
     <header>
       <div class="container">
-        <a href="/" class="logo">Aethis</a>
+        <a href={import.meta.env.BASE_URL} class="logo">Aethis</a>
         <nav>
-          <a href="/">Home</a>
-          <a href="/features/amplifiers/">Features</a>
-          <a href="/download">Download</a>
+          <a href={import.meta.env.BASE_URL}>Home</a>
+          <a href={`${import.meta.env.BASE_URL}features/amplifiers/`}>Features</a>
+          <a href={`${import.meta.env.BASE_URL}download/`}>Download</a>
         </nav>
       </div>
     </header>
@@ -309,8 +309,8 @@ const { site } = config;
       <div class="container">
         <p>&copy; 2025 Agastya Jindal / Aquevix. All rights reserved.</p>
         <p style="margin-top: 8px;">
-          <a href="/">Home</a> ·
-          <a href="/download">Download</a> ·
+          <a href={import.meta.env.BASE_URL}>Home</a> ·
+          <a href={`${import.meta.env.BASE_URL}download/`}>Download</a> ·
           <a href="https://github.com/agastyajindal/Aethis/issues">Report an Issue</a>
         </p>
       </div>

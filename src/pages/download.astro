@@ -349,10 +349,10 @@ const { site } = config;
   <body>
     <header>
       <div class="container">
-        <a href="/" class="logo">Aethis</a>
+        <a href={import.meta.env.BASE_URL} class="logo">Aethis</a>
         <nav>
-          <a href="/">Home</a>
-          <a href="/features/amplifiers/">Features</a>
+          <a href={import.meta.env.BASE_URL}>Home</a>
+          <a href={`${import.meta.env.BASE_URL}features/amplifiers/`}>Features</a>
         </nav>
       </div>
     </header>
