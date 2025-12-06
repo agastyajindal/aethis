@@ -106,8 +106,36 @@ const { site } = config;
         font-size: 1.15rem;
         color: var(--color-text);
         max-width: 550px;
-        margin: 0 auto 48px;
+        margin: 0 auto 24px;
         line-height: 1.6;
+      }
+
+      .version-tag {
+        display: inline-block;
+        background: linear-gradient(135deg, var(--color-primary) 0%, #ffca7b 100%);
+        color: white;
+        padding: 8px 20px;
+        border-radius: 20px;
+        font-size: 0.9rem;
+        font-weight: 600;
+        margin-bottom: 36px;
+      }
+
+      .release-link {
+        margin-top: 24px;
+      }
+
+      .release-link a {
+        color: var(--color-primary);
+        text-decoration: none;
+        font-size: 0.95rem;
+        font-weight: 500;
+        transition: opacity 0.2s;
+      }
+
+      .release-link a:hover {
+        opacity: 0.8;
+        text-decoration: underline;
       }
 
       /* Download Cards */
@@ -335,6 +363,8 @@ const { site } = config;
           <h1>Download <span>Aethis</span></h1>
           <p>Professional guitar processing with three amplifiers, four-voice Multivoicer, and a complete effects chain. Free to download and use.</p>
 
+          <p class="version-tag">Latest: v0.8.0-beta</p>
+
           <div class="download-grid">
             <div class="download-card">
               <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
@@ -343,8 +373,11 @@ const { site } = config;
               <h3>macOS</h3>
               <p class="version">macOS 10.13 or later</p>
               <p class="formats">Intel & Apple Silicon • VST3, AU, Standalone</p>
-              <a href="#" class="download-btn disabled">
-                Coming Soon
+              <a href="https://github.com/agastyajindal/aethis/releases/download/v0.8.0-beta/Aethis-0.8.0.dmg" class="download-btn">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+                </svg>
+                Download .dmg
               </a>
             </div>
 
@@ -355,11 +388,20 @@ const { site } = config;
               <h3>Windows</h3>
               <p class="version">Windows 10/11 (64-bit)</p>
               <p class="formats">VST3 & Standalone</p>
-              <a href="#" class="download-btn disabled">
-                Coming Soon
+              <a href="https://github.com/agastyajindal/aethis/releases/download/v0.8.0-beta/Aethis-0.8.0-Setup.exe" class="download-btn">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+                </svg>
+                Download .exe
               </a>
             </div>
           </div>
+
+          <p class="release-link">
+            <a href="https://github.com/agastyajindal/aethis/releases/tag/v0.8.0-beta" target="_blank" rel="noopener">
+              View release notes on GitHub →
+            </a>
+          </p>
         </div>
       </section>
 
