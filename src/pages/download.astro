@@ -225,7 +225,7 @@ const { site } = config;
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
         gap: 24px;
-        max-width: 700px;
+        max-width: 1000px;
         margin: 0 auto;
       }
 
@@ -499,6 +499,23 @@ const { site } = config;
                 Download .exe
               </a>
             </div>
+
+            <div class="download-card">
+              <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm4 18H6V4h7v5h5v11z"/>
+                <path d="M8 14h8v2H8zm0 4h8v2H8z"/>
+              </svg>
+              <h3>VST3 Only</h3>
+              <p class="version">Cross-platform plugin</p>
+              <p class="formats">Windows & macOS • Manual install</p>
+              <p class="download-count" id="vst3-downloads"></p>
+              <a href="https://github.com/agastyajindal/aethis/releases/download/v0.8.1-beta/Aethis-0.8.1-VST3.zip" class="download-btn">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+                </svg>
+                Download .zip
+              </a>
+            </div>
           </div>
 
           <p class="release-link">
@@ -602,6 +619,7 @@ const { site } = config;
 
           let macosCount = 0;
           let windowsCount = 0;
+          let vst3Count = 0;
 
           for (const release of releases) {
             for (const asset of release.assets) {
@@ -609,18 +627,24 @@ const { site } = config;
                 macosCount += asset.download_count;
               } else if (asset.name.endsWith('.exe')) {
                 windowsCount += asset.download_count;
+              } else if (asset.name.includes('VST3') && asset.name.endsWith('.zip')) {
+                vst3Count += asset.download_count;
               }
             }
           }
 
           const macosEl = document.getElementById('macos-downloads');
           const windowsEl = document.getElementById('windows-downloads');
+          const vst3El = document.getElementById('vst3-downloads');
 
           if (macosEl && macosCount > 0) {
             macosEl.textContent = `${macosCount.toLocaleString()} downloads`;
           }
           if (windowsEl && windowsCount > 0) {
             windowsEl.textContent = `${windowsCount.toLocaleString()} downloads`;
+          }
+          if (vst3El && vst3Count > 0) {
+            vst3El.textContent = `${vst3Count.toLocaleString()} downloads`;
           }
         } catch (error) {
           console.error('Failed to fetch download counts:', error);
