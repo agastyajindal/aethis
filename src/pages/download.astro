@@ -509,7 +509,7 @@ const { site } = config;
               <p class="version">Cross-platform plugin</p>
               <p class="formats">Windows & macOS • Manual install</p>
               <p class="download-count" id="vst3-downloads"></p>
-              <a href="https://github.com/agastyajindal/aethis/releases/download/v0.8.1-beta/Aethis-0.8.1-VST3.zip" class="download-btn">
+              <a href="https://github.com/agastyajindal/aethis/releases/download/v0.8.1-beta/aethis-vst3.zip" class="download-btn">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>
                 </svg>
@@ -627,7 +627,7 @@ const { site } = config;
                 macosCount += asset.download_count;
               } else if (asset.name.endsWith('.exe')) {
                 windowsCount += asset.download_count;
-              } else if (asset.name.includes('VST3') && asset.name.endsWith('.zip')) {
+              } else if (asset.name.includes('vst3') && asset.name.endsWith('.zip')) {
                 vst3Count += asset.download_count;
               }
             }
