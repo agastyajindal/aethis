@@ -6,7 +6,7 @@ The official documentation and showcase website for Aethis - a complete guitar p
 
 ## Features
 
-- **Three Amplifiers** - Noctis (Modern High-Gain), Rosaria (Vintage Chime), Lumina (Classic Rock)
+- **Three Amplifiers** - Noctis (Crystal Clean), Rosaria (Modern High-Gain), Lumina (Classic Rock)
 - **4-Voice Multivoicer** - Pitch shifting, harmonization, scale quantization, and vocoder mode
 - **Full Effects Chain** - Pre/Post EQ, Drive, Chorus, Delay
 - **MIDI Control** - Real-time chord-following harmonies
