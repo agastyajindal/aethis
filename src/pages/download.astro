@@ -319,6 +319,38 @@ const { site } = config;
         opacity: 0.85;
       }
 
+      .antivirus-notice {
+        margin-top: 16px;
+        font-size: 0.8rem;
+        color: var(--color-text);
+        line-height: 1.5;
+        text-align: left;
+      }
+
+      .antivirus-notice summary {
+        cursor: pointer;
+        font-weight: 500;
+        color: var(--color-heading);
+        padding: 8px 0;
+      }
+
+      .antivirus-notice summary:hover {
+        color: var(--color-primary);
+      }
+
+      .antivirus-notice p {
+        margin: 8px 0;
+      }
+
+      .antivirus-notice ul {
+        margin: 8px 0 8px 16px;
+        padding: 0;
+      }
+
+      .antivirus-notice li {
+        margin: 4px 0;
+      }
+
       /* Formats */
       .formats-section {
         padding: 80px 0;
@@ -498,6 +530,17 @@ const { site } = config;
                 </svg>
                 Download .exe
               </a>
+              <details class="antivirus-notice">
+                <summary>Antivirus False Positive Notice</summary>
+                <p>Zillya antivirus may incorrectly flag Aethis as a "Trojan.Keylogger." This is a <strong>false positive</strong>.</p>
+                <p><strong>Why Zillya flags audio plugins:</strong></p>
+                <ul>
+                  <li>Audio plugins handle keyboard input for shortcuts and MIDI control—Zillya's heuristics mistake this for keylogger behavior</li>
+                  <li>Zillya is known in the audio software community for aggressive false positives on legitimate plugins</li>
+                </ul>
+                <p>Aethis is safe. We do not collect any data, log keystrokes, or include any malicious code. Our software is built using JUCE, the same industry-standard framework used by major plugin developers worldwide.</p>
+                <p>If Zillya flags Aethis, you can safely add it to your exceptions list or whitelist.</p>
+              </details>
             </div>
 
             <div class="download-card">
