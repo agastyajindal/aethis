@@ -225,7 +225,7 @@ const { site } = config;
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
         gap: 24px;
-        max-width: 1000px;
+        max-width: 700px;
         margin: 0 auto;
       }
 
@@ -311,44 +311,48 @@ const { site } = config;
         border: 1px solid var(--color-border);
       }
 
-      .macos-note {
-        margin-top: 16px;
-        font-size: 0.8rem;
-        color: var(--color-text);
-        line-height: 1.5;
-        opacity: 0.85;
+      .download-btn-secondary {
+        background: transparent;
+        color: var(--color-primary);
+        border: 1px solid var(--color-primary);
+        margin-top: 10px;
       }
 
-      .antivirus-notice {
+      .download-btn-secondary:hover {
+        background: rgba(215, 109, 119, 0.08);
+      }
+
+      .install-notice {
         margin-top: 16px;
-        font-size: 0.8rem;
+        font-size: 0.75rem;
         color: var(--color-text);
         line-height: 1.5;
         text-align: left;
       }
 
-      .antivirus-notice summary {
+      .install-notice summary {
         cursor: pointer;
         font-weight: 500;
         color: var(--color-heading);
-        padding: 8px 0;
+        padding: 6px 0;
+        font-size: 0.75rem;
       }
 
-      .antivirus-notice summary:hover {
+      .install-notice summary:hover {
         color: var(--color-primary);
       }
 
-      .antivirus-notice p {
-        margin: 8px 0;
+      .install-notice p {
+        margin: 6px 0;
       }
 
-      .antivirus-notice ul {
-        margin: 8px 0 8px 16px;
+      .install-notice ul {
+        margin: 6px 0 6px 16px;
         padding: 0;
       }
 
-      .antivirus-notice li {
-        margin: 4px 0;
+      .install-notice li {
+        margin: 3px 0;
       }
 
       /* Formats */
@@ -496,7 +500,7 @@ const { site } = config;
           <h1>Download <span>Aethis</span></h1>
           <p>Professional guitar processing with three amplifiers, four-voice Multivoicer, and a complete effects chain. Free to download and use.</p>
 
-          <p class="version-tag">Latest: v0.8.1-beta</p>
+          <p class="version-tag">Latest: v0.8.2-beta</p>
 
           <div class="download-grid">
             <div class="download-card">
@@ -507,13 +511,22 @@ const { site } = config;
               <p class="version">macOS 10.13 or later</p>
               <p class="formats">Intel & Apple Silicon • VST3, AU, Standalone</p>
               <p class="download-count" id="macos-downloads"></p>
-              <a href="https://github.com/agastyajindal/aethis/releases/download/v0.8.1-beta/Aethis-0.8.1-macOS.dmg" class="download-btn">
+              <a href="https://github.com/agastyajindal/aethis/releases/download/Aethis-v0.8.2-beta/Aethis-0.8.2-macOS.dmg" class="download-btn">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>
                 </svg>
                 Download .dmg
               </a>
-              <p class="macos-note">macOS may show a warning since the app isn't notarized. Go to System Settings → Privacy & Security and click "Open Anyway" to install.</p>
+              <a href="https://github.com/agastyajindal/aethis/releases/download/Aethis-v0.8.2-beta/Aethis-0.8.2-macOS-AU.zip" class="download-btn download-btn-secondary">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>
+                </svg>
+                Download AU Only (.zip)
+              </a>
+              <details class="install-notice">
+                <summary>macOS Installation Note</summary>
+                <p>macOS may show a warning since the app isn't notarized. Go to System Settings → Privacy & Security and click "Open Anyway" to install.</p>
+              </details>
             </div>
 
             <div class="download-card">
@@ -524,13 +537,13 @@ const { site } = config;
               <p class="version">Windows 10/11 (64-bit)</p>
               <p class="formats">VST3 & Standalone</p>
               <p class="download-count" id="windows-downloads"></p>
-              <a href="https://github.com/agastyajindal/aethis/releases/download/v0.8.1-beta/Aethis-0.8.1-Windows-Setup.exe" class="download-btn">
+              <a href="https://github.com/agastyajindal/aethis/releases/download/Aethis-v0.8.2-beta/Aethis-0.8.2-Windows-Setup.exe" class="download-btn">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>
                 </svg>
                 Download .exe
               </a>
-              <details class="antivirus-notice">
+              <details class="install-notice">
                 <summary>Antivirus False Positive Notice</summary>
                 <p>Zillya antivirus may incorrectly flag Aethis as a "Trojan.Keylogger." This is a <strong>false positive</strong>.</p>
                 <p><strong>Why Zillya flags audio plugins:</strong></p>
@@ -542,27 +555,10 @@ const { site } = config;
                 <p>If Zillya flags Aethis, you can safely add it to your exceptions list or whitelist.</p>
               </details>
             </div>
-
-            <div class="download-card">
-              <svg class="icon" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6zm4 18H6V4h7v5h5v11z"/>
-                <path d="M8 14h8v2H8zm0 4h8v2H8z"/>
-              </svg>
-              <h3>VST3 Only</h3>
-              <p class="version">Cross-platform plugin</p>
-              <p class="formats">Windows & macOS • Manual install</p>
-              <p class="download-count" id="vst3-downloads"></p>
-              <a href="https://github.com/agastyajindal/aethis/releases/download/v0.8.1-beta/aethis-vst3.zip" class="download-btn">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>
-                </svg>
-                Download .zip
-              </a>
-            </div>
           </div>
 
           <p class="release-link">
-            <a href="https://github.com/agastyajindal/aethis/releases/tag/v0.8.1-beta" target="_blank" rel="noopener">
+            <a href="https://github.com/agastyajindal/aethis/releases/tag/Aethis-v0.8.2-beta" target="_blank" rel="noopener">
               View release notes on GitHub →
             </a>
           </p>
@@ -662,32 +658,25 @@ const { site } = config;
 
           let macosCount = 0;
           let windowsCount = 0;
-          let vst3Count = 0;
 
           for (const release of releases) {
             for (const asset of release.assets) {
-              if (asset.name.endsWith('.dmg')) {
+              if (asset.name.endsWith('.dmg') || asset.name.includes('macOS-AU')) {
                 macosCount += asset.download_count;
               } else if (asset.name.endsWith('.exe')) {
                 windowsCount += asset.download_count;
-              } else if (asset.name.includes('vst3') && asset.name.endsWith('.zip')) {
-                vst3Count += asset.download_count;
               }
             }
           }
 
           const macosEl = document.getElementById('macos-downloads');
           const windowsEl = document.getElementById('windows-downloads');
-          const vst3El = document.getElementById('vst3-downloads');
 
           if (macosEl && macosCount > 0) {
             macosEl.textContent = `${macosCount.toLocaleString()} downloads`;
           }
           if (windowsEl && windowsCount > 0) {
             windowsEl.textContent = `${windowsCount.toLocaleString()} downloads`;
-          }
-          if (vst3El && vst3Count > 0) {
-            vst3El.textContent = `${vst3Count.toLocaleString()} downloads`;
           }
         } catch (error) {
           console.error('Failed to fetch download counts:', error);
