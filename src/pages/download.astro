@@ -355,6 +355,72 @@ const { site } = config;
         margin: 3px 0;
       }
 
+      /* Patch Notes */
+      .patch-notes-section {
+        padding: 80px 0;
+        background: #fff;
+      }
+
+      .patch-notes-section h2 {
+        font-size: 1.8rem;
+        font-weight: 600;
+        text-align: center;
+        margin-bottom: 12px;
+        color: var(--color-heading);
+      }
+
+      .patch-notes-section h2 span {
+        color: var(--color-text);
+      }
+
+      .patch-notes-section > .container > p {
+        text-align: center;
+        color: var(--color-text);
+        margin-bottom: 36px;
+      }
+
+      .patch-notes-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 24px;
+        max-width: 1000px;
+        margin: 0 auto;
+      }
+
+      .patch-note-card {
+        background: var(--color-card-bg);
+        border: 1px solid var(--color-border);
+        border-radius: 12px;
+        padding: 24px;
+      }
+
+      .patch-note-card h3 {
+        font-size: 1rem;
+        font-weight: 600;
+        margin-bottom: 12px;
+        color: var(--color-primary);
+      }
+
+      .patch-note-card ul {
+        list-style: none;
+        color: var(--color-text);
+        font-size: 0.9rem;
+        line-height: 1.8;
+      }
+
+      .patch-note-card li {
+        position: relative;
+        padding-left: 16px;
+      }
+
+      .patch-note-card li::before {
+        content: "•";
+        color: var(--color-primary);
+        position: absolute;
+        left: 0;
+        font-weight: 600;
+      }
+
       /* Formats */
       .formats-section {
         padding: 80px 0;
@@ -500,7 +566,7 @@ const { site } = config;
           <h1>Download <span>Aethis</span></h1>
           <p>Professional guitar processing with three amplifiers, four-voice Multivoicer, and a complete effects chain. Free to download and use.</p>
 
-          <p class="version-tag">Latest: v0.8.2-beta</p>
+          <p class="version-tag">Latest: v0.9.0</p>
 
           <div class="download-grid">
             <div class="download-card">
@@ -511,13 +577,13 @@ const { site } = config;
               <p class="version">macOS 10.13 or later</p>
               <p class="formats">Intel & Apple Silicon • VST3, AU, Standalone</p>
               <p class="download-count" id="macos-downloads"></p>
-              <a href="https://github.com/agastyajindal/aethis/releases/download/Aethis-v0.8.2-beta/Aethis-0.8.2-macOS.dmg" class="download-btn">
+              <a href="https://github.com/agastyajindal/aethis/releases/download/v0.9.0/Aethis-0.9.0-macOS.dmg" class="download-btn">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>
                 </svg>
                 Download .dmg
               </a>
-              <a href="https://github.com/agastyajindal/aethis/releases/download/Aethis-v0.8.2-beta/Aethis-0.8.2-macOS-AU.zip" class="download-btn download-btn-secondary">
+              <a href="https://github.com/agastyajindal/aethis/releases/download/v0.9.0/Aethis-0.9.0-macOS-AU.zip" class="download-btn download-btn-secondary">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>
                 </svg>
@@ -537,11 +603,11 @@ const { site } = config;
               <p class="version">Windows 10/11 (64-bit)</p>
               <p class="formats">VST3 & Standalone</p>
               <p class="download-count" id="windows-downloads"></p>
-              <a href="https://github.com/agastyajindal/aethis/releases/download/Aethis-v0.8.2-beta/Aethis-0.8.2-Windows-Setup.exe" class="download-btn">
+              <a href="https://github.com/agastyajindal/aethis/releases/download/v0.9.0/Aethis-0.9.0-Windows-Setup.zip" class="download-btn">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/>
                 </svg>
-                Download .exe
+                Download .zip
               </a>
               <details class="install-notice">
                 <summary>Antivirus False Positive Notice</summary>
@@ -558,7 +624,7 @@ const { site } = config;
           </div>
 
           <p class="release-link">
-            <a href="https://github.com/agastyajindal/aethis/releases/tag/Aethis-v0.8.2-beta" target="_blank" rel="noopener">
+            <a href="https://github.com/agastyajindal/aethis/releases/tag/v0.9.0" target="_blank" rel="noopener">
               View release notes on GitHub →
             </a>
           </p>
@@ -586,6 +652,68 @@ const { site } = config;
               </svg>
               Donate — Coming Soon
             </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="patch-notes-section">
+        <div class="container">
+          <h2>What's New in <span>v0.9.0</span></h2>
+          <p>Latest improvements and features.</p>
+
+          <div class="patch-notes-grid">
+            <div class="patch-note-card">
+              <h3>Multivoicer / Harmonizer</h3>
+              <ul>
+                <li>Redesigned UI with visual slider fills</li>
+                <li>Adjustable chorus control (0-40%)</li>
+                <li>Improved voice separation for fuller harmonies</li>
+                <li>Enhanced harmony clarity with increased volume</li>
+              </ul>
+            </div>
+
+            <div class="patch-note-card">
+              <h3>Per-Amp Settings</h3>
+              <ul>
+                <li>Independent gain, bass, mid, treble, and master controls per amp channel</li>
+                <li>Separate pedal configuration savings for each amp</li>
+              </ul>
+            </div>
+
+            <div class="patch-note-card">
+              <h3>New Pedal Design</h3>
+              <ul>
+                <li>Updated PreFX pedal panel with improved layout</li>
+                <li>Cleaner, more intuitive EQ controls</li>
+              </ul>
+            </div>
+
+            <div class="patch-note-card">
+              <h3>Windows Improvements</h3>
+              <ul>
+                <li>Fixed VST3 crashes in Ableton</li>
+                <li>Corrected dropdown menu functionality</li>
+                <li>Resolved preset import dialog freezing</li>
+                <li>Enhanced UI scaling at various resolutions</li>
+              </ul>
+            </div>
+
+            <div class="patch-note-card">
+              <h3>Audio & General</h3>
+              <ul>
+                <li>Added audio driver selection for standalone mode</li>
+                <li>More reliable third-party preset importing</li>
+                <li>Smoother UI responsiveness</li>
+                <li>Visual refresh throughout application</li>
+              </ul>
+            </div>
+
+            <div class="patch-note-card">
+              <h3>Bug Fixes</h3>
+              <ul>
+                <li>Resolved critical issue preventing audible pitch-shifted output on initial load</li>
+              </ul>
+            </div>
           </div>
         </div>
       </section>
