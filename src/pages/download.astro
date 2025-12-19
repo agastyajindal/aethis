@@ -791,7 +791,7 @@ const { site } = config;
             for (const asset of release.assets) {
               if (asset.name.endsWith('.dmg') || asset.name.includes('macOS-AU')) {
                 macosCount += asset.download_count;
-              } else if (asset.name.endsWith('.exe')) {
+              } else if (asset.name.endsWith('.exe') || asset.name.includes('Windows')) {
                 windowsCount += asset.download_count;
               }
             }
