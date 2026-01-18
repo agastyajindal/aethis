@@ -95,7 +95,7 @@ Love Aethis? Donations will be available soon to support continued development.
 
 Proprietary software. All rights reserved.
 
-© 2025 Agastya Jindal / Aquevix
+© 2025 Agastya Jindal
 
 ---
 

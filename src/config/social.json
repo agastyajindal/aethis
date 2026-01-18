@@ -1,25 +1,19 @@
 {
   "main": [
     {
-      "icon": "facebook",
-      "label": "Facebook",
-      "href": "https://www.facebook.com/"
-    },
-    {
-      "icon": "slack",
-      "label": "Slack",
-      "href": "https://slack.com/"
+      "icon": "linkedin",
+      "label": "LinkedIn",
+      "href": "https://www.linkedin.com/in/agastya-jindal/"
     },
     {
       "icon": "github",
       "label": "GitHub",
-      "href": "https://www.github.com/"
+      "href": "https://github.com/agastyajindal"
     },
-
     {
-      "icon": "linkedin",
-      "label": "LinkedIn",
-      "href": "https://www.linkedin.com/"
+      "icon": "external",
+      "label": "Personal Site",
+      "href": "https://agastyajindal.com"
     }
   ]
 }

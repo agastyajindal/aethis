@@ -2,7 +2,7 @@
 title: Terms & Conditions
 template: splash
 
-lastUpdated: 2025-09-30
+lastUpdated: false
 head:
   - tag: style
     content: |
@@ -15,211 +15,71 @@ head:
        }
 ---
 
+_Last updated: January 2025_
+
 ## Introduction
 
-At DocKit, we are committed to protecting your privacy and ensuring the security of your personal information. This Terms & Conditions explains how we collect, use, disclose, and safeguard your information when you visit our documentation site and use our services.
+These Terms and Conditions govern your use of the Aethis software application ("the Software"), created and maintained by Agastya Jindal ("we", "us", or "our"). By downloading, installing, or using Aethis, you agree to be bound by these terms.
 
-By using DocKit, you consent to the data practices described in this policy.
+## Software License
 
-## Information We Collect
+Aethis is **proprietary, closed-source software**. All rights reserved. Copyright © 2025 Agastya Jindal / Aquevix.
 
-### Information You Provide to Us
+### Permitted Uses
 
-We may collect information that you voluntarily provide to us when you:
+- Install and use Aethis on computers you own or control
+- Use Aethis for personal and commercial music production
+- Use Aethis in live performances and recordings
+- Distribute music and recordings created with Aethis
 
-- Create an account or register for our services
-- Subscribe to our newsletter or updates
-- Participate in community discussions or forums
-- Submit bug reports or feature requests
-- Contact us for support or inquiries
-- Contribute to our open-source projects
+### Restrictions
 
-This information may include:
+- **No Redistribution:** You may not redistribute, share, upload, or distribute the Aethis software, installer, or any of its components
+- **No Modification:** You may not modify, reverse engineer, decompile, or disassemble the software
+- **No Resale:** You may not sell, rent, lease, or sublicense the software
+- **No Derivative Works:** You may not create derivative works based on the software
 
-- Name and email address
-- Username and profile information
-- Communication preferences
-- Any other information you choose to provide
+## Intellectual Property
 
-### Information Automatically Collected
+Aethis, the Aethis logo, and all associated trademarks, trade names, and brand elements are the exclusive property of Agastya Jindal. All neural amp models, presets, and audio processing algorithms included in the software are proprietary.
 
-When you visit our site, we may automatically collect certain information about your device and usage patterns, including:
+## Data and Privacy
 
-- IP address and general location information
-- Browser type and version
-- Operating system
-- Pages visited and time spent on each page
-- Referring websites
-- Device information and screen resolution
+Aethis operates entirely offline and does not:
 
-### Cookies and Tracking Technologies
+- Collect personal information
+- Transmit data to external servers
+- Include analytics, telemetry, or tracking
+- Require an internet connection for functionality
 
-We use cookies and similar tracking technologies to:
+All user data (presets, settings, preferences) is stored locally on your device. See our [Privacy Policy](/privacy-policy/) for complete details.
 
-- Remember your preferences and settings
-- Analyze site usage and performance
-- Provide personalized content
-- Improve our services and user experience
+## Third-Party Components
 
-You can control cookies through your browser settings, though disabling cookies may affect site functionality.
+Aethis may include open-source libraries and third-party components. These components are used under their respective licenses. The use of these components does not grant you any rights to the proprietary portions of Aethis.
 
-## How We Use Your Information
+## Disclaimer of Warranties
 
-We use the collected information for the following purposes:
+THE SOFTWARE IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NONINFRINGEMENT. WE DO NOT WARRANT THAT THE SOFTWARE WILL BE ERROR-FREE OR UNINTERRUPTED.
 
-### Service Provision
+## Limitation of Liability
 
-- To provide, maintain, and improve our documentation platform
-- To process your requests and respond to your inquiries
-- To send you technical notices and support communications
+IN NO EVENT SHALL AGASTYA JINDAL OR ANY CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-### Communication
+## Updates and Changes
 
-- To send you newsletters and updates (with your consent)
-- To notify you about changes to our services or policies
-- To respond to your comments and questions
+We may update these Terms and Conditions from time to time. Changes will be posted on this page with an updated date. Your continued use of the software after any changes constitutes acceptance of the new terms.
 
-### Analytics and Improvement
+## Governing Law
 
-- To analyze usage patterns and improve our content
-- To monitor and analyze trends and user behavior
-- To detect and prevent security issues
+These terms shall be governed by and construed in accordance with applicable laws, without regard to conflict of law principles.
 
-### Legal Compliance
+## Contact
 
-- To comply with applicable laws and regulations
-- To protect our rights and interests
-- To respond to legal requests
+For questions about these Terms and Conditions, please contact us through:
 
-## Information Sharing and Disclosure
-
-We do not sell, rent, or trade your personal information. We may share your information in the following circumstances:
-
-### Service Providers
-
-We may share information with trusted third-party service providers who assist us in:
-
-- Website hosting and maintenance
-- Analytics and performance monitoring
-- Email communications
-- Customer support
-
-These providers are bound by confidentiality agreements and may only use your information to provide services to us.
-
-### Legal Requirements
-
-We may disclose your information if required to do so by law or in response to:
-
-- Valid legal processes (subpoenas, court orders)
-- Government investigations
-- Protection of our rights or property
-- Emergency situations involving personal safety
-
-### Business Transfers
-
-In the event of a merger, acquisition, or sale of assets, your information may be transferred as part of that transaction.
-
-## Data Security
-
-We implement appropriate technical and organizational security measures to protect your personal information against:
-
-- Unauthorized access or disclosure
-- Alteration or destruction
-- Loss or theft
-- Accidental damage
-
-Security measures include:
-
-- Encryption of data in transit and at rest
-- Regular security assessments
-- Access controls and authentication
-- Employee training on data protection
-
-However, no internet transmission or electronic storage method is 100% secure. We cannot guarantee absolute security.
-
-## Your Rights and Choices
-
-Depending on your location, you may have the following rights regarding your personal information:
-
-### Access and Portability
-
-- Request access to your personal information
-- Obtain a copy of your data in a portable format
-
-### Correction and Updates
-
-- Request correction of inaccurate information
-- Update your profile and preferences
-
-### Deletion
-
-- Request deletion of your personal information
-- Close your account and remove associated data
-
-### Consent Management
-
-- Withdraw consent for optional data processing
-- Opt out of marketing communications
-- Manage cookie preferences
-
-To exercise these rights, please contact us using the information provided below.
-
-## Data Retention
-
-We retain your personal information only as long as necessary to:
-
-- Provide our services to you
-- Comply with legal obligations
-- Resolve disputes and enforce agreements
-- Maintain security and prevent fraud
-
-When information is no longer needed, we securely delete or anonymize it.
-
-## International Data Transfers
-
-Your information may be transferred to and processed in countries other than your own. We ensure appropriate safeguards are in place for international transfers, including:
-
-- Adequacy decisions by relevant authorities
-- Standard contractual clauses
-- Other legally recognized transfer mechanisms
-
-## Children's Privacy
-
-Our services are not directed to individuals under the age of 13. We do not knowingly collect personal information from children under 13. If we become aware that we have collected such information, we will take steps to delete it promptly.
-
-## Third-Party Links
-
-Our site may contain links to third-party websites or services. This Terms & Conditions does not apply to those third parties. We encourage you to review the privacy policies of any third-party sites you visit.
-
-## Changes to This Terms & Conditions
-
-We may update this Privacy Policy from time to time to reflect changes in our practices or applicable laws. We will:
-
-- Post the updated policy on our website
-- Update the "Last Updated" date
-- Notify users of significant changes via email or site notification
-- Maintain previous versions for reference
-
-Continued use of our services after changes take effect constitutes acceptance of the updated policy.
-
-## Contact Information
-
-If you have questions, concerns, or requests regarding this Privacy Policy or our data practices, please contact us:
-
-**Email:** privacy@dockit.dev  
-**Website:** [Contact Form](/contact)  
-**Address:** [Your Business Address]
-
-For data protection inquiries in the EU, you may also contact our Data Protection Officer at: dpo@dockit.dev
-
-## Compliance and Certifications
-
-We are committed to compliance with applicable privacy laws and regulations, including:
-
-- General Data Protection Regulation (GDPR)
-- California Consumer Privacy Act (CCPA)
-- Other applicable local and international privacy laws
+- **GitHub Issues:** [github.com/agastyajindal/Aethis/issues](https://github.com/agastyajindal/Aethis/issues)
 
 ---
 
-_This Privacy Policy is part of our Terms of Service and should be read in conjunction with those terms._
+_By using Aethis, you acknowledge that you have read, understood, and agree to be bound by these Terms and Conditions._

@@ -1,14 +1,14 @@
 ---
-title: Aethis - Professional Guitar Amp Simulator
-description: Three amplifiers, four-voice harmonization, and a complete effects chain in a single plugin.
+title: Aethis - Professional Guitar Processor & Harmonizer
+description: Aethis is a professional guitar processor powered by the Aethis Engine. Featuring Neural Amp Modeller technology, 4-voice intelligent harmonization, and a complete effects chain in one VST3/AU plugin.
 template: splash
 hero:
   title: |
-    Your guitar. <span class="light-text">Reimagined.</span>
+    Aethis. <span class="light-text">Reimagined.</span>
   tagline: |
-    Three amplifiers. Four-voice Multivoicer. Complete effects chain.<br/>
-    Professional guitar processing in one plugin.<br/>
-    No compromise. No limitations.
+    Experience the power of the Aethis Engine. Intelligent 4-voice harmonization and professional amp modeling.<br/>
+    The ultimate guitar processing suite in the beautiful Aethis UI.<br/>
+    Professional tones. No compromise.
 ---
 
 import { Image } from 'astro:assets';
@@ -33,29 +33,29 @@ import multivoicerImg from '~/assets/features/multivoicer.PNG';
 import preFx from '~/assets/features/pre-fx.PNG';
 import postFx from '~/assets/features/post-fx.PNG';
 
-<Section title="Professional features
-<span class='light-text'>for serious guitarists</span>" description="Three amplifiers, intelligent harmonization, and a complete effects chain—all in one plugin.">
+<Section title="The Aethis Engine
+<span class='light-text'>Professional Guitar Processing</span>" description="Intelligent harmonization, Neural Amp Modeller integration, and a complete effects chain—all inside Aethis.">
 
 <div class="animate-stagger">
 <Grid columns={4}>
   <FadeIn client:visible delay={0} direction="up">
-    <Card title="Three Amplifiers" icon="seti:audio" iconColor="#FF8585">
-      Noctis, Rosaria, and Lumina—three distinct amp channels with unique sonic character. Full tone controls and built-in effects.
+    <Card title="Aethis Engine" icon="seti:audio" iconColor="#FF8585">
+      Advanced audio processing with Neural Amp Modeller integration. Beautifully captures of the best amps, extracted to a beautiful UI.
     </Card>
   </FadeIn>
   <FadeIn client:visible delay={0.1} direction="up">
     <Card title="Effects Chain" icon="seti:config" iconColor="#FFD97B">
-      Drive pedal, stereo chorus, delay with ping-pong mode. Dual 9-band EQ for pre and post amp shaping.
+      Drive pedal, stereo chorus, delay with ping-pong mode. Dual 9-band EQ for pre and post amp shaping in the Aethis UI.
     </Card>
   </FadeIn>
   <FadeIn client:visible delay={0.2} direction="up">
     <Card title="The Multivoicer" icon="seti:audio" iconColor="#7BE1A4">
-      Four pitch-shifted voices with ±12 semitone range. Harmonizer and Vocoder modes with MIDI control.
+      Four pitch-shifted voices with ±12 semitone range. Intelligent Harmonizer and Vocoder modes with full MIDI control.
     </Card>
   </FadeIn>
   <FadeIn client:visible delay={0.3} direction="up">
     <Card title="Plugin & Standalone" icon="rocket" iconColor="#979BFF">
-      VST3, AU, and Standalone. macOS and Windows. 44.1 kHz to 192 kHz sample rates.
+      VST3, AU, and Standalone support for macOS and Windows. Professional 192 kHz sample rate processing.
     </Card>
   </FadeIn>
 </Grid>
@@ -63,17 +63,17 @@ import postFx from '~/assets/features/post-fx.PNG';
 
 </Section>
 
-<Section title="Three amplifiers, <span class='light-text'>infinite tones</span>" description="Each amp has its own character. Switch instantly between all three.">
+<Section title="Neural Amp Modelling, <span class='light-text'>Infinite Tones</span>" description="Aethis features beautifully captures of the best amps, extracted to the beautiful Aethis UI.">
 
 <Grid columns={3}>
 <FadeIn client:visible delay={0} direction="up">
   <div class="feature-showcase rounded-2xl overflow-hidden border border-white/10 bg-white/5 glow-card">
     <div class="img-container">
-      <Image src={noctisAmp} alt="Noctis - Crystal Clean Amplifier" class="feature-img" />
+      <Image src={noctisAmp} alt="Aethis Clean Model - Pristine Headroom" class="feature-img" />
     </div>
     <div class="p-5">
-      <h3 class="text-lg font-semibold mb-2 text-white">Noctis</h3>
-      <p class="text-text text-sm mb-3">Crystal clean with pristine headroom. Bell-like clarity for jazz and funk.</p>
+      <h3 class="text-lg font-semibold mb-2 text-white">Clean Model</h3>
+      <p class="text-text text-sm mb-3">Crystal clean with pristine headroom. Bell-like clarity for jazz and funk. Captured with Neural Amp Modeller technology.</p>
       <LinkButton href="/features/amplifiers/" variant="text" size="sm">Learn More →</LinkButton>
     </div>
   </div>
@@ -82,11 +82,11 @@ import postFx from '~/assets/features/post-fx.PNG';
 <FadeIn client:visible delay={0.1} direction="up">
   <div class="feature-showcase rounded-2xl overflow-hidden border border-white/10 bg-white/5 glow-card">
     <div class="img-container">
-      <Image src={rosariaAmp} alt="Rosaria - Modern High-Gain Amplifier" class="feature-img" />
+      <Image src={rosariaAmp} alt="Aethis High-Gain Model - Modern Metal" class="feature-img" />
     </div>
     <div class="p-5">
-      <h3 class="text-lg font-semibold mb-2 text-white">Rosaria</h3>
-      <p class="text-text text-sm mb-3">Modern high-gain for metal and rock. Scooped mids, aggressive attack.</p>
+      <h3 class="text-lg font-semibold mb-2 text-white">High-Gain Model</h3>
+      <p class="text-text text-sm mb-3">Modern high-gain for metal and rock. Scooped mids, aggressive attack. Powered by the Aethis Engine's NAM core.</p>
       <LinkButton href="/features/amplifiers/" variant="text" size="sm">Learn More →</LinkButton>
     </div>
   </div>
@@ -95,11 +95,11 @@ import postFx from '~/assets/features/post-fx.PNG';
 <FadeIn client:visible delay={0.2} direction="up">
   <div class="feature-showcase rounded-2xl overflow-hidden border border-white/10 bg-white/5 glow-card">
     <div class="img-container">
-      <Image src={luminaAmp} alt="Lumina - Classic Rock Amplifier" class="feature-img" />
+      <Image src={luminaAmp} alt="Aethis Crunch Model - Classic Rock" class="feature-img" />
     </div>
     <div class="p-5">
-      <h3 class="text-lg font-semibold mb-2 text-white">Lumina</h3>
-      <p class="text-text text-sm mb-3">Classic rock crunch. Mid-range punch for blues and versatile playing.</p>
+      <h3 class="text-lg font-semibold mb-2 text-white">Crunch Model</h3>
+      <p class="text-text text-sm mb-3">Classic rock crunch. Mid-range punch for blues and versatile playing. Beautifully captured and presented in the Aethis UI.</p>
       <LinkButton href="/features/amplifiers/" variant="text" size="sm">Learn More →</LinkButton>
     </div>
   </div>
@@ -108,16 +108,16 @@ import postFx from '~/assets/features/post-fx.PNG';
 
 </Section>
 
-<Section title="Complete <span class='light-text'>effects chain</span>" description="Shape your tone before and after the amp with professional effects.">
+<Section title="Advanced <span class='light-text'>Aethis UI effects</span>" description="Shape your tone before and after the amp with studio-grade professional effects.">
 
 <Grid columns={2}>
 <FadeIn client:visible delay={0} direction="left">
   <div class="feature-showcase rounded-2xl overflow-hidden border border-white/10 bg-white/5 p-6 glow-card">
     <div class="img-container rounded-xl overflow-hidden mb-5">
-      <Image src={preFx} alt="Pre-Amp Effects - EQ and Drive Pedal" class="feature-img" />
+      <Image src={preFx} alt="Pre-Amp Effects in Aethis UI - EQ and Drive" class="feature-img" />
     </div>
     <h3 class="text-xl font-semibold mb-3 text-white">Pre-Amp Effects</h3>
-    <p class="text-text mb-4">9-band graphic EQ and drive pedal with tube-style saturation. Shape your signal before it hits the amp for the perfect foundation.</p>
+    <p class="text-text mb-4">9-band graphic EQ and drive pedal with tube-style saturation. Condition your signal before the Aethis Engine processes it for the perfect response.</p>
     <LinkButton href="/features/effects/" variant="text">View All Effects →</LinkButton>
   </div>
 </FadeIn>
@@ -125,10 +125,10 @@ import postFx from '~/assets/features/post-fx.PNG';
 <FadeIn client:visible delay={0.15} direction="right">
   <div class="feature-showcase rounded-2xl overflow-hidden border border-white/10 bg-white/5 p-6 glow-card">
     <div class="img-container rounded-xl overflow-hidden mb-5">
-      <Image src={postFx} alt="Post-Amp Effects - Cabinet, Reverb, Chorus, Delay" class="feature-img" />
+      <Image src={postFx} alt="Post-Amp Effects in Aethis UI - Reverb and Delay" class="feature-img" />
     </div>
     <h3 class="text-xl font-semibold mb-3 text-white">Post-Amp Effects</h3>
-    <p class="text-text mb-4">Cabinet simulation, spatial reverb, stereo chorus, and ping-pong delay. Everything you need for polished, professional tones.</p>
+    <p class="text-text mb-4">Cabinet simulation, spatial reverb, stereo chorus, and ping-pong delay. Everything you need for polished, professional guitar tones.</p>
     <LinkButton href="/features/effects/" variant="text">Explore Effects →</LinkButton>
   </div>
 </FadeIn>
@@ -137,8 +137,8 @@ import postFx from '~/assets/features/post-fx.PNG';
 </Section>
 
 <Section
-  title="The Multivoicer <span class='light-text'>in action</span>"
-  description="Four-voice harmonization that sounds like a full band. Create rich, layered harmonies in real-time."
+  title="Intelligent Multivoicer <span class='light-text'>Technology</span>"
+  description="Experience the Aethis Engine's 4-voice harmonization. Create rich, layered guitar harmonies in real-time."
 >
 
 <FadeIn client:visible direction="up" delay={0.1}>
@@ -146,7 +146,7 @@ import postFx from '~/assets/features/post-fx.PNG';
     <FloatingParticles client:load count={20} color="rgba(123, 225, 164, 0.4)" speed={25} />
 
     <div class="img-container rounded-xl overflow-hidden mb-8 relative">
-      <Image src={multivoicerImg} alt="Multivoicer - 4-Voice Pitch Shifter and Harmonizer" class="feature-img" />
+      <Image src={multivoicerImg} alt="Aethis Multivoicer - Intelligent Harmonizer UI" class="feature-img" />
     </div>
 
     <div class="grid md:grid-cols-3 gap-6 text-center relative z-10">
@@ -183,7 +183,7 @@ import Accordion from "~/components/Accordion.astro";
 
 <Section
   title="Common questions <span class='light-text'>answered</span>"
-  description="Everything you need to know about Aethis."
+  description="Everything you need to know about Aethis and the Aethis Engine."
 >
 
 <FadeIn client:visible direction="up" delay={0.1}>
@@ -198,7 +198,7 @@ import Accordion from "~/components/Accordion.astro";
     {
       type: 'setting',
       title: 'Features & Usage',
-      subtitle:'Understanding Aethis\'s capabilities.',
+      subtitle:'Understanding Aethis capabilities.',
       icon: "settings"
     },
     {
@@ -238,7 +238,7 @@ import Accordion from "~/components/Accordion.astro";
 />
 <Accordion
   question="What are the three amplifier channels?"
-  answer="Aethis includes three amp channels: (1) Noctis—crystal clean with pristine headroom for jazz and funk. (2) Rosaria—modern high-gain with scooped mids for metal and rock. (3) Lumina—classic rock crunch with mid-range punch for blues and versatile playing. Each has full tone controls, noise gate, cabinet simulation, reverb, and compressor."
+  answer="Aethis includes three amp channels powered by the Aethis Engine using Neural Amp Modeller technology: (1) Clean Model—crystal clean for jazz and funk. (2) High-Gain Model—modern metal and rock. (3) Crunch Model—classic rock and blues. Each has full tone controls, cabinet simulation, reverb, and compressor."
   type="setting"
 />
 <Accordion
@@ -248,7 +248,7 @@ import Accordion from "~/components/Accordion.astro";
 />
 <Accordion
   question="What audio quality options are available?"
-  answer="Aethis offers adjustable oversampling (Off, 2x, 4x, 8x) for pristine audio quality at the cost of CPU usage. CPU Saver mode reduces processing load for lower-powered systems. All effects and amp processing adapt automatically to your DAW's sample rate from 44.1 kHz to 192 kHz."
+  answer="Aethis offers adjustable oversampling (Off, 2x, 4x, 8x) for pristine audio quality. CPU Saver mode reduces processing load for lower-powered systems. All effects and amp processing adapt automatically to your DAW's sample rate from 44.1 kHz to 192 kHz."
   type="setting"
 />
 
