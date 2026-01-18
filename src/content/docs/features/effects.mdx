@@ -1,262 +1,157 @@
 ---
-title: Aethis Engine Effects
-description: Drive pedal, stereo chorus, delay with ping-pong, and dual 9-band graphic EQ for complete tone shaping with Aethis Engine.
+title: Effects & EQ
+description: Dual 9-band graphic equalizer with pre and post amp modes, plus global controls for complete tone shaping.
 ---
 
 import { Image } from 'astro:assets';
-import SignalFlow from "~/components/user-components/SignalFlow.astro";
-import ControlCard from "~/components/user-components/ControlCard.astro";
-import BentoGrid from "~/components/user-components/BentoGrid.astro";
-import FeatureCard from "~/components/user-components/FeatureCard.astro";
-
 import eqImage from '~/assets/features/eq-pedal.jpg';
-import postFx from '~/assets/features/post-fx.jpg';
 
-# Aethis Engine Effects
+# Effects & EQ
 
-Aethis includes a complete effects chain powered by the **Aethis Engine**, with everything you need to shape your sound. From subtle enhancement to extreme processing, these studio-quality effects give you full control over your tone within the beautiful Aethis UI.
+Aethis includes a powerful **dual 9-band graphic equalizer** that can be placed before or after the amplifier in the signal chain. Combined with global input/output controls, you have complete control over your tone.
 
----
-
-## Signal Flow
-
-Your guitar signal flows through effects in this order:
-
-<SignalFlow steps={[
-  { label: "Guitar Input", description: "Your instrument signal" },
-  { label: "Global Input Gain", description: "-12 to +12 dB" },
-  { label: "Pre-Amp EQ", description: "9-band graphic EQ", color: "#EC4899" },
-  { label: "Drive Pedal", description: "Tube-style saturation", color: "#F59E0B" },
-  {
-    label: "Active Amp Channel",
-    isBox: true,
-    color: "#D76D77",
-    boxContent: ["Compressor", "Gate", "Tone Stack", "Amp", "Cabinet", "Presence", "Reverb"]
-  },
-  { label: "Post-Amp EQ", description: "9-band graphic EQ", color: "#94A3B8" },
-  { label: "Chorus", description: "Stereo modulation", color: "#EC4899" },
-  { label: "Delay", description: "Ping-pong mode", color: "#14B8A6" },
-  { label: "Multivoicer", description: "Harmonizer/Vocoder", color: "#979BFF" },
-  { label: "Global Output Gain", description: "-12 to +12 dB" },
-  { label: "Output", description: "To your DAW or speakers" }
-]} />
-
-Each effect can be enabled or bypassed independently via the Aethis UI.
-
----
-
-## Dual 9-Band Graphic EQ
-
-<div class="fx-showcase">
-  <Image src={eqImage} alt="Pre-Amp and Post-Amp 9-Band Graphic EQ" class="fx-image" />
+<div class="feature-image">
+  <Image src={eqImage} alt="9-Band Graphic Equalizer" />
 </div>
 
-Shape your tone before and after the amp for complete tonal control. The Pre-Amp EQ (pink) conditions your signal before the amplifier, while the Post-Amp EQ (white) provides final polish.
+---
+
+## 9-Band Graphic EQ
+
+The equalizer provides surgical tone control with 9 frequency bands spanning the full guitar range.
 
 ### Frequency Bands
 
-<BentoGrid variant="compact">
-  <FeatureCard title="100 Hz" color="#D76D77">
-    Sub-bass, rumble
-  </FeatureCard>
-  <FeatureCard title="200 Hz" color="#FF8585">
-    Bass, low thump
-  </FeatureCard>
-  <FeatureCard title="400 Hz" color="#FFD97B">
-    Low-mid warmth
-  </FeatureCard>
-  <FeatureCard title="800 Hz" color="#FFD97B">
-    Mid-range body
-  </FeatureCard>
-  <FeatureCard title="1.6 kHz" color="#7BE1A4">
-    Upper-mid presence
-  </FeatureCard>
-  <FeatureCard title="3.2 kHz" color="#7BE1A4">
-    High-mid bite
-  </FeatureCard>
-  <FeatureCard title="6.4 kHz" color="#5BC0EB">
-    Treble clarity
-  </FeatureCard>
-  <FeatureCard title="10 kHz" color="#5BC0EB">
-    High treble, air
-  </FeatureCard>
-  <FeatureCard title="16 kHz" color="#979BFF">
-    Extreme highs, sparkle
-  </FeatureCard>
-</BentoGrid>
+| Band | Frequency | Character |
+|------|-----------|-----------|
+| 1 | 65 Hz | Sub-bass, rumble |
+| 2 | 125 Hz | Bass, low thump |
+| 3 | 250 Hz | Low-mid warmth |
+| 4 | 500 Hz | Mid-range body |
+| 5 | 1 kHz | Upper-mid presence |
+| 6 | 2 kHz | High-mid bite |
+| 7 | 4 kHz | Treble clarity |
+| 8 | 8 kHz | High treble, air |
+| 9 | 16 kHz | Extreme highs, sparkle |
 
-Each band: **-12 to +12 dB** adjustment
-
-<BentoGrid>
-  <FeatureCard title="Pre-Amp EQ" color="#EC4899">
-    Shapes signal going **INTO** the amp:
-    - Changes how the amp responds
-    - Affects distortion character
-    - Boosting mids = more mid-focused crunch
-  </FeatureCard>
-  <FeatureCard title="Post-Amp EQ" color="#94A3B8">
-    Shapes signal coming **OUT OF** the amp:
-    - Final polish and correction
-    - Doesn't change amp character
-    - Better for surgical adjustments
-  </FeatureCard>
-</BentoGrid>
+Each band can be adjusted from **-12 dB to +12 dB**.
 
 ---
 
-## Post-Amp Effects
+## Pre vs Post Mode
 
-<div class="fx-showcase">
-  <Image src={postFx} alt="Post-Amp Effects - Cabinet, Reverb, Chorus, Delay" class="fx-image" />
-</div>
+The EQ can operate in two modes, switchable via the PRE/POST button:
 
-### Cabinet Simulation
+### Pre-Amp EQ (PRE)
 
-Authentic speaker cabinet emulation for realistic amp-in-the-room tone.
+Places the EQ **before** the amplifier in the signal chain.
 
-<ControlCard
-  title="Cabinet"
-  color="#22C55E"
-  controls={[
-    { name: "Cabinet Enabled", range: "On/Off", description: "Toggle cabinet simulation" },
-    { name: "Mix", range: "0-100%", description: "Blend between direct amp sound and cabinet-processed signal" }
-  ]}
-  columns={1}
-/>
+**Effect:** Changes how the amp responds to your signal. Boosting frequencies here affects the amp's distortion character.
 
-### Reverb
+**Use cases:**
+- Shaping your tone before it hits the amp
+- Boosting mids for more aggressive crunch
+- Cutting bass to tighten high-gain tones
+- Creating mid-scooped tones that the amp then distorts
 
-Lush spatial effects to add space and dimension to your tone.
+### Post-Amp EQ (POST)
 
-<ControlCard
-  title="Reverb"
-  color="#3B82F6"
-  controls={[
-    { name: "Size", range: "0-100%", description: "Room size from intimate booth to expansive cathedral" },
-    { name: "Damping", range: "0-100%", description: "High-frequency absorption for darker reverb tails" },
-    { name: "Width", range: "0-100%", description: "Stereo spread of the reverb" },
-    { name: "Mix", range: "0-100%", description: "Dry/wet blend of the reverb effect" }
-  ]}
-/>
+Places the EQ **after** the amplifier in the signal chain.
 
-### Chorus
+**Effect:** Shapes the amp's output without changing its distortion character. More surgical and predictable.
 
-Rich stereo modulation effect for lush, detuned sounds.
+**Use cases:**
+- Final tone polish and correction
+- Matching your tone to a mix
+- Removing problem frequencies
+- Subtle adjustments that don't affect amp feel
 
-<ControlCard
-  title="Chorus"
-  color="#EC4899"
-  controls={[
-    { name: "Rate", range: "0.1-10 Hz", description: "Speed of the modulation" },
-    { name: "Depth", range: "0-100%", description: "Intensity of the pitch modulation" },
-    { name: "Feedback", range: "0-95%", description: "Amount of signal fed back for more intense effect" },
-    { name: "Mix", range: "0-100%", description: "Dry/wet blend" }
-  ]}
-/>
+---
 
-<BentoGrid variant="compact">
-  <FeatureCard title="Slow & Dreamy" color="#979BFF">
-    0.1-1 Hz rate for subtle movement
-  </FeatureCard>
-  <FeatureCard title="Classic Chorus" color="#EC4899">
-    1-3 Hz rate for standard modulation
-  </FeatureCard>
-  <FeatureCard title="Fast Vibrato" color="#FFD97B">
-    3-10 Hz rate for shimmer effect
-  </FeatureCard>
-</BentoGrid>
+## High-Pass and Low-Pass Filters
 
-### Delay
+In addition to the 9 bands, the EQ includes adjustable filters:
 
-Versatile delay with optional ping-pong stereo mode.
+| Filter | Range | Description |
+|--------|-------|-------------|
+| **HP (High-Pass)** | 20-500 Hz | Removes frequencies below this point |
+| **LP (Low-Pass)** | 2000-20000 Hz | Removes frequencies above this point |
 
-<ControlCard
-  title="Delay"
-  color="#14B8A6"
-  controls={[
-    { name: "Time", range: "1-2000 ms", description: "Delay time between repeats" },
-    { name: "Feedback", range: "0-95%", description: "Number of repeats (higher = more echoes)" },
-    { name: "Damping", range: "0-100%", description: "High-frequency absorption on repeats" },
-    { name: "Ping-Pong", range: "On/Off", description: "Stereo bouncing effect" },
-    { name: "Mix", range: "0-100%", description: "Dry/wet blend" }
-  ]}
-/>
-
-<BentoGrid>
-  <FeatureCard title="Time Settings" color="#14B8A6">
-    - **1-50 ms**: Slapback, doubling
-    - **50-200 ms**: Rhythmic echoes
-    - **200-500 ms**: Standard delay
-    - **500-2000 ms**: Long, ambient
-  </FeatureCard>
-  <FeatureCard title="Feedback Settings" color="#979BFF">
-    - **0-20%**: Single echo or short trails
-    - **20-50%**: 4-5 audible echoes
-    - **50-80%**: Long, fading trails
-    - **80-95%**: Near self-oscillation
-  </FeatureCard>
-</BentoGrid>
+These are useful for:
+- Cutting rumble and sub-bass (HP)
+- Removing harsh highs and noise (LP)
+- Fitting your guitar into a dense mix
 
 ---
 
 ## Global Controls
 
-<ControlCard
-  title="Master Section"
-  color="#D76D77"
-  controls={[
-    { name: "Global Input Gain", range: "-12 to +12 dB", description: "Master input level" },
-    { name: "Global Output Gain", range: "-12 to +12 dB", description: "Master output level" },
-    { name: "Global Bypass", range: "On/Off", description: "Bypass all processing" },
-    { name: "Input Enabled", range: "On/Off", description: "Master input mute" }
-  ]}
-/>
+### Input Section
 
-<ControlCard
-  title="Audio Quality"
-  color="#979BFF"
-  controls={[
-    { name: "Oversampling", range: "Off, 2x, 4x, 8x", description: "Higher values = better quality, more CPU usage" },
-    { name: "CPU Saver Mode", range: "On/Off", description: "Reduce processing load for lower-powered systems" }
-  ]}
-  columns={1}
-/>
+| Control | Range | Description |
+|---------|-------|-------------|
+| **Input Gain** | -12 to +12 dB | Adjusts signal level entering Aethis |
+| **Gate** | -60 to 0 dB | Noise gate threshold |
+| **On/Off** | Toggle | Master bypass for input |
+
+### Output Section
+
+| Control | Range | Description |
+|---------|-------|-------------|
+| **Output Gain** | -12 to +12 dB | Master output level |
+
+### Additional Controls
+
+| Control | Options | Description |
+|---------|---------|-------------|
+| **Tuner** | Button | Opens the built-in chromatic tuner |
+| **Bright** | On/Off | Adds high-frequency presence |
+
+---
+
+## Signal Flow
+
+The complete signal path in Aethis:
+
+1. **Input** → Input gain and gate
+2. **Pre-FX** → Boost, Noise Gate, Compressor, Overdrive
+3. **EQ (Pre mode)** → 9-band graphic equalizer
+4. **Amp** → Rosaria, Lumina, or Noctis
+5. **EQ (Post mode)** → 9-band graphic equalizer
+6. **Post-FX** → Cabinet, Chorus, Delay, Reverb
+7. **Voices** → 4-voice harmonizer
+8. **Output** → Output gain
+
+Note: The EQ appears in only one position at a time (Pre or Post), not both simultaneously.
 
 ---
 
 ## Tips
 
-<BentoGrid variant="compact">
-  <FeatureCard title="Pre-EQ Shaping" color="#EC4899">
-    Shape your input before it hits the amp
-  </FeatureCard>
-  <FeatureCard title="Post-EQ Polish" color="#94A3B8">
-    Small adjustments go a long way
-  </FeatureCard>
-  <FeatureCard title="Chorus Width" color="#EC4899">
-    Adds dimension to clean tones
-  </FeatureCard>
-  <FeatureCard title="Delay Damping" color="#14B8A6">
-    Higher = warmer, vintage echoes
-  </FeatureCard>
-  <FeatureCard title="Ping-Pong" color="#14B8A6">
-    Great for leads and ambient textures
-  </FeatureCard>
-  <FeatureCard title="Oversampling" color="#979BFF">
-    4x or 8x improves quality
-  </FeatureCard>
-</BentoGrid>
+**Start flat:**
+Begin with all EQ bands at 0 dB. Make small adjustments (2-3 dB) and listen carefully. Large boosts often sound worse than subtle cuts.
+
+**Cut before boosting:**
+If something sounds muddy, try cutting the problem frequency rather than boosting others. This keeps your overall level consistent.
+
+**Pre-EQ for amp feel:**
+Use Pre mode when you want to change how the amp responds. A mid boost here will make the amp crunch differently.
+
+**Post-EQ for polish:**
+Use Post mode for final adjustments. This is where you fine-tune your tone without affecting how the amp feels under your fingers.
+
+**High-pass for clarity:**
+A subtle high-pass around 80-100 Hz removes rumble and tightens your low end, especially useful for high-gain tones.
 
 <style>{`
-  .fx-showcase {
-    margin: 1.5rem 0 2rem 0;
-    border-radius: 16px;
+  .feature-image {
+    margin: 2rem 0;
+    border-radius: 12px;
     overflow: hidden;
     border: 1px solid var(--sl-color-gray-5);
-    background: var(--sl-color-gray-6);
   }
 
-  .fx-image {
+  .feature-image img {
     width: 100%;
     height: auto;
     display: block;

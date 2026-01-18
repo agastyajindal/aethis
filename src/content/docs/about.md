@@ -1,11 +1,11 @@
 ---
 title: About Aethis
-description: Intelligent Multivoicer + Guitar Processor in One Plugin
+description: Intelligent Voices + Guitar Processor in One Plugin
 ---
 
 # Aethis
 
-**Intelligent Multivoicer + Guitar Processor in One Plugin**
+**Intelligent Voices + Guitar Processor in One Plugin**
 
 Aethis isn't just a harmonizer. It's a complete rethinking of what a guitar plugin should be. Four-voice harmonization meets professional amp processing in a single, unified instrument. No compromise. No limitations. Just your guitar, reimagined.
 
@@ -33,7 +33,7 @@ Fine-tune your sound after the amp with another full 9-band graphic equalizer. P
 
 **Delay:** Three modes—ping pong, wide, normal—and three types: diffusion, vintage digital, modern. Layer your tone with space and atmosphere.
 
-### The Multivoicer
+### The Voices
 
 Add four pitch-shifted voices to your signal. Create rich, layered harmonies that sound like a full band. Each voice can be tuned independently from ±24 semitones with cent-level precision.
 

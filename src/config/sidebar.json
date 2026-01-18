@@ -21,11 +21,11 @@
           "slug": "features/effects"
         },
         {
-          "label": "[music] Multivoicer",
+          "label": "[music] Voices",
           "translations": {
-            "fr": "[music] Multivoicer"
+            "fr": "[music] Voix"
           },
-          "slug": "features/multivoicer"
+          "slug": "features/voices"
         }
       ]
     },

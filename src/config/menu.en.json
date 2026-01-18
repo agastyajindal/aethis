@@ -20,8 +20,8 @@
           "icon": "config"
         },
         {
-          "name": "Multivoicer",
-          "url": "/features/multivoicer/",
+          "name": "Voices",
+          "url": "/features/voices/",
           "icon": "music"
         }
       ]
@@ -79,8 +79,8 @@
           "url": "/features/amplifiers/"
         },
         {
-          "name": "Multivoicer",
-          "url": "/features/multivoicer/"
+          "name": "Voices",
+          "url": "/features/voices/"
         },
         {
           "name": "Effects",

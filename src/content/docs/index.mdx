@@ -49,8 +49,8 @@ import postFx from '~/assets/features/post-fx.jpg';
     </Card>
   </FadeIn>
   <FadeIn client:visible delay={0.2} direction="up">
-    <Card title="The Multivoicer" icon="seti:audio" iconColor="#7BE1A4">
-      Four pitch-shifted voices with ±12 semitone range. Intelligent Harmonizer and Vocoder modes with full MIDI control.
+    <Card title="Voices" icon="seti:audio" iconColor="#7BE1A4">
+      Four pitch-shifted voices with ±12 semitone range. Intelligent harmonizer with scale quantization and MIDI control.
     </Card>
   </FadeIn>
   <FadeIn client:visible delay={0.3} direction="up">
@@ -137,7 +137,7 @@ import postFx from '~/assets/features/post-fx.jpg';
 </Section>
 
 <Section
-  title="Intelligent Multivoicer <span class='light-text'>Technology</span>"
+  title="Intelligent Voices <span class='light-text'>Harmonization</span>"
   description="Experience the Aethis Engine's 4-voice harmonization. Create rich, layered guitar harmonies in real-time."
 >
 
@@ -146,32 +146,32 @@ import postFx from '~/assets/features/post-fx.jpg';
     <FloatingParticles client:load count={20} color="rgba(123, 225, 164, 0.4)" speed={25} />
 
     <div class="img-container rounded-xl overflow-hidden mb-8 relative">
-      <Image src={multivoicerImg} alt="Aethis Multivoicer - Intelligent Harmonizer UI" class="feature-img" />
+      <Image src={multivoicerImg} alt="Aethis Voices - 4-Voice Harmonizer" class="feature-img" />
     </div>
 
     <div class="grid md:grid-cols-3 gap-6 text-center relative z-10">
       <FadeIn client:visible delay={0} direction="up">
         <div class="p-4">
-          <h4 class="text-lg font-semibold text-white mb-2">Harmonizer Mode</h4>
-          <p class="text-text text-sm">Automatically generate perfect musical intervals. Choose your root note and scale—your guitar becomes a choir.</p>
+          <h4 class="text-lg font-semibold text-white mb-2">Scale Quantization</h4>
+          <p class="text-text text-sm">Automatically generate perfect musical intervals. Choose your key and scale—your harmonies stay in tune.</p>
         </div>
       </FadeIn>
       <FadeIn client:visible delay={0.1} direction="up">
         <div class="p-4">
-          <h4 class="text-lg font-semibold text-white mb-2">Vocoder Mode</h4>
-          <p class="text-text text-sm">Add synthetic, vocal-like texture with formant shifting. Push into experimental, otherworldly territory.</p>
+          <h4 class="text-lg font-semibold text-white mb-2">Per-Voice Control</h4>
+          <p class="text-text text-sm">Independent level, pan, detune, and delay for each of the four voices. Total control over your harmony.</p>
         </div>
       </FadeIn>
       <FadeIn client:visible delay={0.2} direction="up">
         <div class="p-4">
-          <h4 class="text-lg font-semibold text-white mb-2">MIDI Control</h4>
+          <h4 class="text-lg font-semibold text-white mb-2">MIDI Mode</h4>
           <p class="text-text text-sm">Connect a MIDI controller for real-time chord-following harmonies. Your guitar provides the tone, MIDI controls the harmony.</p>
         </div>
       </FadeIn>
     </div>
 
     <div class="text-center mt-6">
-      <LinkButton href="/features/multivoicer/">Explore Multivoicer →</LinkButton>
+      <LinkButton href="/features/voices/">Explore Voices →</LinkButton>
     </div>
   </div>
 </FadeIn>
@@ -232,13 +232,13 @@ import Accordion from "~/components/Accordion.astro";
 />
 
 <Accordion
-  question="How does the Multivoicer work?"
-  answer="The Multivoicer adds up to four pitch-shifted voices to your guitar signal. Each voice has independent control over: interval (±12 semitones), fine-tuning (cents), mix level, stereo pan, and delay. In Harmonizer mode, voices snap to a selected musical scale with 8 scale types. The 16-band Vocoder mode adds synthetic textures with formant shifting. MIDI mode allows real-time chord-following harmonies."
+  question="How does the Voices harmonizer work?"
+  answer="The Voices section adds up to four pitch-shifted voices to your guitar signal. Each voice has independent control over: interval (±12 semitones), fine-tuning (cents), level, stereo pan, and delay. Scale quantization keeps harmonies in key with 8 scale types. MIDI mode allows real-time chord-following harmonies where your guitar provides the tone and MIDI controls the pitch."
   type="setting"
 />
 <Accordion
-  question="What are the three amplifier channels?"
-  answer="Aethis includes three amp channels powered by the Aethis Engine using Neural Amp Modeller technology: (1) Clean Model—crystal clean for jazz and funk. (2) High-Gain Model—modern metal and rock. (3) Crunch Model—classic rock and blues. Each has full tone controls, cabinet simulation, reverb, and compressor."
+  question="What are the three amplifier models?"
+  answer="Aethis includes three amp models powered by Neural Amp Modeler (NAM) technology: (1) Rosaria—warm mids and smooth breakup for blues and rock. (2) Lumina—crystal cleans with maximum headroom for jazz and funk. (3) Noctis—tight bass and aggressive high-gain for metal. Each has full tone controls (gain, bass, mid, treble, resonance, output) and saves settings independently."
   type="setting"
 />
 <Accordion

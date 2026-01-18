@@ -1,13 +1,9 @@
 ---
 title: Amplifiers
-description: Three distinct amplifier channels powered by Neural Amp Modeller technology, featuring unique tonal characters, full tone controls, cabinet simulation, reverb, and dynamics processing.
+description: Three distinct amplifier models powered by Neural Amp Modeler technology - Rosaria, Lumina, and Noctis - each with unique tonal character and full tone controls.
 ---
 
 import { Image } from 'astro:assets';
-import ControlCard from "~/components/user-components/ControlCard.astro";
-import BentoGrid from "~/components/user-components/BentoGrid.astro";
-import FeatureCard from "~/components/user-components/FeatureCard.astro";
-
 import noctisAmp from '~/assets/features/noctis-amp.jpg';
 import rosariaAmp from '~/assets/features/rosaria-amp.jpg';
 import luminaAmp from '~/assets/features/lumina-amp.jpg';
@@ -16,228 +12,214 @@ import postFx from '~/assets/features/post-fx.jpg';
 
 # Amplifiers
 
-Aethis Engine includes **three distinct amplifier channels**, each with its own unique tonal character powered by **Neural Amp Modeller** technology. Beautifully captures of the best amps, extracted to a beautiful UI.
+Aethis features **three distinct amplifier models**, each captured using **Neural Amp Modeler (NAM)** technology. Switch between amps instantly with no loading time, and each amp remembers its own settings independently.
 
 ---
 
-## Clean Model
+## Rosaria
 
 <div class="amp-showcase">
-  <Image src={noctisAmp} alt="Clean Model Amplifier" class="amp-image" />
+  <Image src={rosariaAmp} alt="Rosaria Amplifier" />
 </div>
 
-A pristine, glassy clean amplifier with exceptional headroom and clarity. This model delivers bell-like highs and warm lows without any breakup—perfect for jazz, funk, and ambient styles where you need every note to ring true. Captured with Neural Amp Modeller technology for authentic response.
+A warm, versatile amplifier with a pronounced mid-range character. Rosaria delivers everything from sparkling cleans to creamy overdrive, making it the go-to choice for blues, classic rock, and expressive lead work.
 
-**Best for:** Jazz, funk, clean tones, ambient, fingerstyle
+**Character:** Warm mids, smooth breakup, dynamic response
+
+**Best for:** Blues, classic rock, country, jazz fusion, expressive leads
 
 ---
 
-## High-Gain Model
+## Lumina
 
 <div class="amp-showcase">
-  <Image src={rosariaAmp} alt="High-Gain Model Amplifier" class="amp-image" />
+  <Image src={luminaAmp} alt="Lumina Amplifier" />
 </div>
 
-A dark, powerful amplifier delivering a scooped, aggressive tone perfect for metal and modern rock. This model features boosted bass and treble with scooped mids for that thick, chunky attack that cuts through any mix. Powered by NAM for realistic high-gain saturation.
+A pristine, crystal-clear amplifier with exceptional headroom. Lumina delivers bell-like cleans and chimey tones that stay clean even at higher volumes, perfect for styles where clarity is paramount.
 
-**Best for:** Metal, djent, modern rock, heavy rhythm
+**Character:** Crystal cleans, bell-like highs, maximum headroom
+
+**Best for:** Jazz, funk, ambient, fingerstyle, clean tones, pedal platform
 
 ---
 
-## Crunch Model
+## Noctis
 
 <div class="amp-showcase">
-  <Image src={luminaAmp} alt="Crunch Model Amplifier" class="amp-image" />
+  <Image src={noctisAmp} alt="Noctis Amplifier" />
 </div>
 
-The quintessential rock amplifier tone with a pronounced mid-range punch. This model captures that classic British crunch sound—perfect for blues, classic rock, and everything in between. Authentic tube-like dynamics provided by the Aethis Engine.
+A dark, powerful high-gain amplifier built for modern metal and aggressive tones. Noctis delivers tight low-end, scooped mids, and aggressive saturation that cuts through any mix.
 
-**Best for:** Blues, classic rock, crunch tones, versatile playing
+**Character:** Tight bass, scooped mids, aggressive high-gain
+
+**Best for:** Metal, djent, hardcore, modern rock, heavy rhythm
 
 ---
 
 ## Amp Controls
 
-Every amp channel includes a full set of professional controls within the Aethis UI:
+Every amplifier includes a complete set of tone-shaping controls:
 
-<ControlCard
-  title="Input & Output"
-  color="#D76D77"
-  controls={[
-    { name: "Input Gain", range: "-12 to +12 dB", description: "Adjusts signal level going into the amp" },
-    { name: "Output Gain", range: "-12 to +12 dB", description: "Controls the final output level of the amp" }
-  ]}
-  columns={1}
-/>
+| Control | Range | Description |
+|---------|-------|-------------|
+| **Gain** | 0-10 | Input drive and saturation amount |
+| **Bass** | 0-10 | Low frequency content |
+| **Middle** | 0-10 | Mid-range frequencies (biggest impact on tone) |
+| **Treble** | 0-10 | High frequency content |
+| **Resonance** | 0-10 | Low-frequency presence and tightness |
+| **Output** | 0-10 | Master volume level |
 
-<ControlCard
-  title="Tone Stack (3-Band EQ)"
-  color="#FFD97B"
-  controls={[
-    { name: "Bass", range: "-12 to +12 dB", description: "Low frequency content" },
-    { name: "Mid", range: "-12 to +12 dB", description: "Mid-range frequencies — biggest impact on tone character" },
-    { name: "Treble", range: "-12 to +12 dB", description: "High frequency content" },
-    { name: "Presence", range: "-12 to +12 dB", description: "High-frequency \"air\" and sparkle above the treble control" }
-  ]}
-/>
+Each amp saves its control settings independently, so you can set up three completely different tones and switch between them instantly.
 
 ---
 
-## Pre-Amp Effects
+## Pre-FX Pedals
 
 <div class="amp-showcase">
-  <Image src={preFx} alt="Pre-Amp Effects - Noise Gate, Compressor, Drive" class="amp-image" />
+  <Image src={preFx} alt="Pre-FX Pedals" />
 </div>
+
+Effects that go before the amplifier in the signal chain:
+
+### Boost
+
+A clean boost and EQ pedal for pushing the amp harder or shaping your input tone.
+
+| Control | Range | Description |
+|---------|-------|-------------|
+| **Gain** | 0-100% | Boost amount |
+| **Level** | 0-100% | Output volume |
+| **Bass** | 0-100% | Low frequency adjustment |
+| **Treble** | 0-100% | High frequency adjustment |
 
 ### Noise Gate
 
-Built-in precision gate to eliminate unwanted hum and buzz during silent passages.
+Precision gate to eliminate unwanted hum and buzz during silent passages.
 
-<ControlCard
-  title="Gate Controls"
-  color="#8B5CF6"
-  controls={[
-    { name: "Threshold", range: "-80 to 0 dB", description: "Signal level below which the gate closes" },
-    { name: "Attack", range: "0.1-100 ms", description: "How quickly the gate opens when signal is detected" },
-    { name: "Release", range: "10-1000 ms", description: "How slowly the gate closes after signal stops" },
-    { name: "Hold", range: "0-500 ms", description: "Minimum time gate stays open after triggering" }
-  ]}
-/>
+| Control | Range | Description |
+|---------|-------|-------------|
+| **Threshold** | -80 to 0 dB | Level below which the gate closes |
+| **Attack** | 0.1-100 ms | How quickly the gate opens |
+| **Release** | 10-1000 ms | How slowly the gate closes |
+| **Hold** | 0-500 ms | Minimum time gate stays open |
 
 ### Compressor
 
 Smooth dynamics control for consistent levels and sustain.
 
-<ControlCard
-  title="Compressor Controls"
-  color="#F97316"
-  controls={[
-    { name: "Threshold", range: "-60 to 0 dB", description: "Level above which compression begins" },
-    { name: "Ratio", range: "1:1 to 20:1", description: "Amount of gain reduction applied" },
-    { name: "Attack", range: "0.1-100 ms", description: "How quickly compression engages" },
-    { name: "Release", range: "10-1000 ms", description: "How slowly compression releases" },
-    { name: "Makeup Gain", range: "0-24 dB", description: "Compensate for volume lost during compression" },
-    { name: "Mix", range: "0-100%", description: "Parallel compression blend for punch with dynamics" }
-  ]}
-/>
+| Control | Range | Description |
+|---------|-------|-------------|
+| **Comp** | 0-100% | Compression amount |
+| **Level** | 0-100% | Output volume |
+| **Fast** | On/Off | Fast attack mode for percussive playing |
 
-### Drive
+### Overdrive
 
-Warm, tube-style overdrive for everything from subtle grit to saturated crunch.
+Tube-style overdrive for adding grit and saturation before the amp.
 
-<ControlCard
-  title="Drive Controls"
-  color="#F59E0B"
-  controls={[
-    { name: "Drive", range: "0-100%", description: "Intensity of the distortion" },
-    { name: "Tone", range: "0-100%", description: "Brightness of the overdrive (dark to bright)" },
-    { name: "Level", range: "-12 to +12 dB", description: "Output volume compensation" }
-  ]}
-/>
+| Control | Range | Description |
+|---------|-------|-------------|
+| **Drive** | 0-100% | Distortion intensity |
+| **Tone** | 0-100% | Brightness (dark to bright) |
+| **Level** | 0-100% | Output volume |
 
 ---
 
-## Post-Amp Effects
+## Post-FX Pedals
 
 <div class="amp-showcase">
-  <Image src={postFx} alt="Post-Amp Effects - Cabinet, Reverb, Chorus, Delay" class="amp-image" />
+  <Image src={postFx} alt="Post-FX Pedals" />
 </div>
 
-### Cabinet Simulation
+Effects that go after the amplifier in the signal chain:
 
-Authentic speaker cabinet emulation for realistic amp-in-the-room tone.
+### Cabinet
 
-<ControlCard
-  title="Cabinet"
-  color="#22C55E"
-  controls={[
-    { name: "Cabinet Enabled", range: "On/Off", description: "Toggle cabinet simulation" },
-    { name: "Mix", range: "0-100%", description: "Blend between direct amp sound and cabinet-processed signal" }
-  ]}
-  columns={1}
-/>
+Speaker cabinet simulation for realistic amp-in-the-room tone.
 
-### Reverb
-
-Lush spatial effects to add space and dimension to your tone.
-
-<ControlCard
-  title="Reverb"
-  color="#3B82F6"
-  controls={[
-    { name: "Size", range: "0-100%", description: "Room size from intimate booth to expansive cathedral" },
-    { name: "Damping", range: "0-100%", description: "High-frequency absorption for darker reverb tails" },
-    { name: "Width", range: "0-100%", description: "Stereo spread of the reverb" },
-    { name: "Mix", range: "0-100%", description: "Dry/wet blend of the reverb effect" }
-  ]}
-/>
+| Control | Range | Description |
+|---------|-------|-------------|
+| **Mix** | 0-100% | Cabinet blend amount |
+| **Load IR** | Button | Load custom impulse response |
 
 ### Chorus
 
-Rich stereo modulation effect for lush, detuned sounds.
+Stereo modulation effect for lush, animated tones.
 
-<ControlCard
-  title="Chorus"
-  color="#EC4899"
-  controls={[
-    { name: "Rate", range: "0.1-10 Hz", description: "Speed of the modulation" },
-    { name: "Depth", range: "0-100%", description: "Intensity of the pitch modulation" },
-    { name: "Feedback", range: "0-95%", description: "Amount of signal fed back for more intense effect" },
-    { name: "Mix", range: "0-100%", description: "Dry/wet blend" }
-  ]}
-/>
+| Control | Range | Description |
+|---------|-------|-------------|
+| **Mix** | 0-100% | Effect blend |
 
 ### Delay
 
-Versatile delay with optional ping-pong stereo mode.
+Versatile delay with multiple modes for rhythmic echoes and ambient textures.
 
-<ControlCard
-  title="Delay"
-  color="#14B8A6"
-  controls={[
-    { name: "Time", range: "1-2000 ms", description: "Delay time between repeats" },
-    { name: "Feedback", range: "0-95%", description: "Number of repeats (higher = more echoes)" },
-    { name: "Damping", range: "0-100%", description: "High-frequency absorption on repeats" },
-    { name: "Ping-Pong", range: "On/Off", description: "Stereo bouncing effect" },
-    { name: "Mix", range: "0-100%", description: "Dry/wet blend" }
-  ]}
-/>
+| Control | Range | Description |
+|---------|-------|-------------|
+| **Time** | 1-2000 ms | Delay time |
+| **Feedback** | 0-100% | Number of repeats |
+| **Mix** | 0-100% | Effect blend |
+| **Lo** | 20-2000 Hz | Low-cut filter on repeats |
+| **Hi** | 2000-20000 Hz | High-cut filter on repeats |
+| **Mode** | MOD/VDIG/DIFF | Delay character (modulated/vintage digital/diffused) |
+| **Width** | DRY/WIDE/MON | Stereo mode |
+
+### Reverb
+
+Lush spatial effects with shimmer option.
+
+| Control | Range | Description |
+|---------|-------|-------------|
+| **Decay** | 0.1-10s | Reverb tail length |
+| **Mix** | 0-100% | Effect blend |
+| **Lo** | 50-2000 Hz | Low-frequency damping |
+| **Hi** | 2000-16000 Hz | High-frequency damping |
+| **Shimmer** | On/Off | Adds octave-shifted reflections |
+
+---
+
+## Signal Flow
+
+Your guitar signal flows through the effects in this order:
+
+1. **Input** → Global input gain
+2. **Pre-FX** → Boost, Noise Gate, Compressor, Overdrive
+3. **EQ** → 9-band graphic equalizer (Pre mode)
+4. **Amp** → Selected amplifier model
+5. **EQ** → 9-band graphic equalizer (Post mode)
+6. **Post-FX** → Cabinet, Chorus, Delay, Reverb
+7. **Voices** → Harmonizer/pitch shifter
+8. **Output** → Global output gain
+
+Each effect can be bypassed independently by clicking its footswitch.
 
 ---
 
 ## Tips
 
-<BentoGrid variant="compact">
-  <FeatureCard title="Start with Mids" color="#FFD97B">
-    The Mid control has the biggest impact on your overall tone character
-  </FeatureCard>
-  <FeatureCard title="Use the Gate" color="#8B5CF6">
-    Essential for high-gain settings to keep things tight between notes
-  </FeatureCard>
-  <FeatureCard title="Compression First" color="#F97316">
-    Helps with consistent dynamics and sustain before the gate
-  </FeatureCard>
-  <FeatureCard title="Drive Stacking" color="#F59E0B">
-    Use drive with High-Gain Model for extreme saturation
-  </FeatureCard>
-  <FeatureCard title="Clean Headroom" color="#EC4899">
-    Clean Model shines with pristine, uncolored cleans
-  </FeatureCard>
-  <FeatureCard title="Instant Switch" color="#D76D77">
-    Switch between all three amps with no loading or latency
-  </FeatureCard>
-</BentoGrid>
+**Matching amp to style:**
+Use Rosaria for blues and classic rock where you want touch-sensitive dynamics. Use Lumina for clean tones and as a pedal platform. Use Noctis for metal and high-gain applications.
+
+**Gain staging:**
+Start with the amp's gain control, then add the overdrive pedal for more saturation. This gives you more tonal options than just cranking the amp gain.
+
+**Using the noise gate:**
+Essential for high-gain settings. Set the threshold just above your noise floor, use fast attack for tight playing, and slower release for sustained notes.
+
+**Cabinet simulation:**
+Leave this on for recording direct. Only bypass if you're using external cabinet simulation or a real amp/cab setup.
 
 <style>{`
   .amp-showcase {
     margin: 1.5rem 0 2rem 0;
-    border-radius: 16px;
+    border-radius: 12px;
     overflow: hidden;
     border: 1px solid var(--sl-color-gray-5);
-    background: var(--sl-color-gray-6);
   }
 
-  .amp-image {
+  .amp-showcase img {
     width: 100%;
     height: auto;
     display: block;
