@@ -282,6 +282,17 @@ const { site } = config;
         display: none;
       }
 
+      .total-downloads {
+        font-size: 1.1rem;
+        color: var(--color-primary);
+        margin-bottom: 24px;
+        font-weight: 500;
+      }
+
+      .total-downloads:empty {
+        display: none;
+      }
+
       .download-btn {
         display: inline-flex;
         align-items: center;
@@ -636,6 +647,7 @@ const { site } = config;
           <p>Professional guitar processing with three amplifiers, 4-voice harmonizer, and a complete effects chain. Free to download and use.</p>
 
           <div class="version-tag">v0.1.0 Alpha</div>
+          <p class="total-downloads" id="total-downloads"></p>
 
           <div class="download-grid">
             <div class="download-card">
@@ -872,34 +884,53 @@ const { site } = config;
     </footer>
 
     <script>
+      let downloadData = { macos: 0, windows: 0 };
+
+      // Update display with current counts
+      function updateDisplay() {
+        const macosEl = document.getElementById('macos-count');
+        const windowsEl = document.getElementById('windows-count');
+        const totalEl = document.getElementById('total-downloads');
+
+        const total = downloadData.macos + downloadData.windows;
+
+        if (macosEl) {
+          macosEl.textContent = `${downloadData.macos.toLocaleString()} downloads`;
+        }
+        if (windowsEl) {
+          windowsEl.textContent = `${downloadData.windows.toLocaleString()} downloads`;
+        }
+        if (totalEl && total > 0) {
+          totalEl.textContent = `${total.toLocaleString()} total downloads`;
+        }
+      }
+
       // Fetch and display download counts
       async function fetchDownloadCounts() {
         try {
           const response = await fetch('/api/downloads');
-          const data = await response.json();
-
-          const macosEl = document.getElementById('macos-count');
-          const windowsEl = document.getElementById('windows-count');
-
-          if (macosEl && data.macos > 0) {
-            macosEl.textContent = `${data.macos.toLocaleString()} downloads`;
-          }
-          if (windowsEl && data.windows > 0) {
-            windowsEl.textContent = `${data.windows.toLocaleString()} downloads`;
-          }
+          downloadData = await response.json();
+          updateDisplay();
         } catch (error) {
           console.error('Failed to fetch download counts:', error);
         }
       }
 
-      // Track download click
+      // Track download click and update display immediately
       async function trackDownload(platform) {
+        // Update locally immediately for instant feedback
+        downloadData[platform]++;
+        updateDisplay();
+
         try {
           await fetch(`/api/downloads?platform=${platform}`, {
             method: 'POST'
           });
         } catch (error) {
           console.error('Failed to track download:', error);
+          // Revert on error
+          downloadData[platform]--;
+          updateDisplay();
         }
       }
 
