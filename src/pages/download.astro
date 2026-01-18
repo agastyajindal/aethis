@@ -370,6 +370,60 @@ const { site } = config;
         letter-spacing: -0.01em;
       }
 
+      /* Security Notice */
+      .security-notice {
+        display: flex;
+        gap: 16px;
+        background: rgba(251, 191, 36, 0.1);
+        border: 1px solid rgba(251, 191, 36, 0.3);
+        border-radius: 12px;
+        padding: 20px 24px;
+        margin-top: 24px;
+        text-align: left;
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .security-icon {
+        flex-shrink: 0;
+        color: #d97706;
+        margin-top: 2px;
+      }
+
+      .security-content h3 {
+        font-size: 1rem;
+        font-weight: 600;
+        color: var(--color-heading);
+        margin: 0 0 8px 0;
+      }
+
+      .security-content p {
+        font-size: 0.9rem;
+        color: var(--color-text);
+        margin: 0 0 12px 0;
+        line-height: 1.5;
+      }
+
+      .security-content ul {
+        margin: 0 0 12px 0;
+        padding-left: 20px;
+        font-size: 0.85rem;
+        color: var(--color-text);
+        line-height: 1.6;
+      }
+
+      .security-content li {
+        margin-bottom: 8px;
+      }
+
+      .security-content .security-note {
+        font-size: 0.8rem;
+        color: var(--color-text);
+        opacity: 0.8;
+        margin-bottom: 0;
+      }
+
       /* Patch Notes */
       .patch-notes-section {
         padding: 80px 0;
@@ -581,7 +635,7 @@ const { site } = config;
           <h1>Download <span>Aethis</span></h1>
           <p>Professional guitar processing with three amplifiers, 4-voice harmonizer, and a complete effects chain. Free to download and use.</p>
 
-          <div class="version-tag">v0.9.0 Beta</div>
+          <div class="version-tag">v0.1.0 Alpha</div>
 
           <div class="download-grid">
             <div class="download-card">
@@ -595,7 +649,7 @@ const { site } = config;
               <p class="formats">VST3, AU, Standalone</p>
               <p class="download-count" id="macos-count"></p>
               <a
-                href="https://github.com/agastyajindal/aethis/releases/latest/download/Aethis-macOS.dmg"
+                href="https://github.com/agastyajindal/aethis/releases/download/0.1.0-alpha/Aethis-0.1.0-alpha-macos-setup.dmg"
                 class="download-btn"
                 id="macos-download"
                 data-platform="macos"
@@ -620,7 +674,7 @@ const { site } = config;
               <p class="formats">VST3, Standalone</p>
               <p class="download-count" id="windows-count"></p>
               <a
-                href="https://github.com/agastyajindal/aethis/releases/latest/download/Aethis-Windows.exe"
+                href="https://github.com/agastyajindal/aethis/releases/download/0.1.0-alpha/Aethis-0.1.0-alpha-Windows-Setup.exe"
                 class="download-btn"
                 id="windows-download"
                 data-platform="windows"
@@ -636,12 +690,31 @@ const { site } = config;
           </div>
 
           <p class="release-link">
-            <a href="https://github.com/agastyajindal/aethis/releases" target="_blank">View all releases on GitHub</a>
+            <a href="https://github.com/agastyajindal/aethis/releases/tag/0.1.0-alpha" target="_blank">View release on GitHub</a>
           </p>
 
+          <div class="security-notice">
+            <div class="security-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                <line x1="12" y1="8" x2="12" y2="12"/>
+                <line x1="12" y1="16" x2="12.01" y2="16"/>
+              </svg>
+            </div>
+            <div class="security-content">
+              <h3>You'll see a security warning</h3>
+              <p>Aethis isn't signed with an official certificate, so your computer will show a warning when you try to open it. This is normal for indie software — here's how to proceed:</p>
+              <ul>
+                <li><strong>macOS:</strong> You'll see "Aethis can't be opened because Apple cannot check it for malicious software." Go to <strong>System Settings → Privacy & Security</strong> and click <strong>"Open Anyway"</strong>.</li>
+                <li><strong>Windows:</strong> You'll see "Windows protected your PC" from SmartScreen. Click <strong>"More info"</strong> then <strong>"Run anyway"</strong>.</li>
+              </ul>
+              <p class="security-note">Signing certificates cost several hundred dollars per year. Since Aethis is free during beta, it's distributed unsigned. The code is open for review on GitHub.</p>
+            </div>
+          </div>
+
           <div class="beta-notice">
-            <span class="beta-badge">BETA</span>
-            <p>This is a beta release. Free to use with full features. Report issues on <a href="https://github.com/agastyajindal/aethis/issues">GitHub</a>.</p>
+            <span class="beta-badge">ALPHA</span>
+            <p>This is an alpha release. Free to use with full features. Report issues on <a href="https://github.com/agastyajindal/aethis/issues">GitHub</a>.</p>
           </div>
         </div>
       </section>
@@ -668,7 +741,7 @@ const { site } = config;
 
       <section class="patch-notes-section">
         <div class="container">
-          <h2>What's New in <span>v0.9.0</span></h2>
+          <h2>What's New in <span>v0.1.0 Alpha</span></h2>
           <p>Latest improvements and features.</p>
 
           <div class="patch-notes-grid">
