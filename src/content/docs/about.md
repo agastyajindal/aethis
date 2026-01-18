@@ -35,7 +35,7 @@ Fine-tune your sound after the amp with another full 9-band graphic equalizer. P
 
 ### The Voices
 
-Add four pitch-shifted voices to your signal. Create rich, layered harmonies that sound like a full band. Each voice can be tuned independently from ±24 semitones with cent-level precision.
+Add four pitch-shifted voices to your signal. Create rich, layered harmonies that sound like a full band. Each voice can be tuned independently from ±15 semitones with cent-level precision.
 
 **Harmonizer Mode:** Automatically generate perfect musical intervals. Choose your root note and scale. Watch your guitar turn into a choir of harmonized voices.
 
@@ -78,10 +78,10 @@ Built-in live tuner for quick reference. Run Aethis standalone without a DAW. Pl
 
 | | |
 |---|---|
-| **Beta (Current)** | **Free** — Full access to all features |
+| **Alpha (Current)** | **Free** — Full access to all features |
 | **v1.0 Release** | Paid (pricing TBA) |
 
-> **Note:** All beta versions are completely free. When v1.0 releases, it will be a paid product. Enjoy the beta while it lasts!
+> **Note:** All pre-release versions are completely free. When v1.0 releases, it will be a paid product. Enjoy the alpha while it lasts!
 
 ---
 
