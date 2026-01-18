@@ -12,6 +12,20 @@ export const onRequestGet: PagesFunction<Env> = async (context) => {
   const { env } = context;
 
   try {
+    // Check if KV binding exists
+    if (!env.DOWNLOAD_COUNTS) {
+      return new Response(JSON.stringify({
+        macos: 0,
+        windows: 0,
+        _debug: "KV binding not configured"
+      }), {
+        headers: {
+          "Content-Type": "application/json",
+          "Access-Control-Allow-Origin": "*"
+        }
+      });
+    }
+
     const macos = await env.DOWNLOAD_COUNTS.get("macos") || "0";
     const windows = await env.DOWNLOAD_COUNTS.get("windows") || "0";
 
@@ -25,7 +39,8 @@ export const onRequestGet: PagesFunction<Env> = async (context) => {
       }
     });
   } catch (error) {
-    return new Response(JSON.stringify({ macos: 0, windows: 0 }), {
+    const errorMessage = error instanceof Error ? error.message : "Unknown error";
+    return new Response(JSON.stringify({ macos: 0, windows: 0, _debug: errorMessage }), {
       headers: {
         "Content-Type": "application/json",
         "Access-Control-Allow-Origin": "*"
@@ -38,13 +53,24 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
   const { env, request } = context;
 
   try {
+    // Check if KV binding exists
+    if (!env.DOWNLOAD_COUNTS) {
+      return new Response(JSON.stringify({
+        error: "KV binding not configured",
+        hint: "Add DOWNLOAD_COUNTS KV namespace binding in Cloudflare Pages settings"
+      }), {
+        status: 500,
+        headers: { "Content-Type": "application/json", "Access-Control-Allow-Origin": "*" }
+      });
+    }
+
     const url = new URL(request.url);
     const platform = url.searchParams.get("platform");
 
     if (platform !== "macos" && platform !== "windows") {
       return new Response(JSON.stringify({ error: "Invalid platform" }), {
         status: 400,
-        headers: { "Content-Type": "application/json" }
+        headers: { "Content-Type": "application/json", "Access-Control-Allow-Origin": "*" }
       });
     }
 
@@ -64,9 +90,10 @@ export const onRequestPost: PagesFunction<Env> = async (context) => {
       }
     });
   } catch (error) {
-    return new Response(JSON.stringify({ error: "Failed to update count" }), {
+    const errorMessage = error instanceof Error ? error.message : "Unknown error";
+    return new Response(JSON.stringify({ error: "Failed to update count", details: errorMessage }), {
       status: 500,
-      headers: { "Content-Type": "application/json" }
+      headers: { "Content-Type": "application/json", "Access-Control-Allow-Origin": "*" }
     });
   }
 };
