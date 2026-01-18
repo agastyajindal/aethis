@@ -4,7 +4,6 @@ import { getTranslations } from "@/lib/utils/languagePerser";
 
 import config from "@/config/config.json" assert { type: "json" };
 import ThemeSwitch from "./ThemeSwitch.astro";
-import Search from "./Search.astro";
 
 // get current locale from URL
 const locale = Astro.currentLocale || "en";
@@ -14,8 +13,6 @@ const menu = await getTranslations(locale || "en");
 const { settings, navigation_button } = config;
 const { main }: { main: any[] } = menu;
 const pathname = Astro.request.url;
-
-const hasSidebar = Astro.locals.starlightRoute.hasSidebar;
 
 // Base URL for links
 const base = (import.meta.env.BASE_URL || "").replace(/\/$/, "") + "/";
@@ -122,14 +119,6 @@ const withBase = (url: string) => url.startsWith("http") ? url : `${base}${url.s
   <div
     class="order-1 ml-auto flex items-center md:order-2 lg:ml-0 navbar-actions"
   >
-    {
-      hasSidebar && settings.search && (
-        <div class="search-bar">
-          <Search />
-        </div>
-      )
-    }
-
     {settings.theme_switcher && <ThemeSwitch className="lg:mx-6 mr-10" />}
 
     {
