@@ -1,0 +1,233 @@
+AETHIS END USER LICENSE AGREEMENT
+
+PLEASE READ THIS AGREEMENT CAREFULLY BEFORE INSTALLING OR USING THIS SOFTWARE.
+By clicking "I Agree", downloading, installing, or using Aethis, you ("User")
+agree to be legally bound by the terms below. If you do not agree, do not
+install or use the Software.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. PARTIES & DEFINITIONS
+
+"Licensor" means Agastya Jindal, an individual doing business as Aquevix,
+located in India.
+
+"Software" means the Aethis application and all plugin formats (Standalone,
+VST3, AU, AAX), including all included audio assets, neural amp models,
+impulse responses, presets, documentation, and updates provided to you.
+
+"License" means the rights granted to you under this Agreement.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+2. LICENSE GRANT
+
+Subject to your compliance with this Agreement, Licensor grants you a limited,
+personal, non-exclusive, non-transferable, non-sublicensable license to:
+
+  (a) Install and run the Software on computers you own or control;
+  (b) Use the Software for personal and commercial music production,
+      including recording, live performance, streaming, and broadcast;
+  (c) Make one archival backup copy of the installer for personal use.
+
+This license is a license to use, not a sale. Licensor retains all ownership.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+3. AUDIO OUTPUT OWNERSHIP
+
+You own full rights to all audio recordings, compositions, and productions
+you create using the Software. No royalties, attribution, or fees are owed
+to Licensor for music made with Aethis. The music you make is entirely yours.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+4. RESTRICTIONS
+
+You may NOT:
+
+  (a) Copy, redistribute, upload, share, rehost, sell, rent, lease, or
+      sublicense the Software or any of its components;
+  (b) Reverse engineer, decompile, disassemble, or otherwise attempt to
+      derive source code, neural model weights, or impulse responses from
+      the Software, except to the limited extent expressly permitted by
+      applicable law notwithstanding this restriction;
+  (c) Modify, adapt, translate, or create derivative works of the
+      proprietary portions of the Software;
+  (d) Extract, convert, or use the included neural amp models or impulse
+      responses outside of the Software;
+  (e) Remove, alter, or obscure any copyright, trademark, or other
+      proprietary notices within the Software;
+  (f) Use the Software's proprietary source code, neural model weights, or
+      original assets to build other software products.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+5. INTELLECTUAL PROPERTY & COPYRIGHT
+
+The Software, including all source code, neural model weights, impulse
+responses, user interface design, and documentation, is the exclusive property
+of Agastya Jindal and is protected by copyright laws and international treaties.
+
+Copyright (c) 2026 Agastya Jindal. All rights reserved.
+
+The name "Aethis", the Aethis logo, and the Aethis stylized wordmark are
+unregistered trademarks of Agastya Jindal. Other names, marks, and logos
+appearing in the Software belong to their respective owners.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+6. INDEPENDENT DEVELOPMENT & GENERAL TECHNIQUES
+
+The Software was independently developed by Agastya Jindal without reference
+to any third party's proprietary source code, trade secrets, or confidential
+materials.
+
+Audio processing techniques embodied in the Software — including but not
+limited to amplifier simulation, neural amp modeling, impulse response
+convolution, noise gating, harmonic pitch shifting, parametric equalization,
+stereo widening, chorus, delay, and reverb — are general-purpose audio
+engineering methods well-established in the public domain and the prior art.
+The existence of other software products that perform similar audio processing
+functions does not constitute any claim of infringement, and Licensor makes
+no representation that Aethis is the sole product of its kind.
+
+Nothing in this Agreement restricts you from using software that provides
+similar functionality to the Software.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+7. THIRD-PARTY COMPONENTS & OPEN SOURCE NOTICES
+
+The Software incorporates the following third-party open source components,
+each under its respective license:
+
+  Neural Amp Modeler Core ("NAM")
+    Copyright (c) 2023-2025 Steven Atkinson and NAM contributors
+    Licensed under the MIT License
+    Source: https://github.com/sdatkinson/NeuralAmpModelerCore
+
+  iPlug2 Audio Plugin Framework
+    Copyright (c) Oli Larkin and the iPlug2 contributors
+    Licensed under the WDL / iPlug2 License (permissive, attribution required
+    in accompanying documentation)
+    Source: https://github.com/iPlug2/iPlug2
+
+  Visage GPU UI Framework
+    Copyright (c) Vital Audio, LLC
+    Licensed under the MIT License
+    Source: https://github.com/VitalAudio/visage
+
+These components are used in compliance with their respective licenses.
+Your use of the Software constitutes acceptance of those upstream terms
+as they apply to those components. Licensor makes no warranty regarding
+the third-party components beyond what is stated in their own licenses.
+Any open source license obligations are fulfilled by Licensor.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+8. DISCLAIMER OF WARRANTIES
+
+THE SOFTWARE IS PROVIDED "AS IS" AND "AS AVAILABLE" WITHOUT WARRANTY OF ANY
+KIND. TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, LICENSOR EXPRESSLY
+DISCLAIMS ALL WARRANTIES, WHETHER EXPRESS, IMPLIED, STATUTORY, OR OTHERWISE,
+INCLUDING WITHOUT LIMITATION:
+
+  - ANY IMPLIED WARRANTY OF MERCHANTABILITY;
+  - FITNESS FOR A PARTICULAR PURPOSE;
+  - TITLE AND NON-INFRINGEMENT;
+  - THAT THE SOFTWARE WILL BE ERROR-FREE, UNINTERRUPTED, OR SECURE;
+  - THAT DEFECTS WILL BE CORRECTED;
+  - COMPATIBILITY WITH ANY SPECIFIC DIGITAL AUDIO WORKSTATION OR HOST.
+
+NO ORAL OR WRITTEN INFORMATION OR ADVICE GIVEN BY LICENSOR SHALL CREATE A
+WARRANTY NOT EXPRESSLY STATED IN THIS AGREEMENT.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+9. LIMITATION OF LIABILITY
+
+TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW:
+
+  (a) IN NO EVENT SHALL LICENSOR BE LIABLE FOR ANY INDIRECT, INCIDENTAL,
+      SPECIAL, EXEMPLARY, CONSEQUENTIAL, OR PUNITIVE DAMAGES, INCLUDING
+      LOSS OF PROFITS, LOSS OF DATA, LOSS OF AUDIO RECORDINGS, BUSINESS
+      INTERRUPTION, OR LOSS OF GOODWILL, REGARDLESS OF THE LEGAL THEORY
+      UNDER WHICH SUCH DAMAGES ARE SOUGHT AND EVEN IF LICENSOR HAS BEEN
+      ADVISED OF THE POSSIBILITY OF SUCH DAMAGES;
+
+  (b) LICENSOR'S TOTAL CUMULATIVE LIABILITY TO YOU ARISING OUT OF OR
+      RELATING TO THIS AGREEMENT OR THE SOFTWARE SHALL NOT EXCEED THE
+      GREATER OF (i) THE AMOUNT ACTUALLY PAID BY YOU FOR THE SOFTWARE IN
+      THE TWELVE (12) MONTHS PRECEDING THE CLAIM, OR (ii) USD $10.00.
+
+SOME JURISDICTIONS DO NOT ALLOW THE EXCLUSION OF CERTAIN WARRANTIES OR
+LIMITATION OF LIABILITY, SO THE ABOVE LIMITATIONS MAY NOT APPLY TO YOU IN
+FULL. IN SUCH JURISDICTIONS, LICENSOR'S LIABILITY IS LIMITED TO THE MINIMUM
+EXTENT PERMITTED BY LAW.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+10. TERMINATION
+
+This Agreement is effective until terminated. It terminates automatically,
+without notice, if you breach any term. Upon termination:
+
+  (a) All rights granted to you immediately cease;
+  (b) You must uninstall and destroy all copies of the Software.
+
+Sections 3, 5, 6, 7, 8, 9, 11, 12, and 13 survive termination.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+11. UPDATES
+
+Licensor may release updates at any time and may modify this Agreement in
+connection with any update. Continued use of the Software after an updated
+Agreement is made available constitutes acceptance of the revised terms.
+Licensor is not obligated to provide any updates or continued support.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+12. GOVERNING LAW & DISPUTE RESOLUTION
+
+This Agreement shall be governed by and construed in accordance with the laws
+of India, without regard to its conflict of law provisions. Any dispute arising
+out of or in connection with this Agreement that cannot be resolved amicably
+within thirty (30) days shall be submitted to the exclusive jurisdiction of
+the courts of Bengaluru, Karnataka, India.
+
+If you are a consumer resident in a jurisdiction with mandatory consumer
+protection laws that cannot be waived by contract, nothing in this Agreement
+limits rights you may have under those laws.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+13. GENERAL
+
+  Entire Agreement. This Agreement is the complete and exclusive agreement
+  between you and Licensor regarding the Software, and supersedes all prior
+  agreements, representations, and understandings.
+
+  Severability. If any provision of this Agreement is found to be invalid,
+  illegal, or unenforceable, that provision shall be modified to the minimum
+  extent necessary to make it enforceable, and the remaining provisions shall
+  continue in full force and effect.
+
+  No Waiver. Failure to enforce any provision of this Agreement shall not
+  constitute a waiver of Licensor's right to enforce it in the future.
+
+  Assignment. You may not assign or transfer this Agreement or any rights
+  hereunder without Licensor's prior written consent. Any attempted assignment
+  without consent is void. Licensor may assign this Agreement freely.
+
+  Export. You agree to comply with all applicable export control laws and
+  regulations in your jurisdiction.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+By installing or using Aethis, you confirm that you have read and understood
+this Agreement and agree to be bound by its terms.
+
+Aethis — https://aethis.agastyajindal.com
+Contact: agastyajindal@gmail.com

@@ -1,8 +1,0 @@
----
-const { label, link, variant } = Astro.props;
-
-const base = (import.meta.env.BASE_URL || "").replace(/\/$/, "") + "/";
-const withBase = (url: string) => url.startsWith("http") || url === "#" ? url : `${base}${url.startsWith("/") ? url.slice(1) : url}`;
----
-
-<a href={withBase(link)} class={`btn btn-${variant}`}>{label}</a>
